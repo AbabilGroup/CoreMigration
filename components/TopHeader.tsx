@@ -3,7 +3,7 @@ import { PhoneIcon } from '@heroicons/react/20/solid';
 
 export default function TopHeader() {
     return (
-        <div className="w-full items-center justify-between text-xs font-semibold h-13 hidden md:flex bg-[#5A4125] text-[#E3D6BF]">
+        <div className="w-full items-center justify-between text-xs font-semibold h-13 hidden md:flex bg-[#aa7f09] text-[#E3D6BF]">
             <div className='flex w-full h-full container mx-auto'>
                 {/* Navigation moved to MainHeader, keep a spacer for layout balance */}
                 <div className="flex-1"></div>
