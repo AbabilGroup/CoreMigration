@@ -37,7 +37,7 @@ export default function SourcingDeploymentModels() {
         {models.map((model, i) => (
           <div
             key={model.title}
-            className="group bg-white border border-zinc-200 p-8 md:p-10 hover:border-brand-primary transition-colors"
+            className="card-hover group bg-white border border-zinc-200 p-8 md:p-10"
             data-aos="fade-up"
             data-aos-delay={i * 100}>
             <h3 className="text-2xl text-brand-dark font-bold mb-4">{t(model.title)}</h3>

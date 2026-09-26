@@ -60,7 +60,7 @@ export default function AboutServices() {
           {reasons.map((reason, i) => (
             <div
               key={reason.title}
-              className="bg-white p-8 border border-gray-100"
+              className="card-hover bg-white p-8 border border-gray-100"
               data-aos="fade-up"
               data-aos-delay={(i % 3) * 100}>
               <reason.icon className="w-9 h-9 text-brand-primary mb-5" />

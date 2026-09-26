@@ -77,11 +77,11 @@ export default function OurSolutions() {
             {solutions.map((solution, i) => (
               <div
                 key={solution.title}
-                className="border border-gray-200 flex flex-col"
+                className="card-hover border border-gray-200 flex flex-col"
                 data-aos="fade-up"
                 data-aos-delay={i * 100}>
-                <div className="relative w-full h-56">
-                  <Image src={solution.image} alt={t(solution.title)} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover" />
+                <div className="relative w-full h-56 overflow-hidden">
+                  <Image src={solution.image} alt={t(solution.title)} fill sizes="(max-width: 768px) 100vw, 33vw" className="card-hover-img object-cover" />
                 </div>
                 <div className="p-8 flex flex-col flex-1">
                   <h3 className="text-xl font-bold text-brand-dark mb-3">{t(solution.title)}</h3>

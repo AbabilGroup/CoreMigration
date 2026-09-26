@@ -21,7 +21,7 @@ export default function ExampleOpportunityCard({ opportunity }: { opportunity: O
   const { t } = useLanguage();
 
   return (
-    <div className="border border-gray-200 bg-white p-7 md:p-8 flex flex-col" data-aos="fade-up">
+    <div className="card-hover border border-gray-200 bg-white p-7 md:p-8 flex flex-col" data-aos="fade-up">
       <div className="flex items-start justify-between gap-4 mb-4">
         <h3 className="text-xl font-bold text-brand-dark">{t(opportunity.title)}</h3>
         <span className="shrink-0 bg-brand-accent/20 text-brand-dark text-[10px] font-bold uppercase tracking-wider px-3 py-1 whitespace-nowrap">

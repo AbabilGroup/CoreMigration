@@ -61,7 +61,7 @@ export default function MiddleEast() {
             ))}
           </div>
 
-          <div className="bg-zinc-50 border border-zinc-200 p-6" data-aos="fade-up">
+          <div className="card-hover bg-zinc-50 border border-zinc-200 p-6" data-aos="fade-up">
             <p className="text-sm text-gray-600 leading-relaxed">
               <span className="font-bold text-brand-dark">{t("Compliance note:")}</span>{" "}
               {t("All GCC deployments include country-specific visa and emigration handling — including Saudi Wakala/Enjaz processes and UAE biometric requirements — managed through Overseas Processing.")}

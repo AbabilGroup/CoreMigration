@@ -34,3 +34,35 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Card hover: lift, shadow and brand border. Add `card-hover-img` to an image
+   inside the card (in an overflow-hidden wrapper) for a slow zoom. */
+@layer components {
+  .card-hover {
+    transition:
+      translate 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+      box-shadow 0.4s ease,
+      border-color 0.3s ease,
+      background-color 0.3s ease;
+  }
+  .card-hover:hover {
+    translate: 0 -8px;
+    border-color: var(--color-brand-primary);
+    box-shadow: 0 20px 40px -16px rgb(18 13 10 / 0.25);
+  }
+  .card-hover .card-hover-img {
+    transition: scale 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .card-hover:hover .card-hover-img {
+    scale: 1.08;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .card-hover:hover {
+      translate: none;
+    }
+    .card-hover:hover .card-hover-img {
+      scale: none;
+    }
+  }
+}

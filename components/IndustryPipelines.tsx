@@ -52,7 +52,7 @@ export default function IndustryPipelines() {
           <Link
             key={item.title}
             href={item.href}
-            className="group block bg-zinc-50 border border-zinc-200 p-6 hover:bg-brand-dark transition-colors duration-300"
+            className="card-hover group block bg-zinc-50 border border-zinc-200 p-6 hover:bg-brand-dark"
             data-aos="fade-up"
             data-aos-delay={i * 100}>
             <item.icon className="w-10 h-10 text-brand-primary mb-5" />

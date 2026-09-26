@@ -70,7 +70,7 @@ export default function AboutValues() {
           {values.map((value, index) => (
             <div
               key={value.title}
-              className="border border-gray-200 rounded-sm p-8 flex flex-col items-start hover:border-[#006A80] hover:shadow-md transition-all duration-300 group"
+              className="card-hover border border-gray-200 rounded-sm p-8 flex flex-col items-start group"
               data-aos="fade-up"
               data-aos-delay={index * 80}>
               <value.icon className="w-10 h-10 text-[#006A80] mb-5 stroke-1 group-hover:scale-110 transition-transform duration-300" />

@@ -130,7 +130,7 @@ export default function OverseasProcessing() {
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-10">
             {attestationItems.map((item) => (
-              <div key={item.title} className="bg-white border border-gray-200 p-6" data-aos="fade-up">
+              <div key={item.title} className="card-hover bg-white border border-gray-200 p-6" data-aos="fade-up">
                 <h3 className="font-bold text-brand-dark mb-2">{t(item.title)}</h3>
                 <p className="text-gray-600 text-sm leading-relaxed">{t(item.description)}</p>
               </div>

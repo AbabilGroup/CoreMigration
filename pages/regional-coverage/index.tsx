@@ -55,11 +55,11 @@ export default function RegionalCoverage() {
               <Link
                 key={region.title}
                 href={region.href}
-                className="group border border-gray-200 flex flex-col hover:border-brand-primary transition-colors"
+                className="card-hover group border border-gray-200 flex flex-col"
                 data-aos="fade-up"
                 data-aos-delay={i * 100}>
-                <div className="relative w-full h-48">
-                  <Image src={region.image} alt={t(region.title)} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover" />
+                <div className="relative w-full h-48 overflow-hidden">
+                  <Image src={region.image} alt={t(region.title)} fill sizes="(max-width: 768px) 100vw, 33vw" className="card-hover-img object-cover" />
                 </div>
                 <div className="p-7">
                   <h3 className="text-xl font-bold text-brand-dark mb-3 group-hover:text-brand-primary transition-colors">

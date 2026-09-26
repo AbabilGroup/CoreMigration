@@ -9,7 +9,7 @@ export default function DualValueProposition() {
   return (
     <section className="py-16 md:py-24 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div className="bg-zinc-50 border border-zinc-200 p-8 md:p-10" data-aos="fade-up">
+        <div className="card-hover bg-zinc-50 border border-zinc-200 p-8 md:p-10" data-aos="fade-up">
           <div className="w-14 h-14 flex items-center justify-center bg-brand-primary/10 mb-6">
             <BriefcaseIcon className="w-7 h-7 text-brand-primary" />
           </div>
@@ -26,7 +26,7 @@ export default function DualValueProposition() {
           </Link>
         </div>
 
-        <div className="bg-zinc-50 border border-zinc-200 p-8 md:p-10" data-aos="fade-up" data-aos-delay="100">
+        <div className="card-hover bg-zinc-50 border border-zinc-200 p-8 md:p-10" data-aos="fade-up" data-aos-delay="100">
           <div className="w-14 h-14 flex items-center justify-center bg-brand-primary/10 mb-6">
             <UserIcon className="w-7 h-7 text-brand-primary" />
           </div>

@@ -43,7 +43,7 @@ export default function DeploymentInfrastructure() {
           {stages.map((stage, i) => (
             <React.Fragment key={stage.title}>
               <div
-                className="w-full bg-white border border-gray-200 px-8 py-6 text-center"
+                className="card-hover w-full bg-white border border-gray-200 px-8 py-6 text-center"
                 data-aos="fade-up"
                 data-aos-delay={i * 100}>
                 <h3 className="font-bold text-brand-dark mb-1">{t(stage.title)}</h3>

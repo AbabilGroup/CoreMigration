@@ -91,7 +91,7 @@ export default function Industries() {
             <div
               key={industry.id}
               id={industry.id}
-              className="border border-gray-200 p-8 md:p-10 scroll-mt-24"
+              className="card-hover border border-gray-200 p-8 md:p-10 scroll-mt-24"
               data-aos="fade-up"
               data-aos-delay={i * 50}>
               <div className="flex items-center gap-4 mb-8">
