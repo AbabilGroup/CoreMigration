@@ -16,15 +16,18 @@ const keyFeatures = [
 const targetRoles = [
   {
     group: "Healthcare",
-    roles: "Registered Nurses, ER/ICU Specialists, General Practitioners, Laboratory Technicians",
+    roles:
+      "Registered Nurses, ER/ICU Specialists, General Practitioners, Laboratory Technicians",
   },
   {
     group: "Engineering & Technical",
-    roles: "Civil Engineers, MEP Managers, Site Supervisors, Quality Control Inspectors",
+    roles:
+      "Civil Engineers, MEP Managers, Site Supervisors, Quality Control Inspectors",
   },
   {
     group: "Hospitality Leadership",
-    roles: "Executive Chefs, Restaurant Managers, Front Office Supervisors, Head Housekeepers",
+    roles:
+      "Executive Chefs, Restaurant Managers, Front Office Supervisors, Head Housekeepers",
   },
 ];
 
@@ -37,15 +40,19 @@ export default function DirectSpecialistRecruitment() {
         <title>{t("Direct & Specialist Recruitment - Core Migration")}</title>
         <meta
           name="description"
-          content={t("For companies seeking qualified white-collar professionals, technical experts, and licensed healthcare staff, with rigorous vetting to ensure immediate productivity on placement.")}
+          content={t(
+            "For companies seeking qualified white-collar professionals, technical experts, and licensed healthcare staff, with rigorous vetting to ensure immediate productivity on placement.",
+          )}
         />
       </Head>
       <main className="min-h-screen bg-white">
         <ServicesHero
           title={t("Direct &")}
           titleAccent={t("Specialist Recruitment")}
-          subtitle={t("For companies seeking qualified white-collar professionals, technical experts, and licensed healthcare staff, with rigorous vetting to ensure immediate productivity on placement.")}
-          image="https://images.pexels.com/photos/8961243/pexels-photo-8961243.jpeg"
+          subtitle={t(
+            "For companies seeking qualified white-collar professionals, technical experts, and licensed healthcare staff, with rigorous vetting to ensure immediate productivity on placement.",
+          )}
+          image="https://images.pexels.com/photos/5668858/pexels-photo-5668858.jpeg?_gl=1*1xlq31b*_ga*Nzc4NDE5NTg5LjE3OTA0MDcwMjU.*_ga_8JE65Q40S6*czE3OTA0NDM0ODMkbzIkZzEkdDE3OTA0NDM1MTMkajMwJGwwJGgw"
           breadcrumbs={[
             { label: t("Home"), href: "/" },
             { label: t("Our Solutions"), href: "/our-solutions" },
@@ -59,7 +66,9 @@ export default function DirectSpecialistRecruitment() {
           </h2>
           <ul className="space-y-4 mb-16">
             {keyFeatures.map((feature) => (
-              <li key={feature} className="flex items-start gap-3 text-gray-600 leading-relaxed">
+              <li
+                key={feature}
+                className="flex items-start gap-3 text-gray-600 leading-relaxed">
                 <span className="w-1.5 h-1.5 mt-2.5 rounded-full bg-brand-primary shrink-0" />
                 {t(feature)}
               </li>
@@ -71,9 +80,16 @@ export default function DirectSpecialistRecruitment() {
           </h2>
           <div className="space-y-8 mb-12">
             {targetRoles.map((group) => (
-              <div key={group.group} className="border-l-4 border-brand-primary pl-6" data-aos="fade-right">
-                <h3 className="font-bold text-brand-dark mb-2">{t(group.group)}</h3>
-                <p className="text-gray-600 leading-relaxed">{t(group.roles)}</p>
+              <div
+                key={group.group}
+                className="border-l-4 border-brand-primary pl-6"
+                data-aos="fade-right">
+                <h3 className="font-bold text-brand-dark mb-2">
+                  {t(group.group)}
+                </h3>
+                <p className="text-gray-600 leading-relaxed">
+                  {t(group.roles)}
+                </p>
               </div>
             ))}
           </div>
@@ -97,8 +113,14 @@ export default function DirectSpecialistRecruitment() {
           <MobileAppSection
             headline="Discuss Your"
             headlineAccent="Workforce Requirements"
-            primaryCta={{ label: "Submit Your Demand Specifications", href: "/contact-us" }}
-            secondaryCta={{ label: "Speak to a Workforce Consultant", href: "/contact-us" }}
+            primaryCta={{
+              label: "Submit Your Demand Specifications",
+              href: "/contact-us",
+            }}
+            secondaryCta={{
+              label: "Speak to a Workforce Consultant",
+              href: "/contact-us",
+            }}
           />
         </div>
       </main>
