@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { useLanguage } from "@/context/LanguageContext";
 
@@ -7,14 +6,17 @@ export default function Hero() {
 
   return (
     <div className="relative w-full h-dvh overflow-hidden bg-gray-900">
-      <Image
-        src="https://images.pexels.com/photos/159306/construction-site-build-construction-work-159306.jpeg"
-        alt={t("Cross-Border Workforce Solutions, Delivered Without the Friction")}
-        fill
-        priority
-        sizes="100vw"
-        className="object-cover"
-      />
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="auto"
+        poster="https://images.pexels.com/photos/159306/construction-site-build-construction-work-159306.jpeg"
+        aria-hidden="true"
+        className="absolute inset-0 h-full w-full object-cover">
+        <source src="/CoreMigration.mp4" type="video/mp4" />
+      </video>
       <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/40 to-black/20" />
 
       <div className="relative z-10 flex h-full items-end px-6 md:px-16 pb-20 md:pb-28">
