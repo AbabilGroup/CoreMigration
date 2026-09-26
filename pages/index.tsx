@@ -21,7 +21,7 @@ export default function Home() {
           content={t("Core Migration connects employers across the Middle East, the UK, and Europe with trade-tested, vetted, and job-ready professionals from Bangladesh, India, Nepal, and Sri Lanka.")}
         />
       </Head>
-      <main className="min-h-screen bg-zinc-50 dark:bg-black overflow-hidden">
+      <main className="min-h-screen bg-white overflow-hidden">
         <Hero />
         <div data-aos="fade-up">
           <DualValueProposition />
