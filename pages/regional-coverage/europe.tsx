@@ -28,7 +28,7 @@ export default function Europe() {
           ]}
         />
 
-        <div data-aos="fade-up">
+        <div data-aos="blur-in">
           <MobileAppSection
             headline="Discuss European"
             headlineAccent="Workforce Needs"

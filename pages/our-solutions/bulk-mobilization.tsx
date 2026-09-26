@@ -71,7 +71,7 @@ export default function BulkMobilization() {
           </h2>
           <div className="space-y-8 mb-12">
             {targetRoles.map((group) => (
-              <div key={group.group} className="border-l-4 border-brand-primary pl-6" data-aos="fade-up">
+              <div key={group.group} className="border-l-4 border-brand-primary pl-6" data-aos="fade-right">
                 <h3 className="font-bold text-brand-dark mb-2">{t(group.group)}</h3>
                 <p className="text-gray-600 leading-relaxed">{t(group.roles)}</p>
               </div>
@@ -93,7 +93,7 @@ export default function BulkMobilization() {
           </div>
         </section>
 
-        <div data-aos="fade-up">
+        <div data-aos="blur-in">
           <MobileAppSection
             headline="Discuss Your"
             headlineAccent="Workforce Requirements"

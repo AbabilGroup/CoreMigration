@@ -23,7 +23,7 @@ export default function HowWeDeliver() {
           <WhatYouCanExpect />
         </div>
 
-        <div data-aos="fade-up">
+        <div data-aos="blur-in">
           <MobileAppSection
             headline="Start Building"
             headlineAccent="Your Workforce"

@@ -56,7 +56,7 @@ export default function JobDetails() {
             <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24">
                 <div className="flex flex-col lg:flex-row gap-16 lg:gap-24">
                     {/* Left Column: Opportunity Description */}
-                    <div className="lg:w-8/12" data-aos="fade-up">
+                    <div className="lg:w-8/12" data-aos="fade-right">
                         <span className="inline-block bg-brand-accent/20 text-brand-dark text-[10px] font-bold uppercase tracking-wider px-3 py-1 mb-6">
                             {t("Example Opportunity")}
                         </span>
@@ -77,7 +77,7 @@ export default function JobDetails() {
                     </div>
 
                     {/* Right Column: Opportunity Meta Card */}
-                    <div className="lg:w-4/12" data-aos="fade-up" data-aos-delay="100">
+                    <div className="lg:w-4/12" data-aos="fade-left" data-aos-delay="150">
                         <div className="bg-zinc-50 border border-zinc-200 p-8 sticky top-32">
                             <h3 className="text-xl font-bold text-brand-dark mb-6 border-b border-zinc-200 pb-4">{t("Position Details")}</h3>
 
@@ -123,7 +123,7 @@ export default function JobDetails() {
             </div>
         </section>
 
-        <div data-aos="fade-up">
+        <div data-aos="blur-in">
             <MobileAppSection />
         </div>
       </main>

@@ -40,7 +40,7 @@ export default function WhatYouCanExpect() {
   return (
     <section className="py-16 md:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24">
-        <div className="mb-16 text-center max-w-2xl mx-auto" data-aos="fade-up">
+        <div className="mb-16 text-center max-w-2xl mx-auto" data-aos="text-reveal">
           <h2
             className="text-3xl md:text-4xl text-brand-dark font-light"
             style={{ fontFamily: "var(--font-playfair-display), serif" }}>
@@ -54,12 +54,16 @@ export default function WhatYouCanExpect() {
             return (
               <div
                 key={block.title}
-                className={`flex flex-col ${isReversed ? "md:flex-row-reverse" : "md:flex-row"} items-center gap-10 md:gap-16`}
-                data-aos="fade-up">
-                <div className="relative w-full md:w-1/2 h-64 md:h-80">
+                className={`flex flex-col ${isReversed ? "md:flex-row-reverse" : "md:flex-row"} items-center gap-10 md:gap-16`}>
+                <div
+                  className="relative w-full md:w-1/2 h-64 md:h-80 overflow-hidden"
+                  data-aos={isReversed ? "reveal-right" : "reveal-left"}>
                   <Image src={block.image} alt={t(block.title)} fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover" />
                 </div>
-                <div className="w-full md:w-1/2">
+                <div
+                  className="w-full md:w-1/2"
+                  data-aos={isReversed ? "fade-right" : "fade-left"}
+                  data-aos-delay="250">
                   <block.icon className="w-10 h-10 text-brand-primary mb-5" />
                   <h3 className="text-2xl font-bold text-brand-dark mb-4">{t(block.title)}</h3>
                   <p className="text-gray-600 leading-relaxed">{t(block.description)}</p>

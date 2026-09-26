@@ -21,8 +21,6 @@ export default function ContactUs() {
         <div data-aos="fade-up">
           <ContactFormSection />
         </div>
-
-        <div data-aos="fade-up"></div>
       </main>
     </>
   );

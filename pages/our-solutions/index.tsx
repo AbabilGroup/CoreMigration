@@ -78,7 +78,7 @@ export default function OurSolutions() {
               <div
                 key={solution.title}
                 className="card-hover border border-gray-200 flex flex-col"
-                data-aos="fade-up"
+                data-aos="zoom-in"
                 data-aos-delay={i * 100}>
                 <div className="relative w-full h-56 overflow-hidden">
                   <Image src={solution.image} alt={t(solution.title)} fill sizes="(max-width: 768px) 100vw, 33vw" className="card-hover-img object-cover" />
@@ -99,16 +99,18 @@ export default function OurSolutions() {
 
         <section id="recruitment-roadmap" className="py-16 md:py-24 bg-brand-dark px-6 md:px-12 lg:px-24">
           <div className="max-w-5xl mx-auto">
-            <div className="mb-12 text-center" data-aos="fade-up">
+            <div className="mb-12 text-center" data-aos="text-reveal">
               <h2
                 className="text-3xl md:text-4xl text-white font-light"
                 style={{ fontFamily: "var(--font-playfair-display), serif" }}>
                 {t("Recruitment")} <span className="italic font-bold text-brand-primary">{t("Roadmap")}</span>
               </h2>
             </div>
-            <div className="flex flex-col gap-8 relative before:absolute before:left-6 before:top-2 before:bottom-2 before:w-px before:bg-white/15">
+            <div className="flex flex-col gap-8 relative">
+              <span aria-hidden="true" className="absolute left-6 top-2 bottom-2 w-px bg-white/15" />
+              <span aria-hidden="true" data-aos="draw-line" className="absolute left-6 top-2 bottom-2 w-px bg-brand-primary shadow-[0_0_8px_var(--color-brand-primary)]" />
               {roadmap.map((step, i) => (
-                <div key={step.title} className="flex gap-6 relative" data-aos="fade-up" data-aos-delay={i * 100}>
+                <div key={step.title} className="flex gap-6 relative" data-aos="fade-left">
                   <div className="w-12 h-12 rounded-full bg-brand-primary text-white font-bold flex items-center justify-center shrink-0 z-10">
                     {i + 1}
                   </div>
@@ -122,7 +124,7 @@ export default function OurSolutions() {
           </div>
         </section>
 
-        <div data-aos="fade-up">
+        <div data-aos="blur-in">
           <MobileAppSection
             headline="Discuss Your"
             headlineAccent="Workforce Requirements"

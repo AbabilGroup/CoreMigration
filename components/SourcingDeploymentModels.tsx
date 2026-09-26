@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import CursorCircle from "./CursorCircle";
 import { useLanguage } from "@/context/LanguageContext";
 
 const models = [
@@ -37,9 +38,10 @@ export default function SourcingDeploymentModels() {
         {models.map((model, i) => (
           <div
             key={model.title}
-            className="card-hover group bg-white border border-zinc-200 p-8 md:p-10"
+            className="card-hover group relative isolate overflow-hidden bg-white border border-zinc-200 p-8 md:p-10"
             data-aos="fade-up"
             data-aos-delay={i * 100}>
+            <CursorCircle />
             <h3 className="text-2xl text-brand-dark font-bold mb-4">{t(model.title)}</h3>
             <p className="text-gray-600 leading-relaxed mb-4">{t(model.description)}</p>
             <p className="text-sm font-bold text-brand-primary uppercase tracking-wider mb-6 opacity-70 group-hover:opacity-100 transition-opacity">

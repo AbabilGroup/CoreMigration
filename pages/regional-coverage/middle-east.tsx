@@ -54,14 +54,14 @@ export default function MiddleEast() {
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-12">
             {sectors.map((sector) => (
-              <div key={sector.text} className="flex items-start gap-4" data-aos="fade-up">
+              <div key={sector.text} className="flex items-start gap-4" data-aos="fade-left">
                 <sector.icon className="w-8 h-8 text-brand-primary shrink-0" />
                 <p className="text-gray-600 leading-relaxed">{t(sector.text)}</p>
               </div>
             ))}
           </div>
 
-          <div className="card-hover bg-zinc-50 border border-zinc-200 p-6" data-aos="fade-up">
+          <div className="card-hover bg-zinc-50 border border-zinc-200 p-6" data-aos="zoom-in">
             <p className="text-sm text-gray-600 leading-relaxed">
               <span className="font-bold text-brand-dark">{t("Compliance note:")}</span>{" "}
               {t("All GCC deployments include country-specific visa and emigration handling — including Saudi Wakala/Enjaz processes and UAE biometric requirements — managed through Overseas Processing.")}
@@ -69,7 +69,7 @@ export default function MiddleEast() {
           </div>
         </section>
 
-        <div data-aos="fade-up">
+        <div data-aos="blur-in">
           <MobileAppSection
             headline="Discuss GCC"
             headlineAccent="Workforce Needs"

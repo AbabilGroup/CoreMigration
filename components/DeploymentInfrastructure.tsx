@@ -1,5 +1,6 @@
 import React from "react";
 import { ChevronDownIcon } from "@heroicons/react/24/solid";
+import CursorCircle from "./CursorCircle";
 import { useLanguage } from "@/context/LanguageContext";
 
 const stages = [
@@ -31,7 +32,7 @@ export default function DeploymentInfrastructure() {
   return (
     <section className="py-20 md:py-28 bg-[#f7f5f2]">
       <div className="max-w-3xl mx-auto px-6 md:px-12">
-        <div className="mb-14 text-center" data-aos="fade-up">
+        <div className="mb-14 text-center" data-aos="text-reveal">
           <h2
             className="text-3xl md:text-4xl text-brand-dark font-light"
             style={{ fontFamily: "var(--font-playfair-display), serif" }}>
@@ -43,9 +44,10 @@ export default function DeploymentInfrastructure() {
           {stages.map((stage, i) => (
             <React.Fragment key={stage.title}>
               <div
-                className="card-hover w-full bg-white border border-gray-200 px-8 py-6 text-center"
-                data-aos="fade-up"
+                className="card-hover relative isolate overflow-hidden w-full bg-white border border-gray-200 px-8 py-6 text-center"
+                data-aos="zoom-in"
                 data-aos-delay={i * 100}>
+                <CursorCircle />
                 <h3 className="font-bold text-brand-dark mb-1">{t(stage.title)}</h3>
                 <p className="text-sm text-gray-500">{t(stage.detail)}</p>
               </div>

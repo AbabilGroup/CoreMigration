@@ -1,16 +1,17 @@
 import React from "react";
+import FloatingCircles from "./FloatingCircles";
 import { useLanguage } from "@/context/LanguageContext";
 
 export default function AboutIntro() {
   const { t } = useLanguage();
 
   return (
-    <section className="bg-white">
+    <section className="relative isolate overflow-hidden bg-white">
+      <FloatingCircles />
       <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24 py-20 md:py-28">
         <div
-          className="flex flex-col lg:flex-row gap-12 lg:gap-24"
-          data-aos="fade-up">
-          <div className="lg:w-5/12">
+          className="flex flex-col lg:flex-row gap-12 lg:gap-24">
+          <div className="lg:w-5/12" data-aos="fade-right">
             <p className="text-xs font-bold tracking-[0.25em] text-brand-primary uppercase mb-4">
               {t("WHO WE ARE")}
             </p>
@@ -22,7 +23,7 @@ export default function AboutIntro() {
             </h2>
           </div>
 
-          <div className="lg:w-7/12">
+          <div className="lg:w-7/12" data-aos="fade-left">
             <p
               className="text-gray-700 text-base md:text-lg leading-relaxed mb-6"
               style={{ fontFamily: "var(--font-playfair-display), serif" }}>

@@ -7,6 +7,7 @@ import {
   ClockIcon,
   HandRaisedIcon,
 } from "@heroicons/react/24/outline";
+import CursorCircle from "./CursorCircle";
 import { useLanguage } from "@/context/LanguageContext";
 
 const values = [
@@ -52,7 +53,7 @@ export default function AboutValues() {
   return (
     <section className="py-20 md:py-28 bg-white">
       <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24">
-        <div className="mb-14" data-aos="fade-up">
+        <div className="mb-14" data-aos="fade-right">
           <p className="text-xs font-bold tracking-[0.25em] text-brand-primary uppercase mb-4">
             {t("OUR VALUES")}
           </p>
@@ -70,9 +71,10 @@ export default function AboutValues() {
           {values.map((value, index) => (
             <div
               key={value.title}
-              className="card-hover border border-gray-200 rounded-sm p-8 flex flex-col items-start group"
-              data-aos="fade-up"
+              className="card-hover relative isolate overflow-hidden border border-gray-200 rounded-sm p-8 flex flex-col items-start group"
+              data-aos="blur-in"
               data-aos-delay={index * 80}>
+              <CursorCircle />
               <value.icon className="w-10 h-10 text-[#006A80] mb-5 stroke-1 group-hover:scale-110 transition-transform duration-300" />
               <h4 className="text-brand-dark font-bold text-lg mb-3">
                 {t(value.title)}

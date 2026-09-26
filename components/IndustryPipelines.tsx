@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import CursorCircle from "./CursorCircle";
 import {
   HeartIcon,
   BuildingOffice2Icon,
@@ -52,14 +53,15 @@ export default function IndustryPipelines() {
           <Link
             key={item.title}
             href={item.href}
-            className="card-hover group block bg-zinc-50 border border-zinc-200 p-6 hover:bg-brand-dark"
+            className="card-hover group relative isolate overflow-hidden block bg-zinc-50 border border-zinc-200 p-6"
             data-aos="fade-up"
             data-aos-delay={i * 100}>
+            <CursorCircle />
             <item.icon className="w-10 h-10 text-brand-primary mb-5" />
-            <h3 className="text-lg font-bold text-brand-dark group-hover:text-white mb-3 transition-colors">
+            <h3 className="text-lg font-bold text-brand-dark mb-3">
               {t(item.title)}
             </h3>
-            <p className="text-gray-600 group-hover:text-gray-300 text-sm leading-relaxed transition-colors">
+            <p className="text-gray-600 text-sm leading-relaxed">
               {t(item.description)}
             </p>
           </Link>

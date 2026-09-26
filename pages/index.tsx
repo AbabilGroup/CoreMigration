@@ -41,7 +41,7 @@ export default function Home() {
         <div data-aos="fade-up">
           <EthicalCommitment />
         </div>
-        <div data-aos="fade-up">
+        <div data-aos="blur-in">
           <GlobalCTA
             headline="Ready to Build Your"
             headlineAccent="International Workforce?"

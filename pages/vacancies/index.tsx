@@ -41,7 +41,7 @@ export default function Vacancies() {
             ))}
           </div>
 
-          <div className="mt-16 text-center bg-zinc-50 border border-zinc-200 p-10" data-aos="fade-up">
+          <div className="mt-16 text-center bg-zinc-50 border border-zinc-200 p-10" data-aos="blur-in">
             <h2 className="text-2xl font-bold text-brand-dark mb-3">
               {t("Don't See a Matching Role?")}
             </h2>
@@ -56,7 +56,7 @@ export default function Vacancies() {
           </div>
         </section>
 
-        <div data-aos="fade-up">
+        <div data-aos="blur-in">
           <MobileAppSection
             headline="Ready to Build Your"
             headlineAccent="International Workforce?"

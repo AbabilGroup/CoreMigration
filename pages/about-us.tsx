@@ -43,7 +43,7 @@ export default function AboutUs() {
           <RegisteredOffice />
         </div>
 
-        <div data-aos="fade-up">
+        <div data-aos="blur-in">
           <MobileAppSection
             headline="Partner with"
             headlineAccent="Core Migration"

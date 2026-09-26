@@ -12,7 +12,7 @@ export default function ContactFormSection() {
     <section className="py-20 bg-white">
       <div className="container mx-auto px-6 lg:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-          <div className="space-y-12">
+          <div className="space-y-12" data-aos="fade-right">
             <div>
               <h2 className="text-3xl font-bold text-gray-900 mb-6">
                 {t("Let's talk about things!")}
@@ -55,7 +55,7 @@ export default function ContactFormSection() {
             </div>
           </div>
 
-          <div className="bg-white rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.06)] p-8 border border-gray-100">
+          <div className="bg-white rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.06)] p-8 border border-gray-100" data-aos="fade-left" data-aos-delay="150">
             <h3 className="text-2xl font-bold text-gray-900 mb-6">
               {t("Send Inquiry to Core Migration")}
             </h3>

@@ -1,6 +1,8 @@
 import Head from "next/head";
 import Link from "next/link";
 import ServicesHero from "@/components/ServicesHero";
+import CursorCircle from "@/components/CursorCircle";
+import FloatingCircles from "@/components/FloatingCircles";
 import { useLanguage } from "@/context/LanguageContext";
 
 const visaItems = [
@@ -111,7 +113,7 @@ export default function OverseasProcessing() {
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-10">
             {visaItems.map((item) => (
-              <div key={item.title} data-aos="fade-up">
+              <div key={item.title} data-aos="fade-right">
                 <h3 className="font-bold text-brand-dark mb-2">{t(item.title)}</h3>
                 <p className="text-gray-600 text-sm leading-relaxed">{t(item.description)}</p>
               </div>
@@ -130,7 +132,8 @@ export default function OverseasProcessing() {
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-10">
             {attestationItems.map((item) => (
-              <div key={item.title} className="card-hover bg-white border border-gray-200 p-6" data-aos="fade-up">
+              <div key={item.title} className="card-hover relative isolate overflow-hidden bg-white border border-gray-200 p-6" data-aos="flip-up">
+                <CursorCircle />
                 <h3 className="font-bold text-brand-dark mb-2">{t(item.title)}</h3>
                 <p className="text-gray-600 text-sm leading-relaxed">{t(item.description)}</p>
               </div>
@@ -152,7 +155,7 @@ export default function OverseasProcessing() {
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
             {orientationItems.map((item) => (
-              <div key={item.title} data-aos="fade-up">
+              <div key={item.title} data-aos="fade-left">
                 <h3 className="font-bold text-brand-dark mb-2">{t(item.title)}</h3>
                 <p className="text-gray-600 text-sm leading-relaxed">{t(item.description)}</p>
               </div>
@@ -160,7 +163,8 @@ export default function OverseasProcessing() {
           </div>
         </section>
 
-        <section className="py-16 md:py-24 bg-brand-dark px-6 md:px-12 lg:px-24 text-center">
+        <section className="relative isolate overflow-hidden py-16 md:py-24 bg-brand-dark px-6 md:px-12 lg:px-24 text-center">
+          <FloatingCircles />
           <h2 className="text-2xl md:text-3xl font-bold text-white mb-8">
             {t("Need Processing Support?")}
           </h2>

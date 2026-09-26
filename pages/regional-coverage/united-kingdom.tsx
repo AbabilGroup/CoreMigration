@@ -46,7 +46,7 @@ export default function UnitedKingdom() {
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
             {sectors.map((sector) => (
-              <div key={sector.text} className="flex items-start gap-4" data-aos="fade-up">
+              <div key={sector.text} className="flex items-start gap-4" data-aos="fade-left">
                 <sector.icon className="w-8 h-8 text-brand-primary shrink-0" />
                 <p className="text-gray-600 leading-relaxed">{t(sector.text)}</p>
               </div>
@@ -54,7 +54,7 @@ export default function UnitedKingdom() {
           </div>
         </section>
 
-        <div data-aos="fade-up">
+        <div data-aos="blur-in">
           <MobileAppSection
             headline="Discuss UK"
             headlineAccent="Workforce Needs"

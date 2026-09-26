@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import FloatingCircles from "./FloatingCircles";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
 import { useLanguage } from "@/context/LanguageContext";
 
@@ -21,7 +22,8 @@ const GlobalCTA = ({
   const { t } = useLanguage();
 
   return (
-    <section className="relative w-full bg-brand-dark py-16 md:py-24 overflow-hidden">
+    <section className="relative isolate w-full bg-brand-dark py-16 md:py-24 overflow-hidden">
+      <FloatingCircles />
       {/* Background accent */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-0 right-0 w-96 h-96 bg-brand-primary rounded-full blur-[100px] translate-x-1/2 -translate-y-1/2" />

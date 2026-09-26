@@ -7,6 +7,7 @@ import {
   UserGroupIcon,
   ChartBarIcon,
 } from "@heroicons/react/24/outline";
+import CursorCircle from "./CursorCircle";
 import { useLanguage } from "@/context/LanguageContext";
 
 const reasons = [
@@ -48,7 +49,7 @@ export default function AboutServices() {
   return (
     <section className="bg-[#f7f5f2] py-20 md:py-28">
       <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24">
-        <div className="mb-12 max-w-3xl" data-aos="fade-up">
+        <div className="mb-12 max-w-3xl" data-aos="text-reveal">
           <h2
             className="text-3xl md:text-4xl text-brand-dark font-light mb-4"
             style={{ fontFamily: "var(--font-playfair-display), serif" }}>
@@ -60,9 +61,10 @@ export default function AboutServices() {
           {reasons.map((reason, i) => (
             <div
               key={reason.title}
-              className="card-hover bg-white p-8 border border-gray-100"
-              data-aos="fade-up"
+              className="card-hover relative isolate overflow-hidden bg-white p-8 border border-gray-100"
+              data-aos="flip-up"
               data-aos-delay={(i % 3) * 100}>
+              <CursorCircle />
               <reason.icon className="w-9 h-9 text-brand-primary mb-5" />
               <h3 className="text-lg font-bold text-brand-dark mb-3">{t(reason.title)}</h3>
               <p className="text-gray-600 text-sm leading-relaxed">{t(reason.description)}</p>

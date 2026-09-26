@@ -29,6 +29,7 @@ export default function RegisterCandidate() {
 
         <section className="py-16 md:py-24 px-6 md:px-12 lg:px-24 max-w-3xl mx-auto">
           <form
+            data-aos="fade-up"
             action="https://formsubmit.co/9eb913914642425af3ecb03929005b59"
             method="POST"
             encType="multipart/form-data"

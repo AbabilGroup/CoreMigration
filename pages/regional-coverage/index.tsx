@@ -56,7 +56,7 @@ export default function RegionalCoverage() {
                 key={region.title}
                 href={region.href}
                 className="card-hover group border border-gray-200 flex flex-col"
-                data-aos="fade-up"
+                data-aos="flip-up"
                 data-aos-delay={i * 100}>
                 <div className="relative w-full h-48 overflow-hidden">
                   <Image src={region.image} alt={t(region.title)} fill sizes="(max-width: 768px) 100vw, 33vw" className="card-hover-img object-cover" />
