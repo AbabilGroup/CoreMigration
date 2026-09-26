@@ -52,7 +52,7 @@ export default function DirectSpecialistRecruitment() {
           subtitle={t(
             "For companies seeking qualified white-collar professionals, technical experts, and licensed healthcare staff, with rigorous vetting to ensure immediate productivity on placement.",
           )}
-          image="https://images.pexels.com/photos/5668858/pexels-photo-5668858.jpeg?_gl=1*1xlq31b*_ga*Nzc4NDE5NTg5LjE3OTA0MDcwMjU.*_ga_8JE65Q40S6*czE3OTA0NDM0ODMkbzIkZzEkdDE3OTA0NDM1MTMkajMwJGwwJGgw"
+          image="https://images.pexels.com/photos/8463175/pexels-photo-8463175.jpeg?_gl=1*vrel5h*_ga*Nzc4NDE5NTg5LjE3OTA0MDcwMjU.*_ga_8JE65Q40S6*czE3OTA0NDM0ODMkbzIkZzEkdDE3OTA0NDM2NzEkajEwJGwwJGgw"
           breadcrumbs={[
             { label: t("Home"), href: "/" },
             { label: t("Our Solutions"), href: "/our-solutions" },
