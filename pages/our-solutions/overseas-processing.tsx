@@ -85,7 +85,7 @@ export default function OverseasProcessing() {
           title={t("Navigating Visa, Attestation, and Emigration So Your Workforce Arrives")}
           titleAccent={t("Ready")}
           subtitle={t("Finding the right candidate is only part of cross-border recruitment. Core Migration manages the entire compliance pipeline in-house to prevent delays and ensure legal, on-time arrival.")}
-          image="https://images.pexels.com/photos/8353802/pexels-photo-8353802.jpeg"
+          image="https://images.pexels.com/photos/7310015/pexels-photo-7310015.jpeg"
           breadcrumbs={[
             { label: t("Home"), href: "/" },
             { label: t("Our Solutions"), href: "/our-solutions" },

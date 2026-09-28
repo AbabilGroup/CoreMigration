@@ -32,7 +32,7 @@ export default function UnitedKingdom() {
           title={t("Supporting UK Healthcare and Infrastructure with Verified International")}
           titleAccent={t("Talent")}
           subtitle={t("Core Migration connects UK employers in healthcare and infrastructure with trade-tested, verified professionals from South Asia, fully supported through UK visa sponsorship and compliance requirements.")}
-          image="https://images.pexels.com/photos/460672/pexels-photo-460672.jpeg"
+          image="https://images.pexels.com/photos/3071145/pexels-photo-3071145.jpeg"
           breadcrumbs={[
             { label: t("Home"), href: "/" },
             { label: t("Regional Coverage"), href: "/regional-coverage" },

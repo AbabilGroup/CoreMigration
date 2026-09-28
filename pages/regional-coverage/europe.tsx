@@ -20,7 +20,7 @@ export default function Europe() {
           title={t("Extending Verified Workforce Solutions Across")}
           titleAccent={t("Europe")}
           subtitle={t("Core Migration supports European employers seeking trade-tested professionals from South Asia across construction, healthcare, and industrial sectors, with the same end-to-end compliance and deployment management used across our GCC and UK operations.")}
-          image="https://images.pexels.com/photos/1796730/pexels-photo-1796730.jpeg"
+          image="https://images.pexels.com/photos/2265845/pexels-photo-2265845.jpeg"
           breadcrumbs={[
             { label: t("Home"), href: "/" },
             { label: t("Regional Coverage"), href: "/regional-coverage" },

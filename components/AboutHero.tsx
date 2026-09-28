@@ -17,7 +17,7 @@ export default function AboutHero() {
         <div ref={heroRef} className="relative w-full h-[55vh] md:h-[75vh] overflow-hidden bg-gray-900">
             <div data-hero-media className="absolute inset-0">
                 <Image
-                    src="https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg"
+                    src="https://images.pexels.com/photos/8961064/pexels-photo-8961064.jpeg"
                     alt={t("Building Global Workforces Through Ethical Sourcing")}
                     fill sizes="100vw"
                     className="object-cover"

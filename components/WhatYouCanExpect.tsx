@@ -9,28 +9,28 @@ const blocks = [
     title: "Clear Communication From Day One",
     description:
       "Every employer engagement begins with a detailed requirement review — roles, salary structures, timelines, and compliance needs are agreed upfront, with no hidden steps added later.",
-    image: "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg",
+    image: "https://images.pexels.com/photos/4342127/pexels-photo-4342127.jpeg",
   },
   {
     icon: ClipboardDocumentCheckIcon,
     title: "Rigorous, Documented Screening",
     description:
       "Every candidate passes through trade testing, credential verification, and medical clearance before being shortlisted — giving employers confidence before they even reach the interview stage.",
-    image: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg",
+    image: "https://images.pexels.com/photos/5989931/pexels-photo-5989931.jpeg",
   },
   {
     icon: EyeIcon,
     title: "Full Visibility Into Compliance Status",
     description:
       "Employers and candidates receive clear updates on visa, medical, and emigration clearance status throughout processing — no unexplained delays or opaque handoffs.",
-    image: "https://images.pexels.com/photos/3184357/pexels-photo-3184357.jpeg",
+    image: "https://images.pexels.com/photos/8152735/pexels-photo-8152735.jpeg",
   },
   {
     icon: PaperAirplaneIcon,
     title: "Deployment Support That Doesn't Stop at the Airport",
     description:
       "Every candidate receives pre-departure orientation and is supported through arrival and initial site onboarding, reducing early-stage attrition and settling-in issues.",
-    image: "https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg",
+    image: "https://images.pexels.com/photos/12717327/pexels-photo-12717327.jpeg",
   },
 ];
 

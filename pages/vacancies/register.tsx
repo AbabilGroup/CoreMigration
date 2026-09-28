@@ -19,7 +19,7 @@ export default function RegisterCandidate() {
           title={t("Don't See a Matching")}
           titleAccent={t("Role?")}
           subtitle={t("Submit your CV and credentials to our candidate database. Our recruitment team will review your profile and contact you when a matching opportunity opens.")}
-          image="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg"
+          image="https://images.pexels.com/photos/590044/pexels-photo-590044.jpeg"
           breadcrumbs={[
             { label: t("Home"), href: "/" },
             { label: t("Vacancies"), href: "/vacancies" },

@@ -9,19 +9,19 @@ const regions = [
     title: "Middle East (GCC)",
     description: "Saudi Arabia, UAE, Qatar, Oman, Kuwait, and Bahrain — mega-project construction, healthcare, hospitality, and energy.",
     href: "/regional-coverage/middle-east",
-    image: "https://images.pexels.com/photos/756790/pexels-photo-756790.jpeg",
+    image: "https://images.pexels.com/photos/13256066/pexels-photo-13256066.jpeg",
   },
   {
     title: "United Kingdom",
     description: "Healthcare and infrastructure employers supported through full UK visa sponsorship and compliance.",
     href: "/regional-coverage/united-kingdom",
-    image: "https://images.pexels.com/photos/460672/pexels-photo-460672.jpeg",
+    image: "https://images.pexels.com/photos/3071145/pexels-photo-3071145.jpeg",
   },
   {
     title: "Europe",
     description: "Construction, healthcare, and industrial employers across Europe supported with the same end-to-end compliance model.",
     href: "/regional-coverage/europe",
-    image: "https://images.pexels.com/photos/1796730/pexels-photo-1796730.jpeg",
+    image: "https://images.pexels.com/photos/2265845/pexels-photo-2265845.jpeg",
   },
 ];
 
@@ -42,7 +42,7 @@ export default function RegionalCoverage() {
           title={t("Deploying Talent Across Our Active Destination")}
           titleAccent={t("Markets")}
           subtitle={t("Core Migration deploys trade-tested, verified professionals across the Middle East (GCC), the United Kingdom, and Europe.")}
-          image="https://images.pexels.com/photos/756790/pexels-photo-756790.jpeg"
+          image="https://images.pexels.com/photos/13256066/pexels-photo-13256066.jpeg"
           breadcrumbs={[
             { label: t("Home"), href: "/" },
             { label: t("Regional Coverage") },

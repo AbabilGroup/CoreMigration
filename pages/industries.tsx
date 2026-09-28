@@ -122,7 +122,7 @@ export default function Industries() {
           title={t("Dedicated Sourcing Pipelines Across Core Global")}
           titleAccent={t("Sectors")}
           subtitle={t("Core Migration maintains active candidate pools and trade-testing networks tailored to the operational demands of critical global industries.")}
-          image="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg"
+          image="https://images.pexels.com/photos/2760343/pexels-photo-2760343.jpeg"
           breadcrumbs={[
             { label: t("Home"), href: "/" },
             { label: t("Industries") },

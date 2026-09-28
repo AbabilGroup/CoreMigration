@@ -17,7 +17,7 @@ export default function HowWeDeliverHero() {
         <div ref={heroRef} className="relative w-full h-[50vh] md:h-[75vh] overflow-hidden bg-gray-900">
             <div data-hero-media className="absolute inset-0">
                 <Image
-                    src="https://images.pexels.com/photos/5668858/pexels-photo-5668858.jpeg"
+                    src="https://images.pexels.com/photos/7580842/pexels-photo-7580842.jpeg"
                     alt={t("A Structured Approach You Can Rely On")}
                     fill sizes="100vw"
                     className="object-cover"

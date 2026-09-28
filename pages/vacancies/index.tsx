@@ -23,7 +23,7 @@ export default function Vacancies() {
           title={t("Verified International Job Opportunities for South Asian")}
           titleAccent={t("Professionals")}
           subtitle={t("Core Migration connects qualified candidates from Bangladesh, India, Nepal, and Sri Lanka with verified international employers. Candidate selection is based purely on merit, technical qualification, and trade-test performance.")}
-          image="https://images.pexels.com/photos/6129681/pexels-photo-6129681.jpeg"
+          image="https://images.pexels.com/photos/5439381/pexels-photo-5439381.jpeg"
           breadcrumbs={[
             { label: t("Home"), href: "/" },
             { label: t("Vacancies") },

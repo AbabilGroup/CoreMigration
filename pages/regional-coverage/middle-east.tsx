@@ -40,7 +40,7 @@ export default function MiddleEast() {
           title={t("Deploying Talent Across the Gulf's Fastest-Moving")}
           titleAccent={t("Industries")}
           subtitle={t("Core Migration places candidates across Saudi Arabia, the UAE, Qatar, Oman, Kuwait, and Bahrain — supporting mega-project construction, healthcare expansion, hospitality openings, and energy infrastructure.")}
-          image="https://images.pexels.com/photos/756790/pexels-photo-756790.jpeg"
+          image="https://images.pexels.com/photos/10549886/pexels-photo-10549886.jpeg"
           breadcrumbs={[
             { label: t("Home"), href: "/" },
             { label: t("Regional Coverage"), href: "/regional-coverage" },

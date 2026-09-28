@@ -11,21 +11,21 @@ const solutions = [
     description: "Targeted sourcing for technical, supervisory, and specialized roles.",
     cta: "Explore Direct Recruitment",
     href: "/our-solutions/direct-specialist-recruitment",
-    image: "https://images.pexels.com/photos/8961243/pexels-photo-8961243.jpeg",
+    image: "https://images.pexels.com/photos/3862135/pexels-photo-3862135.jpeg",
   },
   {
     title: "Bulk Mobilization",
     description: "High-volume recruitment drives for large project workforces.",
     cta: "Plan a Mass Mobilization Drive",
     href: "/our-solutions/bulk-mobilization",
-    image: "https://images.pexels.com/photos/159306/construction-site-build-construction-work-159306.jpeg",
+    image: "https://images.pexels.com/photos/4956920/pexels-photo-4956920.jpeg",
   },
   {
     title: "Overseas Processing",
     description: "Visa, attestation, and pre-departure compliance handled in-house.",
     cta: "View Processing Services",
     href: "/our-solutions/overseas-processing",
-    image: "https://images.pexels.com/photos/8353802/pexels-photo-8353802.jpeg",
+    image: "https://images.pexels.com/photos/8193761/pexels-photo-8193761.jpeg",
   },
 ];
 
@@ -65,7 +65,7 @@ export default function OurSolutions() {
           title={t("Flexible International Sourcing Models Built for Precision, Volume, and")}
           titleAccent={t("Compliance")}
           subtitle={t("Core Migration provides tailored international recruitment solutions to meet the exact manpower demands of global businesses — from individual specialists to project workforces of hundreds.")}
-          image="https://images.pexels.com/photos/8961243/pexels-photo-8961243.jpeg"
+          image="https://images.pexels.com/photos/3183183/pexels-photo-3183183.jpeg"
           breadcrumbs={[
             { label: t("Home"), href: "/" },
             { label: t("Our Solutions") },

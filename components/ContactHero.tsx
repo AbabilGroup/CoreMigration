@@ -17,7 +17,7 @@ export default function ContactHero() {
     <div ref={heroRef} className="relative w-full h-[50vh] md:h-[75vh] overflow-hidden bg-gray-900">
       <div data-hero-media className="absolute inset-0">
         <Image
-          src="https://images.pexels.com/photos/888276/pexels-photo-888276.jpeg"
+          src="https://images.pexels.com/photos/7682340/pexels-photo-7682340.jpeg"
           alt={t("Let's Talk")}
           fill sizes="100vw"
           className="object-cover"

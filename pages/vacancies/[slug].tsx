@@ -44,7 +44,7 @@ export default function JobDetails() {
           title={t(opportunity.title)}
           titleAccent={t(opportunity.destination)}
           subtitle={t(opportunity.industry)}
-          image="https://images.pexels.com/photos/6129681/pexels-photo-6129681.jpeg"
+          image="https://images.pexels.com/photos/8961030/pexels-photo-8961030.jpeg"
           breadcrumbs={[
             { label: t('Home'), href: '/' },
             { label: t('Vacancies'), href: '/vacancies' },
