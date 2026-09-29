@@ -80,7 +80,7 @@ export default function OverseasProcessing() {
           content={t("Finding the right candidate is only part of cross-border recruitment. Core Migration manages the entire compliance pipeline in-house to prevent delays and ensure legal, on-time arrival.")}
         />
       </Head>
-      <main className="min-h-screen bg-white">
+      <main className="min-h-screen">
         <ServicesHero
           title={t("Navigating Visa, Attestation, and Emigration So Your Workforce Arrives")}
           titleAccent={t("Ready")}
@@ -126,7 +126,7 @@ export default function OverseasProcessing() {
           </Link>
         </section>
 
-        <section id="document-attestation" className="py-16 md:py-24 px-6 md:px-12 lg:px-24 max-w-5xl mx-auto bg-zinc-50 scroll-mt-32">
+        <section id="document-attestation" className="py-16 md:py-24 px-6 md:px-12 lg:px-24 max-w-5xl mx-auto scroll-mt-32">
           <h2 className="text-2xl md:text-3xl font-bold text-brand-dark mb-10">
             {t("Document Attestation")}
           </h2>

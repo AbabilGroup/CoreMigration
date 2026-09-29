@@ -117,7 +117,7 @@ export default function Industries() {
           content={t("Core Migration maintains active candidate pools and trade-testing networks tailored to the operational demands of critical global industries.")}
         />
       </Head>
-      <main className="min-h-screen bg-white">
+      <main className="min-h-screen">
         <ServicesHero
           title={t("Dedicated Sourcing Pipelines Across Core Global")}
           titleAccent={t("Sectors")}

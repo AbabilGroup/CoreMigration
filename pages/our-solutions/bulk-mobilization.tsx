@@ -40,7 +40,7 @@ export default function BulkMobilization() {
           content={t("For large-scale infrastructure, industrial, and facility management projects where time-to-site is critical.")}
         />
       </Head>
-      <main className="min-h-screen bg-white">
+      <main className="min-h-screen">
         <ServicesHero
           title={t("Bulk")}
           titleAccent={t("Mobilization")}

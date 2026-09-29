@@ -20,7 +20,7 @@ export default function AboutUs() {
           content={t("Core Migration is an international workforce deployment specialist connecting employers with qualified manpower from South Asia.")}
         />
       </Head>
-      <main className="min-h-screen bg-white">
+      <main className="min-h-screen">
         <AboutHero />
 
         <div data-aos="fade-up">

@@ -8,7 +8,7 @@ export default function DualValueProposition() {
   const { t } = useLanguage();
 
   return (
-    <section className="bg-brand-cream">
+    <section className="bg-brand-cream/60">
       <div className="py-16 md:py-24 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="card-hover relative isolate overflow-hidden rounded-2xl bg-white border-t-4 border-brand-accent p-8 md:p-10 shadow-sm" data-aos="fade-up">

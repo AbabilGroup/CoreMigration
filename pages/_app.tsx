@@ -1,6 +1,7 @@
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import MainHeader from "@/components/MainHeader";
+import BackgroundShapes from "@/components/BackgroundShapes";
 import { Montserrat } from "next/font/google";
 import ScrollAnimations from "@/components/ScrollAnimations";
 import FooterBottomBar from "@/components/FooterBottomBar";
@@ -18,6 +19,7 @@ export default function App({ Component, pageProps }: AppProps) {
     <LanguageProvider>
       <div className={`${montserrat.variable} font-sans`}>
         {/* <TopHeader /> */}
+        <BackgroundShapes />
         <MainHeader />
         <Component {...pageProps} />
         <ScrollAnimations />

@@ -35,7 +35,7 @@ export default function MiddleEast() {
           content={t("Core Migration places candidates across Saudi Arabia, the UAE, Qatar, Oman, Kuwait, and Bahrain — supporting mega-project construction, healthcare expansion, hospitality openings, and energy infrastructure.")}
         />
       </Head>
-      <main className="min-h-screen bg-white">
+      <main className="min-h-screen">
         <ServicesHero
           title={t("Deploying Talent Across the Gulf's Fastest-Moving")}
           titleAccent={t("Industries")}

@@ -60,7 +60,7 @@ export default function OurSolutions() {
           content={t("Core Migration provides tailored international recruitment solutions to meet the exact manpower demands of global businesses — from individual specialists to project workforces of hundreds.")}
         />
       </Head>
-      <main className="min-h-screen bg-white">
+      <main className="min-h-screen">
         <ServicesHero
           title={t("Flexible International Sourcing Models Built for Precision, Volume, and")}
           titleAccent={t("Compliance")}

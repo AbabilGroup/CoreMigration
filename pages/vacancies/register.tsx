@@ -14,7 +14,7 @@ export default function RegisterCandidate() {
           content={t("Don't see a matching role? Submit your CV and credentials to our candidate database. Our recruitment team will review your profile and contact you when a matching opportunity opens.")}
         />
       </Head>
-      <main className="min-h-screen bg-white">
+      <main className="min-h-screen">
         <ServicesHero
           title={t("Don't See a Matching")}
           titleAccent={t("Role?")}

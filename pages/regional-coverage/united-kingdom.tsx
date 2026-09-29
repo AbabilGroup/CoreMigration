@@ -27,7 +27,7 @@ export default function UnitedKingdom() {
           content={t("Core Migration connects UK employers in healthcare and infrastructure with trade-tested, verified professionals from South Asia, fully supported through UK visa sponsorship and compliance requirements.")}
         />
       </Head>
-      <main className="min-h-screen bg-white">
+      <main className="min-h-screen">
         <ServicesHero
           title={t("Supporting UK Healthcare and Infrastructure with Verified International")}
           titleAccent={t("Talent")}

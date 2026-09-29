@@ -18,7 +18,7 @@ export default function Vacancies() {
           content={t("Core Migration connects qualified candidates from Bangladesh, India, Nepal, and Sri Lanka with verified international employers. Candidate selection is based purely on merit, technical qualification, and trade-test performance.")}
         />
       </Head>
-      <main className="min-h-screen bg-white">
+      <main className="min-h-screen">
         <ServicesHero
           title={t("Verified International Job Opportunities for South Asian")}
           titleAccent={t("Professionals")}

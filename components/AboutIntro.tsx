@@ -6,7 +6,7 @@ export default function AboutIntro() {
   const { t } = useLanguage();
 
   return (
-    <section className="relative isolate overflow-hidden bg-white">
+    <section className="relative isolate overflow-hidden">
       <FloatingCircles />
       <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24 py-20 md:py-28">
         <div

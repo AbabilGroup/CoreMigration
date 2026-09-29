@@ -15,7 +15,7 @@ export default function Europe() {
           content={t("Core Migration supports European employers seeking trade-tested professionals from South Asia across construction, healthcare, and industrial sectors.")}
         />
       </Head>
-      <main className="min-h-screen bg-white">
+      <main className="min-h-screen">
         <ServicesHero
           title={t("Extending Verified Workforce Solutions Across")}
           titleAccent={t("Europe")}

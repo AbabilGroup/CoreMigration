@@ -38,7 +38,7 @@ export default function WhatYouCanExpect() {
   const { t } = useLanguage();
 
   return (
-    <section className="py-16 md:py-24 bg-white">
+    <section className="py-16 md:py-24">
       <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24">
         <div className="mb-16 text-center max-w-2xl mx-auto" data-aos="text-reveal">
           <h2

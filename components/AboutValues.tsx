@@ -51,7 +51,7 @@ export default function AboutValues() {
   const { t } = useLanguage();
 
   return (
-    <section className="py-20 md:py-28 bg-white">
+    <section className="py-20 md:py-28">
       <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24">
         <div className="mb-14" data-aos="fade-right">
           <p className="text-xs font-bold tracking-[0.25em] text-brand-primary uppercase mb-4">

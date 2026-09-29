@@ -47,7 +47,7 @@ export default function AboutServices() {
   const { t } = useLanguage();
 
   return (
-    <section className="bg-brand-cream py-20 md:py-28">
+    <section className="bg-brand-cream/60 py-20 md:py-28">
       <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24">
         <div className="mb-12 max-w-3xl" data-aos="text-reveal">
           <h2

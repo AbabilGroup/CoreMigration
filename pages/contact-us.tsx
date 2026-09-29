@@ -15,7 +15,7 @@ export default function ContactUs() {
           content={t("Whether you're an employer seeking workforce deployment or a professional exploring international career opportunities, our team is ready to help.")}
         />
       </Head>
-      <main className="min-h-screen bg-white">
+      <main className="min-h-screen">
         <ContactHero />
 
         <div data-aos="fade-up">

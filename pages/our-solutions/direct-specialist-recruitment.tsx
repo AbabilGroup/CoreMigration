@@ -45,7 +45,7 @@ export default function DirectSpecialistRecruitment() {
           )}
         />
       </Head>
-      <main className="min-h-screen bg-white">
+      <main className="min-h-screen">
         <ServicesHero
           title={t("Direct &")}
           titleAccent={t("Specialist Recruitment")}

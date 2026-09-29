@@ -37,7 +37,7 @@ export default function RegionalCoverage() {
           content={t("Core Migration deploys trade-tested talent across the Middle East (GCC), the United Kingdom, and Europe.")}
         />
       </Head>
-      <main className="min-h-screen bg-white">
+      <main className="min-h-screen">
         <ServicesHero
           title={t("Deploying Talent Across Our Active Destination")}
           titleAccent={t("Markets")}

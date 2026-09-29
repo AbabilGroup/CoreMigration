@@ -26,7 +26,7 @@ export default function SourcingDeploymentModels() {
   const { t } = useLanguage();
 
   return (
-    <section className="py-16 md:py-24 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto bg-zinc-50">
+    <section className="py-16 md:py-24 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto">
       <div className="mb-12 max-w-3xl" data-aos="fade-up">
         <h2
           className="text-3xl md:text-4xl text-brand-dark font-light mb-4"

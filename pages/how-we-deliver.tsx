@@ -16,7 +16,7 @@ export default function HowWeDeliver() {
           content={t("Core Migration delivers workforce solutions through a consistent, transparent process — from first requirement to final deployment.")}
         />
       </Head>
-      <main className="min-h-screen bg-white">
+      <main className="min-h-screen">
         <HowWeDeliverHero />
 
         <div data-aos="fade-up">

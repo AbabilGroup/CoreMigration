@@ -7,7 +7,7 @@ export default function RegisteredOffice() {
   const { t } = useLanguage();
 
   return (
-    <section className="py-16 md:py-20 bg-white">
+    <section className="py-16 md:py-20">
       <div className="max-w-3xl mx-auto px-6 md:px-12" data-aos="fade-left">
         <div className="card-hover relative isolate overflow-hidden flex items-start gap-5 border border-gray-200 p-8">
           <CursorCircle />
