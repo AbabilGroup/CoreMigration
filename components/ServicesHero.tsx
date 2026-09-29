@@ -28,7 +28,7 @@ export default function ServicesHero({ title, titleAccent, subtitle, image, brea
     const crumbs = breadcrumbs || defaultBreadcrumbs;
 
     return (
-        <div ref={heroRef} className="relative w-full h-[55vh] md:h-[65vh] overflow-hidden bg-brand-primary">
+        <div ref={heroRef} className="relative flex items-end w-full min-h-[55vh] md:min-h-[65vh] overflow-hidden bg-brand-primary">
             <div data-hero-media className="absolute inset-0">
                 <Image
                     src={image}
@@ -41,7 +41,7 @@ export default function ServicesHero({ title, titleAccent, subtitle, image, brea
                 <div className="absolute inset-0 bg-linear-to-r from-brand-primary/95 via-brand-primary/65 to-brand-primary/20" />
             </div>
             <LPattern />
-            <div data-hero-content className="absolute bottom-16 md:bottom-22 left-6 md:left-24 z-20 text-white max-w-2xl">
+            <div data-hero-content className="relative z-20 px-6 md:px-24 pt-28 pb-16 md:pb-22 text-white max-w-3xl">
                 <nav data-hero-item className="flex items-center gap-2 mb-5 text-xs tracking-wider">
                     {crumbs.map((crumb, i) => (
                         <React.Fragment key={i}>
@@ -57,7 +57,7 @@ export default function ServicesHero({ title, titleAccent, subtitle, image, brea
                     ))}
                 </nav>
                 <h1 data-hero-item
-                    className="text-4xl md:text-6xl font-light mb-3 drop-shadow-lg"
+                    className="text-3xl sm:text-4xl md:text-6xl font-light mb-3 drop-shadow-lg"
                     style={{ fontFamily: 'var(--font-playfair-display), serif' }}
                 >
                     {title} <span className="font-bold italic">{titleAccent}</span>

@@ -12,7 +12,7 @@ export default function Hero() {
   return (
     <div
       ref={container}
-      className="relative w-full h-dvh overflow-hidden bg-brand-primary">
+      className="relative w-full min-h-dvh overflow-hidden bg-brand-primary">
       <video
         data-hero-media
         autoPlay
@@ -38,11 +38,11 @@ export default function Hero() {
 
       <div
         data-hero-content
-        className="relative z-10 flex h-full items-end px-6 md:px-16 pb-20 md:pb-28">
+        className="relative z-10 flex min-h-dvh items-end px-6 md:px-16 pt-28 md:pt-32 pb-16 md:pb-28">
         <div className="max-w-3xl text-white">
           <h1
             data-hero-item
-            className="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6">
+            className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6">
             {t("Cross-Border Workforce Solutions, Delivered Without the Friction")}
           </h1>
           <p
