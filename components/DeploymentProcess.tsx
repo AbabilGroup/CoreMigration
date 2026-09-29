@@ -97,7 +97,7 @@ export default function DeploymentProcess() {
 
   return (
     <section
-      className="relative isolate py-16 md:py-24 px-6 md:px-12 lg:px-24 bg-brand-dark overflow-hidden"
+      className="relative isolate py-16 md:py-24 px-6 md:px-12 lg:px-24 bg-brand-primary overflow-hidden"
       style={{
         backgroundImage:
           "radial-gradient(rgb(255 255 255 / 0.06) 1px, transparent 1px)",
@@ -109,7 +109,7 @@ export default function DeploymentProcess() {
           <h2
             className="text-3xl md:text-4xl text-white font-light mb-4"
             style={{ fontFamily: "var(--font-playfair-display), serif" }}>
-            <span className="italic font-bold text-brand-primary">{t("Deployment Process")}</span>
+            <span className="italic font-bold text-brand-accent">{t("Deployment Process")}</span>
           </h2>
         </div>
 
@@ -125,7 +125,7 @@ export default function DeploymentProcess() {
               <span
                 data-step-bar
                 aria-hidden="true"
-                className="absolute left-0 top-0 h-1 w-full origin-left bg-brand-primary"
+                className="absolute left-0 top-0 h-1 w-full origin-left bg-brand-accent"
               />
               <span
                 data-step-num
@@ -135,7 +135,7 @@ export default function DeploymentProcess() {
               </span>
               <div
                 data-step-icon
-                className="mb-6 flex h-12 w-12 items-center justify-center rounded-lg bg-brand-primary text-white shadow-[0_8px_24px_-8px] shadow-brand-primary/60">
+                className="mb-6 flex h-12 w-12 items-center justify-center rounded-lg bg-brand-accent text-brand-primary shadow-[0_8px_24px_-8px] shadow-brand-accent/60">
                 <step.icon className="h-6 w-6" />
               </div>
               <h3 className="mb-3 text-lg font-bold text-white">{t(step.title)}</h3>

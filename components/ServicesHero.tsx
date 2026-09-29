@@ -28,7 +28,7 @@ export default function ServicesHero({ title, titleAccent, subtitle, image, brea
     const crumbs = breadcrumbs || defaultBreadcrumbs;
 
     return (
-        <div ref={heroRef} className="relative w-full h-[55vh] md:h-[65vh] overflow-hidden bg-gray-900">
+        <div ref={heroRef} className="relative w-full h-[55vh] md:h-[65vh] overflow-hidden bg-brand-primary">
             <div data-hero-media className="absolute inset-0">
                 <Image
                     src={image}
@@ -38,7 +38,7 @@ export default function ServicesHero({ title, titleAccent, subtitle, image, brea
                     className="object-cover"
                     priority
                 />
-                <div className="absolute inset-0 bg-linear-to-r from-black/75 via-black/40 to-transparent" />
+                <div className="absolute inset-0 bg-linear-to-r from-brand-primary/95 via-brand-primary/65 to-brand-primary/20" />
             </div>
             <LPattern />
             <div data-hero-content className="absolute bottom-16 md:bottom-22 left-6 md:left-24 z-20 text-white max-w-2xl">
@@ -51,7 +51,7 @@ export default function ServicesHero({ title, titleAccent, subtitle, image, brea
                                     {crumb.label}
                                 </Link>
                             ) : (
-                                <span className="text-brand-primary uppercase font-semibold">{crumb.label}</span>
+                                <span className="text-brand-accent uppercase font-semibold">{crumb.label}</span>
                             )}
                         </React.Fragment>
                     ))}

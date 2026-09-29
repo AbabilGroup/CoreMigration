@@ -48,7 +48,7 @@ export default function RegisterCandidate() {
                 id="fullName"
                 name="fullName"
                 required
-                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-primary focus:border-brand-primary outline-none transition-colors"
+                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-accent focus:border-brand-accent outline-none transition-colors"
               />
             </div>
 
@@ -62,7 +62,7 @@ export default function RegisterCandidate() {
                   id="phone"
                   name="phone"
                   required
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-primary focus:border-brand-primary outline-none transition-colors"
+                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-accent focus:border-brand-accent outline-none transition-colors"
                 />
               </div>
               <div className="space-y-2">
@@ -74,7 +74,7 @@ export default function RegisterCandidate() {
                   id="email"
                   name="email"
                   required
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-primary focus:border-brand-primary outline-none transition-colors"
+                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-accent focus:border-brand-accent outline-none transition-colors"
                 />
               </div>
             </div>
@@ -89,7 +89,7 @@ export default function RegisterCandidate() {
                   id="country"
                   name="country"
                   required
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-primary focus:border-brand-primary outline-none transition-colors"
+                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-accent focus:border-brand-accent outline-none transition-colors"
                 />
               </div>
               <div className="space-y-2">
@@ -101,7 +101,7 @@ export default function RegisterCandidate() {
                   id="profession"
                   name="profession"
                   required
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-primary focus:border-brand-primary outline-none transition-colors"
+                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-accent focus:border-brand-accent outline-none transition-colors"
                 />
               </div>
             </div>
@@ -115,7 +115,7 @@ export default function RegisterCandidate() {
                 id="experience"
                 name="experience"
                 required
-                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-primary focus:border-brand-primary outline-none transition-colors"
+                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-accent focus:border-brand-accent outline-none transition-colors"
               />
             </div>
 
@@ -134,7 +134,7 @@ export default function RegisterCandidate() {
 
             <button
               type="submit"
-              className="w-full bg-brand-primary hover:bg-brand-secondary text-white font-semibold py-3.5 px-6 rounded-lg transition-colors uppercase tracking-wider text-sm">
+              className="btn-primary w-full">
               {t("Submit Candidate Profile")}
             </button>
           </form>

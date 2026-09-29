@@ -75,7 +75,7 @@ export default function AboutValues() {
               data-aos="blur-in"
               data-aos-delay={index * 80}>
               <CursorCircle />
-              <value.icon className="w-10 h-10 text-[#006A80] mb-5 stroke-1 group-hover:scale-110 transition-transform duration-300" />
+              <value.icon className="w-10 h-10 text-brand-primary mb-5 stroke-1 group-hover:scale-110 transition-transform duration-300" />
               <h4 className="text-brand-dark font-bold text-lg mb-3">
                 {t(value.title)}
               </h4>

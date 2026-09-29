@@ -72,7 +72,7 @@ export default function ExampleOpportunityCard({ opportunity }: { opportunity: O
 
       <Link
         href={`/vacancies/${opportunity.slug}`}
-        className="mt-auto inline-flex items-center justify-center px-6 py-3 bg-brand-primary text-white text-sm font-bold uppercase tracking-wider hover:bg-brand-secondary transition-colors">
+        className="btn-dark mt-auto">
         {t(opportunity.ctaLabel)}
       </Link>
     </div>

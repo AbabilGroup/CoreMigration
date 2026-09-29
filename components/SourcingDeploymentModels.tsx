@@ -49,7 +49,7 @@ export default function SourcingDeploymentModels() {
             </p>
             <Link
               href={model.href}
-              className="inline-flex items-center justify-center px-6 py-3 border border-brand-dark text-brand-dark text-sm font-bold uppercase tracking-wider hover:bg-brand-dark hover:text-white transition-colors">
+              className="btn-outline">
               {t(model.cta)}
             </Link>
           </div>

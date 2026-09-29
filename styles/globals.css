@@ -5,21 +5,54 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+}
 
-  /* --color-brand-primary: #44a9a8; */
-  --color-brand-primary: #2a835f;
-  --color-brand-secondary: #2b6968;
-  --color-brand-accent: #fbb03b;
-  --color-brand-orange: #fe871c;
-  --color-brand-orange-secondary: #fe871c;
-  --color-brand-dark: #120d0a;
-  --color-brand-dark-border: #2f9ba0;
+/* ------------------------------------------------------------------
+   Brand palette (DEKRA-style: deep green, lime, orange, warm cream).
+   Every color on the site comes from here — change it once, it
+   updates everywhere.
+   ------------------------------------------------------------------ */
+@theme {
+  /* Greens */
+  --color-brand-primary: #1f4b39; /* header, hero, dark sections, headings */
+  --color-brand-secondary: #2c6650; /* hover/lighter shade of primary */
+  --color-brand-dark: #153428; /* darkest green: footer, deep sections, body text */
+  --color-brand-accent: #7ac943; /* lime: primary buttons, lines, highlights */
+  --color-brand-accent-hover: #69b536;
+  --color-brand-light: #e8f5de; /* lime tint: icon chips, soft fills */
+  --color-brand-dark-border: #7ac943; /* legacy name, kept as lime */
+
+  /* Orange (secondary accent, e.g. "For Candidates") */
+  --color-brand-orange: #e8702a;
+  --color-brand-orange-secondary: #fcebdd; /* orange tint */
+
+  /* Neutrals */
+  --color-brand-cream: #f6f1ea; /* page/section background */
+  --color-brand-cream-dark: #ece4d8; /* borders on cream */
+  --color-brand-muted: #5c6b63; /* secondary text */
+
+  /* Tailwind grays re-tinted to the warm/green palette so existing
+     gray-* / zinc-* classes follow the theme automatically. */
+  --color-zinc-50: #f6f1ea;
+  --color-zinc-100: #efe8dd;
+  --color-zinc-200: #e5ddd0;
+  --color-zinc-300: #d6ccbd;
+  --color-gray-50: #f9f6f1;
+  --color-gray-100: #efe8dd;
+  --color-gray-200: #e5ddd0;
+  --color-gray-300: #d6ccbd;
+  --color-gray-400: #8b9891;
+  --color-gray-500: #6b7a72;
+  --color-gray-600: #5c6b63;
+  --color-gray-700: #3f5047;
+  --color-gray-800: #2a3a32;
+  --color-gray-900: #153428;
 }
 
 :root {
   color-scheme: light;
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #153428;
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -38,8 +71,35 @@ body {
 
 /* Card hover: lift, shadow and brand border. Add `card-hover-img` to an image
    inside the card (in an overflow-hidden wrapper) for a slow zoom. */
+/* Buttons — pill shaped, following the brand palette. */
+@utility btn {
+  @apply inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 text-sm font-bold transition-colors duration-300;
+}
+/* Lime fill, dark green text — main call to action */
+@utility btn-primary {
+  @apply btn bg-brand-accent text-brand-primary hover:bg-brand-accent-hover;
+}
+/* Dark green fill — CTA on light backgrounds */
+@utility btn-dark {
+  @apply btn bg-brand-primary text-white hover:bg-brand-secondary;
+}
+/* Orange fill — candidate-facing actions */
+@utility btn-orange {
+  @apply btn bg-brand-orange text-white hover:bg-brand-orange/90;
+}
+/* Outline on light backgrounds */
+@utility btn-outline {
+  @apply btn border-2 border-brand-primary text-brand-primary hover:bg-brand-primary hover:text-white;
+}
+/* Outline on dark backgrounds */
+@utility btn-outline-light {
+  @apply btn border-2 border-white text-white hover:bg-white hover:text-brand-primary;
+}
+
 @layer components {
   .card-hover {
+    border-radius: 1rem;
+    overflow: hidden;
     transition:
       translate 0.4s cubic-bezier(0.22, 1, 0.36, 1),
       box-shadow 0.4s ease,
@@ -48,8 +108,8 @@ body {
   }
   .card-hover:hover {
     translate: 0 -8px;
-    border-color: var(--color-brand-primary);
-    box-shadow: 0 20px 40px -16px rgb(18 13 10 / 0.25);
+    border-color: var(--color-brand-accent);
+    box-shadow: 0 20px 40px -16px color-mix(in srgb, var(--color-brand-primary) 35%, transparent);
   }
   .card-hover .card-hover-img {
     transition: scale 0.7s cubic-bezier(0.22, 1, 0.36, 1);

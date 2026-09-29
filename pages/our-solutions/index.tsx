@@ -88,7 +88,7 @@ export default function OurSolutions() {
                   <p className="text-gray-600 text-sm leading-relaxed mb-6 flex-1">{t(solution.description)}</p>
                   <Link
                     href={solution.href}
-                    className="inline-flex items-center justify-center px-6 py-3 bg-brand-dark text-white text-sm font-bold uppercase tracking-wider hover:bg-brand-secondary transition-colors">
+                    className="btn-dark">
                     {t(solution.cta)}
                   </Link>
                 </div>
@@ -97,21 +97,21 @@ export default function OurSolutions() {
           </div>
         </section>
 
-        <section id="recruitment-roadmap" className="py-16 md:py-24 bg-brand-dark px-6 md:px-12 lg:px-24">
+        <section id="recruitment-roadmap" className="py-16 md:py-24 bg-brand-primary px-6 md:px-12 lg:px-24">
           <div className="max-w-5xl mx-auto">
             <div className="mb-12 text-center" data-aos="text-reveal">
               <h2
                 className="text-3xl md:text-4xl text-white font-light"
                 style={{ fontFamily: "var(--font-playfair-display), serif" }}>
-                {t("Recruitment")} <span className="italic font-bold text-brand-primary">{t("Roadmap")}</span>
+                {t("Recruitment")} <span className="italic font-bold text-brand-accent">{t("Roadmap")}</span>
               </h2>
             </div>
             <div className="flex flex-col gap-8 relative">
               <span aria-hidden="true" className="absolute left-6 top-2 bottom-2 w-px bg-white/15" />
-              <span aria-hidden="true" data-aos="draw-line" className="absolute left-6 top-2 bottom-2 w-px bg-brand-primary shadow-[0_0_8px_var(--color-brand-primary)]" />
+              <span aria-hidden="true" data-aos="draw-line" className="absolute left-6 top-2 bottom-2 w-px bg-brand-accent shadow-[0_0_8px_var(--color-brand-accent)]" />
               {roadmap.map((step, i) => (
                 <div key={step.title} className="flex gap-6 relative" data-aos="fade-left">
-                  <div className="w-12 h-12 rounded-full bg-brand-primary text-white font-bold flex items-center justify-center shrink-0 z-10">
+                  <div className="w-12 h-12 rounded-full bg-brand-accent text-brand-primary font-bold flex items-center justify-center shrink-0 z-10">
                     {i + 1}
                   </div>
                   <div>

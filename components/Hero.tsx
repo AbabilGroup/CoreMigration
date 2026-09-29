@@ -12,7 +12,7 @@ export default function Hero() {
   return (
     <div
       ref={container}
-      className="relative w-full h-dvh overflow-hidden bg-gray-900">
+      className="relative w-full h-dvh overflow-hidden bg-brand-primary">
       <video
         data-hero-media
         autoPlay
@@ -25,7 +25,16 @@ export default function Hero() {
         className="absolute inset-0 h-full w-full object-cover will-change-transform">
         <source src="/CoreMigration.mp4" type="video/mp4" />
       </video>
-      <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/40 to-black/20" />
+      <div className="absolute inset-0 bg-linear-to-t from-brand-primary/95 via-brand-primary/70 to-brand-primary/40" />
+      {/* Decorative ring + blob, DEKRA-style */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -left-40 -top-40 h-136 w-136 rounded-full border-2 border-brand-accent/50"
+      />
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -bottom-40 -right-32 h-112 w-112 rounded-full bg-brand-secondary/70"
+      />
 
       <div
         data-hero-content
@@ -44,12 +53,12 @@ export default function Hero() {
           <div data-hero-item className="flex flex-wrap gap-4">
             <Link
               href="/contact-us"
-              className="inline-flex items-center justify-center px-8 py-3.5 bg-brand-primary text-white text-sm font-bold uppercase tracking-wider hover:bg-brand-secondary transition-colors duration-300">
+              className="btn-primary">
               {t("Submit a Vacancy")}
             </Link>
             <Link
               href="/vacancies"
-              className="inline-flex items-center justify-center px-8 py-3.5 border border-white text-white text-sm font-bold uppercase tracking-wider hover:bg-white hover:text-brand-dark transition-colors duration-300">
+              className="btn-outline-light">
               {t("View Overseas Vacancies")}
             </Link>
           </div>

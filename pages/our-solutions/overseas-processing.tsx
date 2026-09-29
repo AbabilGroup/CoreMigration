@@ -121,7 +121,7 @@ export default function OverseasProcessing() {
           </div>
           <Link
             href="/contact-us"
-            className="inline-flex items-center justify-center px-8 py-3.5 bg-brand-primary text-white text-sm font-bold uppercase tracking-wider hover:bg-brand-secondary transition-colors">
+            className="btn-primary">
             {t("Contact Our Processing Desk")}
           </Link>
         </section>
@@ -141,7 +141,7 @@ export default function OverseasProcessing() {
           </div>
           <Link
             href="/contact-us"
-            className="inline-flex items-center justify-center px-8 py-3.5 bg-brand-primary text-white text-sm font-bold uppercase tracking-wider hover:bg-brand-secondary transition-colors">
+            className="btn-primary">
             {t("Submit Documents for Attestation")}
           </Link>
         </section>
@@ -163,7 +163,7 @@ export default function OverseasProcessing() {
           </div>
         </section>
 
-        <section className="relative isolate overflow-hidden py-16 md:py-24 bg-brand-dark px-6 md:px-12 lg:px-24 text-center">
+        <section className="relative isolate overflow-hidden py-16 md:py-24 bg-brand-primary px-6 md:px-12 lg:px-24 text-center">
           <FloatingCircles />
           <h2 className="text-2xl md:text-3xl font-bold text-white mb-8">
             {t("Need Processing Support?")}
@@ -171,12 +171,12 @@ export default function OverseasProcessing() {
           <div className="flex flex-wrap justify-center gap-4">
             <Link
               href="/contact-us"
-              className="inline-flex items-center justify-center px-8 py-3.5 bg-brand-primary text-white text-sm font-bold uppercase tracking-wider hover:bg-brand-primary/90 transition-colors">
+              className="btn-primary">
               {t("Contact Our Processing Desk")}
             </Link>
             <Link
               href="/contact-us"
-              className="inline-flex items-center justify-center px-8 py-3.5 border border-white/30 text-white text-sm font-bold uppercase tracking-wider hover:bg-white/10 transition-colors">
+              className="btn-outline-light">
               {t("Submit Documents for Attestation")}
             </Link>
           </div>

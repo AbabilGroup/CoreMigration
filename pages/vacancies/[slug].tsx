@@ -21,7 +21,7 @@ export default function JobDetails() {
         <div className="text-center">
           <h1 className="text-4xl text-brand-dark font-bold mb-4">{t("Job Not Found")}</h1>
           <p className="text-gray-500 mb-6">{t("The position you are looking for does not exist or has been filled.")}</p>
-          <Link href="/vacancies" className="bg-brand-primary text-white px-6 py-3 font-bold uppercase tracking-widest text-xs hover:bg-brand-secondary transition-colors">
+          <Link href="/vacancies" className="btn-primary">
             {t("Back to Vacancies")}
           </Link>
         </div>
@@ -63,7 +63,7 @@ export default function JobDetails() {
                         <h2 className="text-3xl md:text-4xl text-brand-dark font-light mb-6" style={{ fontFamily: 'var(--font-playfair-display), serif' }}>
                             {t("Role")} <span className="italic font-bold">{t("Overview")}</span>
                         </h2>
-                        <div className="w-16 h-1 bg-brand-primary mb-8" />
+                        <div className="w-16 h-1 rounded-full bg-brand-accent mb-8" />
 
                         <p className="text-gray-600 text-lg leading-relaxed mb-8">
                             {t("This example opportunity illustrates a typical role, package, and structure for this position and destination — not a live, currently-open vacancy. Salary figures are based on published market-rate research for this role/country combination.")}
@@ -114,7 +114,7 @@ export default function JobDetails() {
 
                             <Link
                                 href="/vacancies/register"
-                                className="block text-center w-full bg-brand-primary text-white py-4 font-bold tracking-widest uppercase hover:bg-brand-secondary transition-colors text-sm">
+                                className="btn-primary w-full">
                                 {t(opportunity.ctaLabel)}
                             </Link>
                         </div>

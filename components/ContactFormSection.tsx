@@ -26,8 +26,8 @@ export default function ContactFormSection() {
 
             <div className="space-y-6">
               <div className="flex items-start gap-4">
-                <div className="bg-[#E5F5EF] p-3 rounded-full shrink-0">
-                  <MapPinIcon className="w-6 h-6 text-[#008F5D]" />
+                <div className="bg-brand-light p-3 rounded-full shrink-0">
+                  <MapPinIcon className="w-6 h-6 text-brand-primary" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-gray-900">
@@ -40,8 +40,8 @@ export default function ContactFormSection() {
               </div>
 
               <div className="flex items-start gap-4">
-                <div className="bg-[#E5F5EF] p-3 rounded-full shrink-0">
-                  <EnvelopeIcon className="w-6 h-6 text-[#008F5D]" />
+                <div className="bg-brand-light p-3 rounded-full shrink-0">
+                  <EnvelopeIcon className="w-6 h-6 text-brand-primary" />
                 </div>
                 <div>
                   <h3 className="font-semibold text-gray-900">
@@ -86,7 +86,7 @@ export default function ContactFormSection() {
                   id="role"
                   name="role"
                   required
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#008F5D] focus:border-[#008F5D] outline-none transition-colors bg-white">
+                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-accent focus:border-brand-accent outline-none transition-colors bg-white">
                   <option value="Employer">{t("Employer")}</option>
                   <option value="Candidate">{t("Candidate")}</option>
                   <option value="Processing Partner">{t("Processing Partner")}</option>
@@ -105,7 +105,7 @@ export default function ContactFormSection() {
                     id="firstName"
                     name="firstName"
                     required
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#008F5D] focus:border-[#008F5D] outline-none transition-colors"
+                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-accent focus:border-brand-accent outline-none transition-colors"
                     placeholder={t("First Name")}
                   />
                 </div>
@@ -121,7 +121,7 @@ export default function ContactFormSection() {
                     id="lastName"
                     name="lastName"
                     required
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#008F5D] focus:border-[#008F5D] outline-none transition-colors"
+                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-accent focus:border-brand-accent outline-none transition-colors"
                     placeholder={t("Last Name")}
                   />
                 </div>
@@ -139,7 +139,7 @@ export default function ContactFormSection() {
                     id="email"
                     name="email"
                     required
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#008F5D] focus:border-[#008F5D] outline-none transition-colors"
+                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-accent focus:border-brand-accent outline-none transition-colors"
                     placeholder="john@example.com"
                   />
                 </div>
@@ -154,7 +154,7 @@ export default function ContactFormSection() {
                     type="tel"
                     id="phone"
                     name="phone"
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#008F5D] focus:border-[#008F5D] outline-none transition-colors"
+                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-accent focus:border-brand-accent outline-none transition-colors"
                   />
                 </div>
               </div>
@@ -171,7 +171,7 @@ export default function ContactFormSection() {
                     id="companyOrProfession"
                     name="companyOrProfession"
                     required
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#008F5D] focus:border-[#008F5D] outline-none transition-colors"
+                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-accent focus:border-brand-accent outline-none transition-colors"
                   />
                 </div>
 
@@ -186,7 +186,7 @@ export default function ContactFormSection() {
                     id="destinationCountry"
                     name="destinationCountry"
                     required
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#008F5D] focus:border-[#008F5D] outline-none transition-colors"
+                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-accent focus:border-brand-accent outline-none transition-colors"
                   />
                 </div>
               </div>
@@ -202,13 +202,13 @@ export default function ContactFormSection() {
                   name="message"
                   rows={5}
                   required
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[#008F5D] focus:border-[#008F5D] outline-none transition-colors resize-none"
+                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-accent focus:border-brand-accent outline-none transition-colors resize-none"
                   placeholder={t("Write your msg here...")}></textarea>
               </div>
 
               <button
                 type="submit"
-                className="w-full bg-[#008F5D] hover:bg-[#00744B] text-white font-semibold py-3 px-6 rounded-lg transition-colors">
+                className="btn-primary w-full">
                 {t("Send Inquiry to Core Migration")}
               </button>
             </form>

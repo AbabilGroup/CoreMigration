@@ -72,7 +72,7 @@ export default function CursorCircle() {
     <span
       ref={circleRef}
       aria-hidden="true"
-      className="pointer-events-none absolute left-0 top-0 -z-10 h-28 w-28 rounded-full border-2 border-brand-primary bg-brand-primary/20 opacity-0"
+      className="pointer-events-none absolute left-0 top-0 -z-10 h-28 w-28 rounded-full border-2 border-brand-accent bg-brand-accent/25 opacity-0"
     />
   );
 }

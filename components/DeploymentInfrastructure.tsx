@@ -30,7 +30,7 @@ export default function DeploymentInfrastructure() {
   const { t } = useLanguage();
 
   return (
-    <section className="py-20 md:py-28 bg-[#f7f5f2]">
+    <section className="py-20 md:py-28 bg-brand-cream">
       <div className="max-w-3xl mx-auto px-6 md:px-12">
         <div className="mb-14 text-center" data-aos="text-reveal">
           <h2

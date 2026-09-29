@@ -14,7 +14,7 @@ export default function ContactHero() {
   const secondPart = spaceIndex !== -1 ? text.substring(spaceIndex + 1) : "";
 
   return (
-    <div ref={heroRef} className="relative w-full h-[50vh] md:h-[75vh] overflow-hidden bg-gray-900">
+    <div ref={heroRef} className="relative w-full h-[50vh] md:h-[75vh] overflow-hidden bg-brand-primary">
       <div data-hero-media className="absolute inset-0">
         <Image
           src="https://images.pexels.com/photos/7682340/pexels-photo-7682340.jpeg"
@@ -23,7 +23,7 @@ export default function ContactHero() {
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-linear-to-t from-black/60 via-black/30 to-transparent" />
+        <div className="absolute inset-0 bg-linear-to-t from-brand-primary/95 via-brand-primary/60 to-brand-primary/20" />
       </div>
       <LPattern />
       <div data-hero-content className="absolute bottom-16 md:bottom-22 left-6 md:left-24 z-20 text-white max-w-2xl">

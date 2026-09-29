@@ -57,7 +57,7 @@ function HeaderDropdown({
       <div className="absolute top-full left-0 w-full h-4" />
 
       {/* Dropdown Container */}
-      <div className="absolute top-[calc(100%-8px)] left-0 z-50 w-72 bg-white shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+      <div className="absolute top-[calc(100%-8px)] left-0 z-50 w-72 bg-white rounded-2xl border-t-4 border-brand-accent shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
         <div className="p-6 flex flex-col">
           {/* Header inside the dropdown */}
           <h3 className="text-brand-primary text-[18px] font-bold mb-6">
@@ -65,7 +65,7 @@ function HeaderDropdown({
           </h3>
 
           {/* Items List with left border */}
-          <div className="flex flex-col border-l border-brand-primary/20 ml-1">
+          <div className="flex flex-col border-l-2 border-brand-accent/50 ml-1">
             {items.map((item) => (
               <Link
                 key={item.label}
@@ -137,7 +137,7 @@ export default function MainHeader() {
     LANGUAGES.find((l) => l.code === locale) || LANGUAGES[0];
 
   return (
-    <header className="fixed inset-x-0 top-0 z-40 flex h-16 md:h-18 items-center justify-between px-4 md:px-10 text-white bg-brand-primary transition-all duration-300">
+    <header className="fixed inset-x-0 top-0 z-40 flex h-16 md:h-18 items-center justify-between px-4 md:px-10 text-white bg-brand-primary border-b-4 border-brand-accent transition-all duration-300">
       {/* Logo */}
       <div className="shrink-0 pt-2 z-50">
         <Link href="/" className="flex items-center" aria-label="Lucru home">
@@ -290,7 +290,7 @@ export default function MainHeader() {
         leave="transition-opacity duration-300"
         leaveFrom="opacity-100"
         leaveTo="opacity-0">
-        <div className="md:hidden fixed inset-0 z-50 bg-background overflow-y-auto w-full min-h-screen text-brand-dark">
+        <div className="md:hidden fixed inset-0 z-50 bg-brand-cream overflow-y-auto w-full min-h-screen text-brand-dark">
           {/* Header inside drawer */}
           <div className="flex items-center justify-between px-6 py-6 border-b border-brand-dark/10">
             <Link

@@ -97,7 +97,7 @@ export default function DirectSpecialistRecruitment() {
           <div className="flex flex-wrap items-center gap-6">
             <Link
               href="/contact-us"
-              className="inline-flex items-center justify-center px-8 py-3.5 bg-brand-primary text-white text-sm font-bold uppercase tracking-wider hover:bg-brand-secondary transition-colors">
+              className="btn-primary">
               {t("Request Specialist Candidates")}
             </Link>
             <Link
