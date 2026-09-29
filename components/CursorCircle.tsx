@@ -13,12 +13,19 @@ export default function CursorCircle() {
     const circle = circleRef.current;
     const card = circle?.parentElement;
     if (!circle || !card) return;
-    if (!window.matchMedia("(hover: hover) and (pointer: fine)").matches) return;
+    if (!window.matchMedia("(hover: hover) and (pointer: fine)").matches)
+      return;
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
     gsap.set(circle, { xPercent: -50, yPercent: -50, scale: 0, opacity: 0 });
-    const moveX = gsap.quickTo(circle, "x", { duration: 0.5, ease: "power3.out" });
-    const moveY = gsap.quickTo(circle, "y", { duration: 0.5, ease: "power3.out" });
+    const moveX = gsap.quickTo(circle, "x", {
+      duration: 0.5,
+      ease: "power3.out",
+    });
+    const moveY = gsap.quickTo(circle, "y", {
+      duration: 0.5,
+      ease: "power3.out",
+    });
 
     const position = (e: MouseEvent) => {
       const box = card.getBoundingClientRect();
@@ -29,7 +36,12 @@ export default function CursorCircle() {
       const { x, y } = position(e);
       // Jump to the entry point so the circle doesn't fly in from the last exit.
       gsap.set(circle, { x, y });
-      gsap.to(circle, { scale: 1, opacity: 1, duration: 0.4, ease: "back.out(2)" });
+      gsap.to(circle, {
+        scale: 1,
+        opacity: 1,
+        duration: 0.4,
+        ease: "back.out(2)",
+      });
     };
 
     let overAction = false;
@@ -54,7 +66,12 @@ export default function CursorCircle() {
 
     const onLeave = () => {
       overAction = false;
-      gsap.to(circle, { scale: 0, opacity: 0, duration: 0.35, ease: "power2.in" });
+      gsap.to(circle, {
+        scale: 0,
+        opacity: 0,
+        duration: 0.35,
+        ease: "power2.in",
+      });
     };
 
     card.addEventListener("mouseenter", onEnter);
@@ -72,7 +89,7 @@ export default function CursorCircle() {
     <span
       ref={circleRef}
       aria-hidden="true"
-      className="pointer-events-none absolute left-0 top-0 -z-10 h-28 w-28 rounded-full border-2 border-brand-accent bg-brand-accent/25 opacity-0"
+      className="pointer-events-none absolute left-0 top-0 -z-10 h-28 w-28 rounded-full border-2 border-brand-accent bg-brand-accent/30 opacity-0"
     />
   );
 }

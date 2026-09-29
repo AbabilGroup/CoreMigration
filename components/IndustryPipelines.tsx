@@ -53,15 +53,15 @@ export default function IndustryPipelines() {
           <Link
             key={item.title}
             href={item.href}
-            className="card-hover group relative isolate overflow-hidden block bg-zinc-50 border border-zinc-200 p-6"
+            className="card-hover group relative isolate overflow-hidden block bg-brand-primary border border-brand-primary p-6"
             data-aos="fade-up"
             data-aos-delay={i * 100}>
             <CursorCircle />
-            <item.icon className="w-10 h-10 text-brand-primary mb-5" />
-            <h3 className="text-lg font-bold text-brand-dark mb-3">
+            <item.icon className="w-10 h-10 text-brand-accent mb-5" />
+            <h3 className="text-lg font-bold text-white mb-3">
               {t(item.title)}
             </h3>
-            <p className="text-gray-600 text-sm leading-relaxed">
+            <p className="text-white/75 text-sm leading-relaxed">
               {t(item.description)}
             </p>
           </Link>

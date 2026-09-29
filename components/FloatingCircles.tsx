@@ -68,7 +68,7 @@ export default function FloatingCircles() {
           key={i}
           data-circle
           className={`absolute rounded-full opacity-80 ${
-            c.filled ? "bg-brand-accent" : "border-2 border-brand-accent"
+            c.filled ? "bg-brand-primary" : "border-2 border-brand-primary"
           }`}
           style={{ top: c.top, left: c.left, width: c.size, height: c.size }}
         />

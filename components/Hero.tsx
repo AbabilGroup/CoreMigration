@@ -33,32 +33,32 @@ export default function Hero() {
       />
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute -bottom-40 -right-32 h-112 w-112 rounded-full bg-brand-secondary/70"
+        className="pointer-events-none absolute -bottom-40 -right-32 h-[28rem] w-[28rem] rounded-full bg-brand-secondary/70"
       />
 
       <div
         data-hero-content
-        className="relative z-10 flex min-h-dvh items-end px-6 md:px-16 pt-28 md:pt-32 pb-16 md:pb-28">
+        className="relative z-10 flex min-h-dvh items-end px-5 sm:px-6 md:px-16 pt-28 md:pt-32 pb-12 sm:pb-16 md:pb-28">
         <div className="max-w-3xl text-white">
           <h1
             data-hero-item
-            className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6">
-            {t("Cross-Border Workforce Solutions, Delivered Without the Friction")}
+            className="text-[1.75rem] leading-[1.15] sm:text-4xl md:text-6xl lg:text-7xl md:leading-tight font-bold mb-4 md:mb-6">
+            {t(
+              "Cross-Border Workforce Solutions, Delivered Without the Friction",
+            )}
           </h1>
           <p
             data-hero-item
-            className="text-base md:text-lg text-white/90 leading-relaxed mb-8 max-w-2xl">
-            {t("Core Migration connects employers across the Middle East, the UK, and Europe with trade-tested, vetted, and job-ready professionals from Bangladesh, India, Nepal, and Sri Lanka. We manage the entire journey — sourcing, trade testing, visa clearance, and deployment.")}
+            className="text-sm sm:text-base md:text-lg text-white/90 leading-relaxed mb-6 md:mb-8 max-w-2xl">
+            {t(
+              "Core Migration connects employers across the Middle East, the UK, and Europe with trade-tested, vetted, and job-ready professionals from Bangladesh, India, Nepal, and Sri Lanka. We manage the entire journey — sourcing, trade testing, visa clearance, and deployment.",
+            )}
           </p>
-          <div data-hero-item className="flex flex-wrap gap-4">
-            <Link
-              href="/contact-us"
-              className="btn-primary">
+          <div data-hero-item className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+            <Link href="/contact-us" className="btn-primary w-full sm:w-auto">
               {t("Submit a Vacancy")}
             </Link>
-            <Link
-              href="/vacancies"
-              className="btn-outline-light">
+            <Link href="/vacancies" className="btn-outline-light w-full sm:w-auto">
               {t("View Overseas Vacancies")}
             </Link>
           </div>

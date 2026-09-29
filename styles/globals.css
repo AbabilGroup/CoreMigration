@@ -14,8 +14,8 @@
    ------------------------------------------------------------------ */
 @theme {
   /* Greens */
-  --color-brand-primary: #1f4b39; /* header, hero, dark sections, headings */
-  --color-brand-secondary: #2c6650; /* hover/lighter shade of primary */
+  --color-brand-primary: #006b52; /* header, hero, dark sections, headings */
+  --color-brand-secondary: #00896a; /* hover/lighter shade of primary */
   --color-brand-dark: #153428; /* darkest green: footer, deep sections, body text */
   --color-brand-accent: #7ac943; /* lime: primary buttons, lines, highlights */
   --color-brand-accent-hover: #69b536;
@@ -109,7 +109,8 @@ body {
   .card-hover:hover {
     translate: 0 -8px;
     border-color: var(--color-brand-accent);
-    box-shadow: 0 20px 40px -16px color-mix(in srgb, var(--color-brand-primary) 35%, transparent);
+    box-shadow: 0 20px 40px -16px
+      color-mix(in srgb, var(--color-brand-primary) 35%, transparent);
   }
   .card-hover .card-hover-img {
     transition: scale 0.7s cubic-bezier(0.22, 1, 0.36, 1);
