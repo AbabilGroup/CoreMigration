@@ -3,6 +3,8 @@ import Link from "next/link";
 import Image from "next/image";
 import ServicesHero from "@/components/ServicesHero";
 import MobileAppSection from "@/components/MobileAppSection";
+import CursorCircle from "@/components/CursorCircle";
+import { ArrowRightIcon } from "@heroicons/react/24/outline";
 import { useLanguage } from "@/context/LanguageContext";
 
 const solutions = [
@@ -74,26 +76,56 @@ export default function OurSolutions() {
 
         <section className="py-16 md:py-24 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {solutions.map((solution, i) => (
-              <div
-                key={solution.title}
-                className="card-hover border border-gray-200 flex flex-col"
-                data-aos="zoom-in"
-                data-aos-delay={i * 100}>
-                <div className="relative w-full h-56 overflow-hidden">
-                  <Image src={solution.image} alt={t(solution.title)} fill sizes="(max-width: 768px) 100vw, 33vw" className="card-hover-img object-cover" />
+            {solutions.map((solution, i) => {
+              const orange = i % 2 === 1;
+              return (
+                <div
+                  key={solution.title}
+                  className={`card-hover group relative isolate flex flex-col overflow-hidden rounded-3xl text-white shadow-[0_24px_60px_-24px] ${
+                    orange
+                      ? "bg-linear-to-br from-brand-orange to-brand-orange-dark shadow-brand-orange/60"
+                      : "bg-brand-primary shadow-brand-primary/60"
+                  }`}
+                  data-aos="zoom-in"
+                  data-aos-delay={i * 100}>
+                  <CursorCircle colorClassName={orange ? "border-white bg-white/25" : undefined} />
+                  <div className="relative w-full h-56 overflow-hidden">
+                    <Image src={solution.image} alt={t(solution.title)} fill sizes="(max-width: 768px) 100vw, 33vw" className="card-hover-img object-cover" />
+                    {/* Blend the photo into the card color */}
+                    <div
+                      className={`absolute inset-0 bg-linear-to-t from-0% via-transparent via-30% to-transparent ${
+                        orange ? "from-brand-orange" : "from-brand-primary"
+                      }`}
+                    />
+                  </div>
+                  <div className="relative p-8 flex flex-col flex-1">
+                    {/* Background shapes */}
+                    <span
+                      aria-hidden="true"
+                      className={`pointer-events-none absolute -right-16 -bottom-16 -z-10 h-56 w-56 rounded-full border-[3px] ${
+                        orange ? "border-white/30" : "border-brand-accent/40"
+                      }`}
+                    />
+                    <span
+                      aria-hidden="true"
+                      className={`pointer-events-none absolute -left-20 bottom-0 -z-10 h-48 w-48 rounded-full ${
+                        orange ? "bg-white/10" : "bg-brand-secondary/50"
+                      }`}
+                    />
+                    <h3 className="text-xl md:text-2xl font-bold mb-3">{t(solution.title)}</h3>
+                    <p className="text-white/85 text-sm leading-relaxed mb-6 flex-1">{t(solution.description)}</p>
+                    <Link
+                      href={solution.href}
+                      className={`group/btn w-full px-4 text-center text-[13px] leading-snug ${
+                        orange ? "btn bg-white text-brand-orange hover:bg-brand-cream" : "btn-primary"
+                      }`}>
+                      {t(solution.cta)}
+                      <ArrowRightIcon className="h-4 w-4 stroke-2 transition-transform group-hover/btn:translate-x-1" />
+                    </Link>
+                  </div>
                 </div>
-                <div className="p-8 flex flex-col flex-1">
-                  <h3 className="text-xl font-bold text-brand-dark mb-3">{t(solution.title)}</h3>
-                  <p className="text-gray-600 text-sm leading-relaxed mb-6 flex-1">{t(solution.description)}</p>
-                  <Link
-                    href={solution.href}
-                    className="btn-dark">
-                    {t(solution.cta)}
-                  </Link>
-                </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </section>
 

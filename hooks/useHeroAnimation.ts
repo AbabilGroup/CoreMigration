@@ -9,7 +9,7 @@ gsap.registerPlugin(ScrollTrigger, useGSAP);
  * Hero intro + scroll parallax. Mark children inside `scope` with:
  * - `data-hero-item`    — rises in one after another on load
  * - `data-hero-media`   — background image/video, drifts slower on scroll
- * - `data-hero-content` — text block, fades out as the hero scrolls away
+ * - `data-hero-content` — text block, drifts slightly slower than the page (stays visible)
  */
 export default function useHeroAnimation(scope: RefObject<HTMLElement | null>) {
   useGSAP(
@@ -38,14 +38,15 @@ export default function useHeroAnimation(scope: RefObject<HTMLElement | null>) {
           },
         });
 
+        // Text stays fully visible; it just trails the scroll a little
+        // (parallax depth) instead of fading away.
         gsap.to("[data-hero-content]", {
-          opacity: 0,
-          y: -80,
+          y: 90,
           ease: "none",
           scrollTrigger: {
             trigger: scope.current,
             start: "top top",
-            end: "60% top",
+            end: "bottom top",
             scrub: true,
           },
         });
