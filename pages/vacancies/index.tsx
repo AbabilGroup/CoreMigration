@@ -2,6 +2,8 @@ import Head from "next/head";
 import Link from "next/link";
 import ServicesHero from "@/components/ServicesHero";
 import ExampleOpportunityCard from "@/components/ExampleOpportunityCard";
+import CursorCircle from "@/components/CursorCircle";
+import { ArrowRightIcon, DocumentArrowUpIcon } from "@heroicons/react/24/outline";
 import MobileAppSection from "@/components/MobileAppSection";
 import { opportunities } from "@/data/opportunities";
 import { useLanguage } from "@/context/LanguageContext";
@@ -41,17 +43,38 @@ export default function Vacancies() {
             ))}
           </div>
 
-          <div className="mt-16 text-center bg-zinc-50 border border-zinc-200 p-10" data-aos="blur-in">
-            <h2 className="text-2xl font-bold text-brand-dark mb-3">
+          <div
+            className="group relative isolate mt-16 overflow-hidden rounded-3xl bg-linear-to-br from-brand-orange to-brand-orange-dark px-6 py-12 md:p-14 text-center text-white shadow-[0_24px_60px_-24px] shadow-brand-orange/60"
+            data-aos="blur-in">
+            <CursorCircle colorClassName="border-white bg-white/25" />
+            {/* Background shapes */}
+            <span
+              aria-hidden="true"
+              className="pointer-events-none absolute -left-16 -top-16 -z-10 h-56 w-56 rounded-full border-[3px] border-white/30"
+            />
+            <span
+              aria-hidden="true"
+              className="pointer-events-none absolute -bottom-24 -right-16 -z-10 h-72 w-72 rounded-full bg-white/10"
+            />
+            <span
+              aria-hidden="true"
+              className="pointer-events-none absolute right-24 top-8 -z-10 h-4 w-4 rounded-full bg-white/40"
+            />
+
+            <div className="mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-white text-brand-orange shadow-lg shadow-black/10">
+              <DocumentArrowUpIcon className="h-7 w-7" />
+            </div>
+            <h2 className="text-2xl md:text-3xl font-bold mb-3">
               {t("Don't See a Matching Role?")}
             </h2>
-            <p className="text-gray-600 max-w-xl mx-auto mb-6 leading-relaxed">
+            <p className="text-white/90 max-w-xl mx-auto mb-8 leading-relaxed">
               {t("Submit your CV and credentials to our candidate database. Our recruitment team will review your profile and contact you when a matching opportunity opens.")}
             </p>
             <Link
               href="/vacancies/register"
-              className="btn-primary">
+              className="btn group/btn bg-white text-brand-orange hover:bg-brand-cream">
               {t("Submit Candidate Profile")}
+              <ArrowRightIcon className="h-4 w-4 stroke-2 transition-transform group-hover/btn:translate-x-1" />
             </Link>
           </div>
         </section>

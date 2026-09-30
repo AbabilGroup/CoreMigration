@@ -60,7 +60,7 @@ const FooterSitemap = () => {
           <li key={idx}>
             <Link
               href={link.href}
-              className="text-gray-500 hover:text-brand-primary transition-colors text-[13px] font-medium block">
+              className="text-white/70 hover:text-brand-accent hover:translate-x-1 transition-all text-[13px] font-medium block">
               {t(link.text)}
             </Link>
           </li>
@@ -75,9 +75,9 @@ const FooterSitemap = () => {
         {sitemapData.map((column, index) => (
           <div
             key={index}
-            className="flex flex-col border-gray-200 sm:border-l sm:pl-6 first:border-l-0 first:pl-0">
+            className="flex flex-col border-white/10 sm:border-l sm:pl-6 first:border-l-0 first:pl-0">
             {column.title && (
-              <h4 className="text-brand-primary font-bold text-[15px] leading-tight mt-1">
+              <h4 className="text-brand-accent font-bold text-[15px] leading-tight mt-1">
                 {t(column.title)}
               </h4>
             )}
@@ -85,14 +85,14 @@ const FooterSitemap = () => {
             {/* Custom rendering for Company Information column */}
             {column.title === "Company Location" ? (
               <div className="flex flex-col gap-2.5 mt-3">
-                <p className="text-gray-500 text-[13px] font-medium">
+                <p className="text-white/70 text-[13px] font-medium">
                   {t("Core Migration")}
                 </p>
                 <div>
-                  <p className="text-gray-500 text-[13px] font-medium font-semibold">
+                  <p className="text-white/70 text-[13px] font-medium font-semibold">
                     {t("Registered Office:")}
                   </p>
-                  <p className="text-gray-500 text-[13px] font-medium leading-relaxed">
+                  <p className="text-white/70 text-[13px] font-medium leading-relaxed">
                     176 Crossbank Street
                     <br />
                     Oldham, England
@@ -101,12 +101,12 @@ const FooterSitemap = () => {
                   </p>
                 </div>
                 <div>
-                  <p className="text-gray-500 text-[13px] font-medium font-semibold">
+                  <p className="text-white/70 text-[13px] font-medium font-semibold">
                     {t("Email:")}
                   </p>
                   <a
                     href="mailto:info@coremigration.eu"
-                    className="text-gray-500 text-[13px] font-medium leading-relaxed hover:text-brand-primary transition-colors">
+                    className="text-white/70 text-[13px] font-medium leading-relaxed hover:text-brand-accent transition-colors">
                     info@coremigration.eu
                   </a>
                 </div>
@@ -122,7 +122,7 @@ const FooterSitemap = () => {
                     {column.subsections.map((sub, subIdx) => (
                       <div key={subIdx}>
                         {sub.title && (
-                          <h4 className="text-brand-primary font-bold text-[15px] leading-tight">
+                          <h4 className="text-brand-accent font-bold text-[15px] leading-tight">
                             {t(sub.title)}
                           </h4>
                         )}

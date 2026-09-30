@@ -38,7 +38,7 @@ const GlobalCTA = ({
               {t(headline)}{" "}
               <span className="italic text-brand-accent">{t(headlineAccent)}</span>
             </h2>
-            <p className="text-gray-300 text-sm md:text-base lg:text-lg max-w-2xl mx-auto md:mx-0 leading-relaxed">
+            <p className="text-white/85 text-sm md:text-base lg:text-lg max-w-2xl mx-auto md:mx-0 leading-relaxed">
               {t(description)}
             </p>
           </div>

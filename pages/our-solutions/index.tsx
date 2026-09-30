@@ -116,7 +116,7 @@ export default function OurSolutions() {
                   </div>
                   <div>
                     <h3 className="text-white font-bold mb-2">{t(step.title)}</h3>
-                    <p className="text-gray-400 text-sm leading-relaxed">{t(step.description)}</p>
+                    <p className="text-white/85 text-sm leading-relaxed">{t(step.description)}</p>
                   </div>
                 </div>
               ))}

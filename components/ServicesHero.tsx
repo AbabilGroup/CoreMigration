@@ -2,7 +2,6 @@ import React, { useRef } from 'react';
 import useHeroAnimation from '@/hooks/useHeroAnimation';
 import Image from 'next/image';
 import Link from 'next/link';
-import LPattern from './LPattern';
 
 interface BreadcrumbItem {
     label: string;
@@ -40,7 +39,6 @@ export default function ServicesHero({ title, titleAccent, subtitle, image, brea
                 />
                 <div className="absolute inset-0 bg-linear-to-r from-brand-primary/95 via-brand-primary/65 to-brand-primary/20" />
             </div>
-            <LPattern />
             <div data-hero-content className="relative z-20 px-6 md:px-24 pt-28 pb-16 md:pb-22 text-white max-w-3xl">
                 <nav data-hero-item className="flex items-center gap-2 mb-5 text-xs tracking-wider">
                     {crumbs.map((crumb, i) => (

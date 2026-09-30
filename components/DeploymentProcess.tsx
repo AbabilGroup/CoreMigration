@@ -139,7 +139,7 @@ export default function DeploymentProcess() {
                 <step.icon className="h-6 w-6" />
               </div>
               <h3 className="mb-3 text-lg font-bold text-white">{t(step.title)}</h3>
-              <p className="text-sm leading-relaxed text-gray-400">{t(step.description)}</p>
+              <p className="text-sm leading-relaxed text-white/85">{t(step.description)}</p>
             </div>
           ))}
         </div>

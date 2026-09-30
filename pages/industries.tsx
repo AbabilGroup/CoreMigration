@@ -98,7 +98,7 @@ export default function Industries() {
             scrollTrigger: trigger,
           });
           gsap.to(card.querySelector("[data-stack-dim]"), {
-            opacity: 0.12,
+            opacity: 0.35,
             ease: "none",
             scrollTrigger: trigger,
           });
@@ -137,7 +137,7 @@ export default function Industries() {
               key={industry.id}
               id={industry.id}
               data-stack-card
-              className="sticky overflow-hidden bg-white border border-gray-200 p-8 md:p-10 shadow-[0_-12px_40px_-20px_rgb(0_0_0/0.25)] scroll-mt-24"
+              className="sticky overflow-hidden rounded-2xl bg-brand-primary border-t-4 border-brand-accent p-8 md:p-10 shadow-[0_-12px_40px_-20px_rgb(0_0_0/0.35)] scroll-mt-24"
               style={{ top: STACK_TOP + i * STACK_STEP }}>
               {/* Darkens as the next card covers this one */}
               <div
@@ -146,16 +146,16 @@ export default function Industries() {
                 className="pointer-events-none absolute inset-0 bg-brand-dark opacity-0"
               />
               <div className="flex items-center gap-4 mb-8">
-                <industry.icon className="w-10 h-10 text-brand-primary shrink-0" />
-                <h2 className="text-2xl md:text-3xl font-bold text-brand-dark">{t(industry.title)}</h2>
+                <industry.icon className="w-10 h-10 text-brand-accent shrink-0" />
+                <h2 className="text-2xl md:text-3xl font-bold text-white">{t(industry.title)}</h2>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {industry.groups.map((group) => (
                   <div key={group.label}>
-                    <h3 className="font-bold text-sm uppercase tracking-wider text-brand-primary mb-2">
+                    <h3 className="font-bold text-sm uppercase tracking-wider text-brand-accent mb-2">
                       {t(group.label)}
                     </h3>
-                    <p className="text-gray-600 text-sm leading-relaxed">{t(group.roles)}</p>
+                    <p className="text-white/85 text-sm leading-relaxed">{t(group.roles)}</p>
                   </div>
                 ))}
               </div>

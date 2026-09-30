@@ -55,7 +55,7 @@ const FooterBottomBar = () => {
       </div>
 
       <div
-        className={`w-full bg-white order-2 grid transition-all duration-700 ease-in-out ${
+        className={`relative isolate overflow-hidden w-full bg-brand-dark border-t border-white/10 order-2 grid transition-all duration-700 ease-in-out ${
           isSitemapOpen
             ? "grid-rows-[1fr] opacity-100"
             : "grid-rows-[0fr] opacity-0"

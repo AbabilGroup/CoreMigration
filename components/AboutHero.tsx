@@ -1,7 +1,6 @@
 import React, { useRef } from 'react';
 import useHeroAnimation from '@/hooks/useHeroAnimation';
 import Image from 'next/image';
-import LPattern from './LPattern';
 import { useLanguage } from '@/context/LanguageContext';
 
 export default function AboutHero() {
@@ -25,7 +24,6 @@ export default function AboutHero() {
                 />
                 <div className="absolute inset-0 bg-linear-to-t from-brand-primary/95 via-brand-primary/60 to-brand-primary/20" />
             </div>
-            <LPattern />
             <div data-hero-content className="relative z-20 px-6 md:px-24 pt-28 pb-16 md:pb-22 text-white max-w-3xl">
                 <h1 data-hero-item
                     className="text-3xl sm:text-4xl md:text-6xl font-light drop-shadow-lg leading-tight"

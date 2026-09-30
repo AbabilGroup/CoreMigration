@@ -25,6 +25,7 @@
   /* Orange (secondary accent, e.g. "For Candidates") */
   --color-brand-orange: #e8702a;
   --color-brand-orange-secondary: #fcebdd; /* orange tint */
+  --color-brand-orange-dark: #c4561a; /* deeper orange for gradients */
 
   /* Neutrals */
   --color-brand-cream: #f6f1ea; /* page/section background */

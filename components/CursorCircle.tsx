@@ -5,8 +5,13 @@ import gsap from "gsap";
  * A circle that trails the mouse while it's inside the parent element.
  * The parent needs `relative isolate overflow-hidden`; the circle sits behind
  * the parent's content. It grows while hovering a link or button.
+ * `colorClassName` overrides the default lime color (e.g. on orange cards).
  */
-export default function CursorCircle() {
+export default function CursorCircle({
+  colorClassName = "border-brand-accent bg-brand-accent/30",
+}: {
+  colorClassName?: string;
+}) {
   const circleRef = useRef<HTMLSpanElement>(null);
 
   useEffect(() => {
@@ -89,7 +94,7 @@ export default function CursorCircle() {
     <span
       ref={circleRef}
       aria-hidden="true"
-      className="pointer-events-none absolute left-0 top-0 -z-10 h-28 w-28 rounded-full border-2 border-brand-accent bg-brand-accent/30 opacity-0"
+      className={`pointer-events-none absolute left-0 top-0 -z-10 h-28 w-28 rounded-full border-2 opacity-0 ${colorClassName}`}
     />
   );
 }

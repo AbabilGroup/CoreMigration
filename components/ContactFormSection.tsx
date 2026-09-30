@@ -55,8 +55,17 @@ export default function ContactFormSection() {
             </div>
           </div>
 
-          <div className="bg-white rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.06)] p-8 border border-gray-100" data-aos="fade-left" data-aos-delay="150">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6">
+          <div className="relative isolate overflow-hidden rounded-3xl bg-brand-primary p-8 md:p-10 shadow-[0_24px_60px_-24px] shadow-brand-primary/60" data-aos="fade-left" data-aos-delay="150">
+            {/* Background shapes */}
+            <span
+              aria-hidden="true"
+              className="pointer-events-none absolute -right-20 -top-20 -z-10 h-64 w-64 rounded-full border-[3px] border-brand-accent/40"
+            />
+            <span
+              aria-hidden="true"
+              className="pointer-events-none absolute -bottom-28 -left-20 -z-10 h-80 w-80 rounded-full bg-brand-secondary/50"
+            />
+            <h3 className="text-2xl font-bold text-white mb-6">
               {t("Send Inquiry to Core Migration")}
             </h3>
             <form
@@ -79,14 +88,14 @@ export default function ContactFormSection() {
               <div className="space-y-2">
                 <label
                   htmlFor="role"
-                  className="block text-sm font-medium text-gray-700">
+                  className="block text-sm font-medium text-white/85">
                   {t("I am an:")}
                 </label>
                 <select
                   id="role"
                   name="role"
                   required
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-accent focus:border-brand-accent outline-none transition-colors bg-white">
+                  className="w-full px-4 py-3 rounded-xl border border-white/20 bg-white text-brand-dark placeholder:text-gray-400 focus:ring-2 focus:ring-brand-accent focus:border-brand-accent outline-none transition-colors">
                   <option value="Employer">{t("Employer")}</option>
                   <option value="Candidate">{t("Candidate")}</option>
                   <option value="Processing Partner">{t("Processing Partner")}</option>
@@ -97,7 +106,7 @@ export default function ContactFormSection() {
                 <div className="space-y-2">
                   <label
                     htmlFor="firstName"
-                    className="block text-sm font-medium text-gray-700">
+                    className="block text-sm font-medium text-white/85">
                     {t("First Name")}
                   </label>
                   <input
@@ -105,7 +114,7 @@ export default function ContactFormSection() {
                     id="firstName"
                     name="firstName"
                     required
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-accent focus:border-brand-accent outline-none transition-colors"
+                    className="w-full px-4 py-3 rounded-xl border border-white/20 bg-white text-brand-dark placeholder:text-gray-400 focus:ring-2 focus:ring-brand-accent focus:border-brand-accent outline-none transition-colors"
                     placeholder={t("First Name")}
                   />
                 </div>
@@ -113,7 +122,7 @@ export default function ContactFormSection() {
                 <div className="space-y-2">
                   <label
                     htmlFor="lastName"
-                    className="block text-sm font-medium text-gray-700">
+                    className="block text-sm font-medium text-white/85">
                     {t("Last Name")}
                   </label>
                   <input
@@ -121,7 +130,7 @@ export default function ContactFormSection() {
                     id="lastName"
                     name="lastName"
                     required
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-accent focus:border-brand-accent outline-none transition-colors"
+                    className="w-full px-4 py-3 rounded-xl border border-white/20 bg-white text-brand-dark placeholder:text-gray-400 focus:ring-2 focus:ring-brand-accent focus:border-brand-accent outline-none transition-colors"
                     placeholder={t("Last Name")}
                   />
                 </div>
@@ -131,7 +140,7 @@ export default function ContactFormSection() {
                 <div className="space-y-2">
                   <label
                     htmlFor="email"
-                    className="block text-sm font-medium text-gray-700">
+                    className="block text-sm font-medium text-white/85">
                     {t("Email Address")}
                   </label>
                   <input
@@ -139,7 +148,7 @@ export default function ContactFormSection() {
                     id="email"
                     name="email"
                     required
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-accent focus:border-brand-accent outline-none transition-colors"
+                    className="w-full px-4 py-3 rounded-xl border border-white/20 bg-white text-brand-dark placeholder:text-gray-400 focus:ring-2 focus:ring-brand-accent focus:border-brand-accent outline-none transition-colors"
                     placeholder="john@example.com"
                   />
                 </div>
@@ -147,14 +156,14 @@ export default function ContactFormSection() {
                 <div className="space-y-2">
                   <label
                     htmlFor="phone"
-                    className="block text-sm font-medium text-gray-700">
+                    className="block text-sm font-medium text-white/85">
                     {t("Phone Number/WhatsApp (optional)")}
                   </label>
                   <input
                     type="tel"
                     id="phone"
                     name="phone"
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-accent focus:border-brand-accent outline-none transition-colors"
+                    className="w-full px-4 py-3 rounded-xl border border-white/20 bg-white text-brand-dark placeholder:text-gray-400 focus:ring-2 focus:ring-brand-accent focus:border-brand-accent outline-none transition-colors"
                   />
                 </div>
               </div>
@@ -163,7 +172,7 @@ export default function ContactFormSection() {
                 <div className="space-y-2">
                   <label
                     htmlFor="companyOrProfession"
-                    className="block text-sm font-medium text-gray-700">
+                    className="block text-sm font-medium text-white/85">
                     {t("Company Name / Profession")}
                   </label>
                   <input
@@ -171,14 +180,14 @@ export default function ContactFormSection() {
                     id="companyOrProfession"
                     name="companyOrProfession"
                     required
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-accent focus:border-brand-accent outline-none transition-colors"
+                    className="w-full px-4 py-3 rounded-xl border border-white/20 bg-white text-brand-dark placeholder:text-gray-400 focus:ring-2 focus:ring-brand-accent focus:border-brand-accent outline-none transition-colors"
                   />
                 </div>
 
                 <div className="space-y-2">
                   <label
                     htmlFor="destinationCountry"
-                    className="block text-sm font-medium text-gray-700">
+                    className="block text-sm font-medium text-white/85">
                     {t("Destination Country of Interest")}
                   </label>
                   <input
@@ -186,7 +195,7 @@ export default function ContactFormSection() {
                     id="destinationCountry"
                     name="destinationCountry"
                     required
-                    className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-accent focus:border-brand-accent outline-none transition-colors"
+                    className="w-full px-4 py-3 rounded-xl border border-white/20 bg-white text-brand-dark placeholder:text-gray-400 focus:ring-2 focus:ring-brand-accent focus:border-brand-accent outline-none transition-colors"
                   />
                 </div>
               </div>
@@ -194,7 +203,7 @@ export default function ContactFormSection() {
               <div className="space-y-2">
                 <label
                   htmlFor="message"
-                  className="block text-sm font-medium text-gray-700">
+                  className="block text-sm font-medium text-white/85">
                   {t("Message")}
                 </label>
                 <textarea
@@ -202,7 +211,7 @@ export default function ContactFormSection() {
                   name="message"
                   rows={5}
                   required
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-accent focus:border-brand-accent outline-none transition-colors resize-none"
+                  className="w-full px-4 py-3 rounded-xl border border-white/20 bg-white text-brand-dark placeholder:text-gray-400 focus:ring-2 focus:ring-brand-accent focus:border-brand-accent outline-none transition-colors resize-none"
                   placeholder={t("Write your msg here...")}></textarea>
               </div>
 
