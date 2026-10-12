@@ -28,7 +28,7 @@ export default function ExampleOpportunityCard({ opportunity }: { opportunity: O
 
   return (
     <div
-      className="relative isolate flex flex-col overflow-hidden rounded-4xl bg-cm-card p-8 md:p-10 text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(25,58,39,0.25)]"
+      className="relative isolate flex flex-col overflow-hidden rounded-4xl bg-cm-card p-8 md:p-10 text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(0,77,59,0.25)]"
       data-aos="fade-up">
       <span
         aria-hidden="true"

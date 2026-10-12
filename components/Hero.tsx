@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import Link from "next/link";
 import useHeroAnimation from "@/hooks/useHeroAnimation";
+import HeroChevrons from "./HeroChevrons";
 import { useLanguage } from "@/context/LanguageContext";
 
 export default function Hero() {
@@ -13,10 +14,9 @@ export default function Hero() {
     <section
       ref={container}
       className="relative isolate overflow-hidden bg-cm-deep text-center text-white pt-36 pb-24 md:pt-52 md:pb-36">
-      {/* Decorative arc (left) and diagonal line (bottom right) */}
+      {/* Chevron shapes on the left edge */}
       <div data-hero-media aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10">
-        <span className="absolute -left-30 top-10 h-225 w-130 -rotate-8 rounded-r-[260px] border-[3px] border-cm-fresh opacity-55" />
-        <span className="absolute -bottom-65 -right-50 h-130 w-175 -rotate-24 border-t-[3px] border-cm-fresh opacity-50" />
+        <HeroChevrons className="absolute inset-y-0 left-0 h-full aspect-[760/720] opacity-35 md:opacity-100" />
       </div>
 
       <div data-hero-content className="mx-auto max-w-300 px-6">

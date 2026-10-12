@@ -45,7 +45,7 @@ function HeaderDropdown({
     <div className="relative group flex items-center h-full cursor-pointer">
       <Link
         href={href || "#"}
-        className="inline-flex items-center justify-center gap-x-1 text-sm font-bold tracking-tight text-background group-hover:text-brand-accent h-full py-4">
+        className="inline-flex items-center justify-center gap-x-1 whitespace-nowrap text-sm font-bold tracking-tight text-background group-hover:text-brand-accent h-full py-4">
         {t(label)}
         <ChevronDownIcon
           className="h-4 w-4 stroke-2 transition-transform duration-300 group-hover:rotate-180"
@@ -167,7 +167,7 @@ export default function MainHeader() {
           {SHOW_FULL_NAV && (
             <Link
               href="/about-us"
-              className="font-bold text-sm tracking-tight text-background hover:text-brand-accent">
+              className="whitespace-nowrap font-bold text-sm tracking-tight text-background hover:text-brand-accent">
               {t("About Us")}
             </Link>
           )}
@@ -244,18 +244,18 @@ export default function MainHeader() {
           />
           <Link
             href="/how-we-deliver"
-            className="font-bold text-sm tracking-tight text-background hover:text-brand-accent">
+            className="whitespace-nowrap font-bold text-sm tracking-tight text-background hover:text-brand-accent">
             {t("How We Deliver")}
           </Link>
           <Link
             href="/contact-us"
-            className="font-bold text-sm tracking-tight text-background hover:text-brand-accent">
+            className="whitespace-nowrap font-bold text-sm tracking-tight text-background hover:text-brand-accent">
             {t("Contact Us")}
           </Link>
         </nav>
 
         {/* Audience pill */}
-        <div className="hidden xl:flex overflow-hidden rounded-full border-2 border-cm-fresh text-sm font-bold">
+        <div className="hidden 2xl:flex shrink-0 overflow-hidden whitespace-nowrap rounded-full border-2 border-cm-fresh text-sm font-bold">
           <Link href="/our-solutions" className="bg-cm-fresh px-5 py-2 text-white">
             {t("For Employers")}
           </Link>

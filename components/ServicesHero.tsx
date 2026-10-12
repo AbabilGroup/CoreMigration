@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 import useHeroAnimation from '@/hooks/useHeroAnimation';
+import HeroChevrons from './HeroChevrons';
 import Link from 'next/link';
 
 interface BreadcrumbItem {
@@ -14,7 +15,7 @@ interface ServicesHeroProps {
     breadcrumbs?: BreadcrumbItem[];
 }
 
-/** Inner-page hero: deep green band with the same arc/line shapes as the home hero. */
+/** Inner-page hero: deep green band with the same chevron shapes as the home hero. */
 export default function ServicesHero({ title, titleAccent, subtitle, breadcrumbs }: ServicesHeroProps) {
     const heroRef = useRef<HTMLElement>(null);
     useHeroAnimation(heroRef);
@@ -22,8 +23,7 @@ export default function ServicesHero({ title, titleAccent, subtitle, breadcrumbs
     return (
         <section ref={heroRef} className="relative isolate overflow-hidden bg-cm-deep text-center text-white pt-32 pb-20 md:pt-44 md:pb-28">
             <div data-hero-media aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10">
-                <span className="absolute -left-40 -top-10 h-180 w-110 -rotate-8 rounded-r-[260px] border-[3px] border-cm-fresh opacity-55" />
-                <span className="absolute -bottom-70 -right-50 h-130 w-175 -rotate-24 border-t-[3px] border-cm-fresh opacity-50" />
+                <HeroChevrons className="absolute inset-y-0 left-0 h-full aspect-[760/720] opacity-35 md:opacity-100" />
             </div>
 
             <div data-hero-content className="mx-auto max-w-300 px-6">

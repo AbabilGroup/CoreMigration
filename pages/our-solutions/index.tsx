@@ -77,7 +77,7 @@ export default function OurSolutions() {
             {solutions.map((solution, i) => (
               <div
                 key={solution.title}
-                className={`group relative isolate flex flex-col overflow-hidden rounded-4xl text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(25,58,39,0.25)] ${
+                className={`group relative isolate flex flex-col overflow-hidden rounded-4xl text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(0,77,59,0.25)] ${
                   i % 2 ? "bg-cm-night" : "bg-cm-card"
                 }`}
                 data-aos="fade-up"

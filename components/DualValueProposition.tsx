@@ -65,7 +65,7 @@ export default function DualValueProposition() {
             <div
               key={panel.id}
               id={panel.id}
-              className={`relative isolate overflow-hidden rounded-4xl p-8 md:p-12 text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(25,58,39,0.25)] ${panel.bg}`}
+              className={`relative isolate overflow-hidden rounded-4xl p-8 md:p-12 text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(0,77,59,0.25)] ${panel.bg}`}
               data-aos="fade-up"
               data-aos-delay={i * 100}>
               <span
