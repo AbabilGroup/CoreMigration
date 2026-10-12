@@ -23,27 +23,27 @@ export default function AboutUs() {
       <main className="min-h-screen">
         <AboutHero />
 
-        <div data-aos="fade-up">
+        <div>
           <AboutIntro />
         </div>
 
-        <div data-aos="fade-up">
+        <div>
           <AboutServices />
         </div>
 
-        <div data-aos="fade-up">
+        <div>
           <AboutValues />
         </div>
 
-        <div data-aos="fade-up">
+        <div>
           <DeploymentInfrastructure />
         </div>
 
-        <div data-aos="fade-up">
+        <div>
           <RegisteredOffice />
         </div>
 
-        <div data-aos="blur-in">
+        <div>
           <MobileAppSection
             headline="Partner with"
             headlineAccent="Core Migration"

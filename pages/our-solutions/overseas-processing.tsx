@@ -1,8 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import ServicesHero from "@/components/ServicesHero";
-import CursorCircle from "@/components/CursorCircle";
-import FloatingCircles from "@/components/FloatingCircles";
+import SectionHeading from "@/components/SectionHeading";
 import { useLanguage } from "@/context/LanguageContext";
 
 const visaItems = [
@@ -85,7 +84,6 @@ export default function OverseasProcessing() {
           title={t("Navigating Visa, Attestation, and Emigration So Your Workforce Arrives")}
           titleAccent={t("Ready")}
           subtitle={t("Finding the right candidate is only part of cross-border recruitment. Core Migration manages the entire compliance pipeline in-house to prevent delays and ensure legal, on-time arrival.")}
-          image="https://images.pexels.com/photos/7310015/pexels-photo-7310015.jpeg"
           breadcrumbs={[
             { label: t("Home"), href: "/" },
             { label: t("Our Solutions"), href: "/our-solutions" },
@@ -94,91 +92,105 @@ export default function OverseasProcessing() {
         />
 
         {/* Scroll-anchor tab navigation */}
-        <nav className="sticky top-16 md:top-18 z-30 bg-white border-b border-gray-200 overflow-x-auto">
-          <div className="max-w-5xl mx-auto flex px-6 md:px-12">
+        <nav className="sticky top-16 md:top-18 z-30 border-b-2 border-cm-hover bg-white overflow-x-auto">
+          <div className="mx-auto flex max-w-300 gap-3 px-6 py-3">
             {tabs.map((tab) => (
               <a
                 key={tab.id}
                 href={`#${tab.id}`}
-                className="px-5 py-4 text-sm font-bold uppercase tracking-wider text-gray-500 hover:text-brand-primary whitespace-nowrap transition-colors">
+                className="whitespace-nowrap rounded-full bg-cm-tile px-5 py-2.5 text-sm font-bold text-cm-deep transition-colors hover:bg-cm-hover">
                 {t(tab.label)}
               </a>
             ))}
           </div>
         </nav>
 
-        <section id="visa-processing" className="py-16 md:py-24 px-6 md:px-12 lg:px-24 max-w-5xl mx-auto scroll-mt-32">
-          <h2 className="text-2xl md:text-3xl font-bold text-brand-dark mb-10">
-            {t("Visa Processing & Emigration")}
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-10">
-            {visaItems.map((item) => (
-              <div key={item.title} data-aos="fade-right">
-                <h3 className="font-bold text-brand-dark mb-2">{t(item.title)}</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">{t(item.description)}</p>
-              </div>
-            ))}
-          </div>
-          <Link
-            href="/contact-us"
-            className="btn-primary">
-            {t("Contact Our Processing Desk")}
-          </Link>
-        </section>
-
-        <section id="document-attestation" className="py-16 md:py-24 px-6 md:px-12 lg:px-24 max-w-5xl mx-auto scroll-mt-32">
-          <h2 className="text-2xl md:text-3xl font-bold text-brand-dark mb-10">
-            {t("Document Attestation")}
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-10">
-            {attestationItems.map((item) => (
-              <div key={item.title} className="card-hover relative isolate overflow-hidden bg-white border border-gray-200 p-6" data-aos="flip-up">
-                <CursorCircle />
-                <h3 className="font-bold text-brand-dark mb-2">{t(item.title)}</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">{t(item.description)}</p>
-              </div>
-            ))}
-          </div>
-          <Link
-            href="/contact-us"
-            className="btn-primary">
-            {t("Submit Documents for Attestation")}
-          </Link>
-        </section>
-
-        <section id="pre-departure-orientation" className="py-16 md:py-24 px-6 md:px-12 lg:px-24 max-w-5xl mx-auto scroll-mt-32">
-          <h2 className="text-2xl md:text-3xl font-bold text-brand-dark mb-4">
-            {t("Pre-Departure Orientation")}
-          </h2>
-          <p className="text-gray-600 leading-relaxed mb-10 max-w-3xl">
-            {t("A well-informed worker is a productive worker. Every candidate deployed through Core Migration undergoes mandatory orientation before departure.")}
-          </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-            {orientationItems.map((item) => (
-              <div key={item.title} data-aos="fade-left">
-                <h3 className="font-bold text-brand-dark mb-2">{t(item.title)}</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">{t(item.description)}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        <section className="relative isolate overflow-hidden py-16 md:py-24 bg-brand-primary px-6 md:px-12 lg:px-24 text-center">
-          <FloatingCircles />
-          <h2 className="text-2xl md:text-3xl font-bold text-white mb-8">
-            {t("Need Processing Support?")}
-          </h2>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link
-              href="/contact-us"
-              className="btn-primary">
+        <section id="visa-processing" className="bg-white py-16 md:py-24 scroll-mt-32">
+          <div className="mx-auto max-w-300 px-6">
+            <SectionHeading>{t("Visa Processing & Emigration")}</SectionHeading>
+            <div className="mt-12 mb-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {visaItems.map((item, i) => (
+                <div
+                  key={item.title}
+                  className="rounded-[28px] border-2 border-cm-hover bg-white p-8"
+                  data-aos="fade-up"
+                  data-aos-delay={(i % 3) * 100}>
+                  <div className="mb-4 grid h-13 w-13 place-items-center rounded-full bg-cm-fresh font-bold text-white">
+                    {i + 1}
+                  </div>
+                  <h3 className="mb-2.5 text-xl font-semibold text-cm-deep">{t(item.title)}</h3>
+                  <p className="text-base leading-relaxed text-cm-ink">{t(item.description)}</p>
+                </div>
+              ))}
+            </div>
+            <Link href="/contact-us" className="btn-fresh">
               {t("Contact Our Processing Desk")}
             </Link>
-            <Link
-              href="/contact-us"
-              className="btn-outline-light">
+          </div>
+        </section>
+
+        <section id="document-attestation" className="bg-cm-mint py-16 md:py-24 scroll-mt-32">
+          <div className="mx-auto max-w-300 px-6">
+            <SectionHeading>{t("Document Attestation")}</SectionHeading>
+            <div className="mt-12 mb-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+              {attestationItems.map((item, i) => (
+                <div
+                  key={item.title}
+                  className={`relative isolate overflow-hidden rounded-[28px] p-8 text-white ${i % 2 ? "bg-cm-night" : "bg-cm-card"}`}
+                  data-aos="fade-up"
+                  data-aos-delay={i * 100}>
+                  <span
+                    aria-hidden="true"
+                    className="pointer-events-none absolute -bottom-15 -right-15 -z-10 h-45 w-45 rounded-full bg-cm-fresh/20"
+                  />
+                  <h3 className="mb-3 text-xl md:text-[22px] font-semibold">{t(item.title)}</h3>
+                  <p className="text-base leading-relaxed text-white/90">{t(item.description)}</p>
+                </div>
+              ))}
+            </div>
+            <Link href="/contact-us" className="btn-deep">
               {t("Submit Documents for Attestation")}
             </Link>
+          </div>
+        </section>
+
+        <section id="pre-departure-orientation" className="bg-white py-16 md:py-24 scroll-mt-32">
+          <div className="mx-auto max-w-300 px-6">
+            <SectionHeading intro={t("A well-informed worker is a productive worker. Every candidate deployed through Core Migration undergoes mandatory orientation before departure.")}>
+              {t("Pre-Departure Orientation")}
+            </SectionHeading>
+            <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {orientationItems.map((item, i) => (
+                <div
+                  key={item.title}
+                  className="rounded-[28px] bg-cm-tile px-6 py-8 transition-all duration-200 hover:-translate-y-1 hover:bg-cm-hover"
+                  data-aos="fade-up"
+                  data-aos-delay={i * 100}>
+                  <h3 className="mb-2 text-xl font-bold text-cm-deep">{t(item.title)}</h3>
+                  <p className="text-base leading-relaxed text-cm-ink">{t(item.description)}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="relative isolate overflow-hidden bg-cm-deep py-16 md:py-24 text-center text-white">
+          <span
+            aria-hidden="true"
+            className="pointer-events-none absolute -right-30 -top-30 -z-10 h-105 w-105 rounded-full bg-cm-glow opacity-25"
+          />
+          <div className="mx-auto max-w-300 px-6">
+            <h2 className="mb-8 text-3xl md:text-[44px] font-bold leading-tight">
+              {t("Need Processing Support?")}
+            </h2>
+            <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-4">
+              <Link href="/contact-us" className="btn-fresh">
+                {t("Contact Our Processing Desk")}
+              </Link>
+              <Link href="/contact-us" className="btn-ghost-light">
+                {t("Submit Documents for Attestation")}
+              </Link>
+            </div>
           </div>
         </section>
       </main>

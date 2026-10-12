@@ -1,24 +1,20 @@
 import React from "react";
 import { MapPinIcon } from "@heroicons/react/24/outline";
-import CursorCircle from "./CursorCircle";
 import { useLanguage } from "@/context/LanguageContext";
 
 export default function RegisteredOffice() {
   const { t } = useLanguage();
 
   return (
-    <section className="py-16 md:py-20">
-      <div className="max-w-3xl mx-auto px-6 md:px-12" data-aos="fade-left">
-        <div className="card-hover relative isolate overflow-hidden flex items-start gap-5 border border-gray-200 p-8">
-          <CursorCircle />
-          <div className="bg-brand-primary/10 p-3 rounded-full shrink-0">
-            <MapPinIcon className="w-6 h-6 text-brand-primary" />
-          </div>
+    <section className="bg-white py-16 md:py-20">
+      <div className="mx-auto max-w-3xl px-6" data-aos="fade-up">
+        <div className="flex items-start gap-5 rounded-[28px] bg-cm-tile p-8">
+          <span className="flex h-13 w-13 shrink-0 items-center justify-center rounded-full bg-cm-fresh text-white">
+            <MapPinIcon className="h-6 w-6" />
+          </span>
           <div>
-            <h3 className="font-bold text-brand-dark text-lg mb-2">
-              {t("Registered Office")}
-            </h3>
-            <p className="text-gray-600 leading-relaxed">
+            <h3 className="mb-2 text-xl font-bold text-cm-deep">{t("Registered Office")}</h3>
+            <p className="text-base leading-relaxed text-cm-ink">
               {t("Core Migration")}
               <br />
               176 Crossbank Street, Oldham, England, OL8 1HE

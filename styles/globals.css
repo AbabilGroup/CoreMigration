@@ -8,35 +8,48 @@
 }
 
 /* ------------------------------------------------------------------
-   Brand palette (DEKRA-style: deep green, lime, orange, warm cream).
+   Brand palette (deep green, fresh green, mint, orange accent).
    Every color on the site comes from here — change it once, it
    updates everywhere.
    ------------------------------------------------------------------ */
 @theme {
   /* Greens */
-  --color-brand-primary: #006b52; /* header, hero, dark sections, headings */
-  --color-brand-secondary: #00896a; /* hover/lighter shade of primary */
-  --color-brand-dark: #153428; /* darkest green: footer, deep sections, body text */
-  --color-brand-accent: #7ac943; /* lime: primary buttons, lines, highlights */
-  --color-brand-accent-hover: #69b536;
-  --color-brand-light: #e8f5de; /* lime tint: icon chips, soft fills */
-  --color-brand-dark-border: #7ac943; /* legacy name, kept as lime */
+  --color-brand-primary: #2d6953; /* header, hero, dark sections, headings */
+  --color-brand-secondary: #32744e; /* hover/lighter shade of primary */
+  --color-brand-dark: #193a27; /* darkest green: footer, deep sections, body text */
+  --color-brand-accent: #77b144; /* lime: primary buttons, lines, highlights */
+  --color-brand-accent-hover: #68a038;
+  --color-brand-light: #f1f7ec; /* lime tint: icon chips, soft fills */
+  --color-brand-dark-border: #77b144; /* legacy name, kept as lime */
 
   /* Orange (secondary accent, e.g. "For Candidates") */
-  --color-brand-orange: #e8702a;
+  --color-brand-orange: #e08230;
   --color-brand-orange-secondary: #fcebdd; /* orange tint */
   --color-brand-orange-dark: #c4561a; /* deeper orange for gradients */
 
+  /* Home redesign palette */
+  --color-cm-deep: #2d6953; /* hero, band, headings */
+  --color-cm-card: #32744e; /* employer panel */
+  --color-cm-night: #193a27; /* candidate panel */
+  --color-cm-fresh: #77b144; /* buttons, icons, lines */
+  --color-cm-fresh-hover: #68a038;
+  --color-cm-glow: #6aac46; /* decorative circles */
+  --color-cm-mint: #f2f8ed; /* section background */
+  --color-cm-tile: #f1f7ec; /* chips and tiles */
+  --color-cm-hover: #d3e3ce; /* tile hover, step borders */
+  --color-cm-ink: #1b1b1b;
+  --color-cm-orange: #e08230; /* footer email */
+
   /* Neutrals */
-  --color-brand-cream: #f6f1ea; /* page/section background */
-  --color-brand-cream-dark: #ece4d8; /* borders on cream */
+  --color-brand-cream: #f2f8ed; /* page/section background */
+  --color-brand-cream-dark: #d3e3ce; /* borders on cream */
   --color-brand-muted: #5c6b63; /* secondary text */
 
   /* Tailwind grays re-tinted to the warm/green palette so existing
      gray-* / zinc-* classes follow the theme automatically. */
-  --color-zinc-50: #f6f1ea;
+  --color-zinc-50: #f2f8ed;
   --color-zinc-100: #efe8dd;
-  --color-zinc-200: #e5ddd0;
+  --color-zinc-200: #d3e3ce;
   --color-zinc-300: #d6ccbd;
   --color-gray-50: #f9f6f1;
   --color-gray-100: #efe8dd;
@@ -53,7 +66,7 @@
 :root {
   color-scheme: light;
   --background: #ffffff;
-  --foreground: #153428;
+  --foreground: #1b1b1b;
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -78,7 +91,7 @@ body {
 }
 /* Lime fill, dark green text — main call to action */
 @utility btn-primary {
-  @apply btn bg-brand-accent text-brand-primary hover:bg-brand-accent-hover;
+  @apply btn bg-brand-accent text-white hover:bg-brand-accent-hover;
 }
 /* Dark green fill — CTA on light backgrounds */
 @utility btn-dark {
@@ -95,6 +108,20 @@ body {
 /* Outline on dark backgrounds */
 @utility btn-outline-light {
   @apply btn border-2 border-white text-white hover:bg-white hover:text-brand-primary;
+}
+
+/* Home redesign buttons — larger pills that lift on hover */
+@utility btn-lg {
+  @apply inline-flex items-center justify-center gap-2 rounded-full border-2 border-transparent px-9 py-3.5 text-base md:text-lg font-bold transition-all duration-200 hover:-translate-y-0.5 motion-reduce:hover:translate-y-0;
+}
+@utility btn-fresh {
+  @apply btn-lg bg-cm-fresh text-white hover:bg-cm-fresh-hover;
+}
+@utility btn-deep {
+  @apply btn-lg bg-cm-deep text-white hover:bg-cm-card;
+}
+@utility btn-ghost-light {
+  @apply btn-lg border-white text-white hover:bg-white hover:text-cm-deep;
 }
 
 @layer components {

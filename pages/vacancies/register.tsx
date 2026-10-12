@@ -19,7 +19,6 @@ export default function RegisterCandidate() {
           title={t("Don't See a Matching")}
           titleAccent={t("Role?")}
           subtitle={t("Submit your CV and credentials to our candidate database. Our recruitment team will review your profile and contact you when a matching opportunity opens.")}
-          image="https://images.pexels.com/photos/590044/pexels-photo-590044.jpeg"
           breadcrumbs={[
             { label: t("Home"), href: "/" },
             { label: t("Vacancies"), href: "/vacancies" },
@@ -27,20 +26,20 @@ export default function RegisterCandidate() {
           ]}
         />
 
-        <section className="py-16 md:py-24 px-6 md:px-12 lg:px-24 max-w-3xl mx-auto">
+        <section className="bg-[linear-gradient(160deg,#fff_0_58%,var(--color-cm-mint)_58%_100%)] px-6 py-16 md:py-24">
           <form
             data-aos="fade-up"
             action="https://formsubmit.co/9eb913914642425af3ecb03929005b59"
             method="POST"
             encType="multipart/form-data"
-            className="space-y-6 bg-white rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.06)] p-8 md:p-10 border border-gray-100">
+            className="mx-auto max-w-3xl space-y-6 rounded-4xl border-2 border-cm-hover bg-white p-8 md:p-12">
             <input type="hidden" name="_captcha" value="false" />
             <input type="hidden" name="_subject" value="New Candidate Registration" />
             <input type="hidden" name="_template" value="table" />
             <input type="hidden" name="_next" value="https://coremigration.eu/vacancies/" />
 
             <div className="space-y-2">
-              <label htmlFor="fullName" className="block text-sm font-medium text-gray-700">
+              <label htmlFor="fullName" className="block text-sm font-bold text-cm-deep">
                 {t("Full Name")}
               </label>
               <input
@@ -48,13 +47,13 @@ export default function RegisterCandidate() {
                 id="fullName"
                 name="fullName"
                 required
-                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-accent focus:border-brand-accent outline-none transition-colors"
+                className="w-full px-4 py-3 rounded-2xl border-2 border-cm-hover bg-cm-tile focus:ring-2 focus:ring-cm-fresh focus:border-cm-fresh outline-none transition-colors"
               />
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-2">
-                <label htmlFor="phone" className="block text-sm font-medium text-gray-700">
+                <label htmlFor="phone" className="block text-sm font-bold text-cm-deep">
                   {t("Contact Phone/WhatsApp")}
                 </label>
                 <input
@@ -62,11 +61,11 @@ export default function RegisterCandidate() {
                   id="phone"
                   name="phone"
                   required
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-accent focus:border-brand-accent outline-none transition-colors"
+                  className="w-full px-4 py-3 rounded-2xl border-2 border-cm-hover bg-cm-tile focus:ring-2 focus:ring-cm-fresh focus:border-cm-fresh outline-none transition-colors"
                 />
               </div>
               <div className="space-y-2">
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+                <label htmlFor="email" className="block text-sm font-bold text-cm-deep">
                   {t("Email Address")}
                 </label>
                 <input
@@ -74,14 +73,14 @@ export default function RegisterCandidate() {
                   id="email"
                   name="email"
                   required
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-accent focus:border-brand-accent outline-none transition-colors"
+                  className="w-full px-4 py-3 rounded-2xl border-2 border-cm-hover bg-cm-tile focus:ring-2 focus:ring-cm-fresh focus:border-cm-fresh outline-none transition-colors"
                 />
               </div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-2">
-                <label htmlFor="country" className="block text-sm font-medium text-gray-700">
+                <label htmlFor="country" className="block text-sm font-bold text-cm-deep">
                   {t("Country of Residence")}
                 </label>
                 <input
@@ -89,11 +88,11 @@ export default function RegisterCandidate() {
                   id="country"
                   name="country"
                   required
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-accent focus:border-brand-accent outline-none transition-colors"
+                  className="w-full px-4 py-3 rounded-2xl border-2 border-cm-hover bg-cm-tile focus:ring-2 focus:ring-cm-fresh focus:border-cm-fresh outline-none transition-colors"
                 />
               </div>
               <div className="space-y-2">
-                <label htmlFor="profession" className="block text-sm font-medium text-gray-700">
+                <label htmlFor="profession" className="block text-sm font-bold text-cm-deep">
                   {t("Primary Profession/Trade")}
                 </label>
                 <input
@@ -101,13 +100,13 @@ export default function RegisterCandidate() {
                   id="profession"
                   name="profession"
                   required
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-accent focus:border-brand-accent outline-none transition-colors"
+                  className="w-full px-4 py-3 rounded-2xl border-2 border-cm-hover bg-cm-tile focus:ring-2 focus:ring-cm-fresh focus:border-cm-fresh outline-none transition-colors"
                 />
               </div>
             </div>
 
             <div className="space-y-2">
-              <label htmlFor="experience" className="block text-sm font-medium text-gray-700">
+              <label htmlFor="experience" className="block text-sm font-bold text-cm-deep">
                 {t("Years of Experience")}
               </label>
               <input
@@ -115,12 +114,12 @@ export default function RegisterCandidate() {
                 id="experience"
                 name="experience"
                 required
-                className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-brand-accent focus:border-brand-accent outline-none transition-colors"
+                className="w-full px-4 py-3 rounded-2xl border-2 border-cm-hover bg-cm-tile focus:ring-2 focus:ring-cm-fresh focus:border-cm-fresh outline-none transition-colors"
               />
             </div>
 
             <div className="space-y-2">
-              <label htmlFor="cv" className="block text-sm font-medium text-gray-700">
+              <label htmlFor="cv" className="block text-sm font-bold text-cm-deep">
                 {t("CV/Certificate Upload")}
               </label>
               <input
@@ -128,13 +127,13 @@ export default function RegisterCandidate() {
                 id="cv"
                 name="cv"
                 required
-                className="w-full px-4 py-3 rounded-lg border border-gray-300 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:bg-brand-primary/10 file:text-brand-primary file:font-semibold"
+                className="w-full px-4 py-3 rounded-2xl border-2 border-cm-hover bg-cm-tile file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:rounded-full file:bg-cm-fresh file:text-white file:font-semibold"
               />
             </div>
 
             <button
               type="submit"
-              className="btn-primary w-full">
+              className="btn-fresh w-full">
               {t("Submit Candidate Profile")}
             </button>
           </form>

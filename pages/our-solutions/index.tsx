@@ -3,8 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import ServicesHero from "@/components/ServicesHero";
 import MobileAppSection from "@/components/MobileAppSection";
-import CursorCircle from "@/components/CursorCircle";
-import { ArrowRightIcon } from "@heroicons/react/24/outline";
+import SectionHeading from "@/components/SectionHeading";
 import { useLanguage } from "@/context/LanguageContext";
 
 const solutions = [
@@ -67,96 +66,65 @@ export default function OurSolutions() {
           title={t("Flexible International Sourcing Models Built for Precision, Volume, and")}
           titleAccent={t("Compliance")}
           subtitle={t("Core Migration provides tailored international recruitment solutions to meet the exact manpower demands of global businesses — from individual specialists to project workforces of hundreds.")}
-          image="https://images.pexels.com/photos/3183183/pexels-photo-3183183.jpeg"
           breadcrumbs={[
             { label: t("Home"), href: "/" },
             { label: t("Our Solutions") },
           ]}
         />
 
-        <section className="py-16 md:py-24 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {solutions.map((solution, i) => {
-              const orange = i % 2 === 1;
-              return (
-                <div
-                  key={solution.title}
-                  className={`card-hover group relative isolate flex flex-col overflow-hidden rounded-3xl text-white shadow-[0_24px_60px_-24px] ${
-                    orange
-                      ? "bg-linear-to-br from-brand-orange to-brand-orange-dark shadow-brand-orange/60"
-                      : "bg-brand-primary shadow-brand-primary/60"
-                  }`}
-                  data-aos="zoom-in"
-                  data-aos-delay={i * 100}>
-                  <CursorCircle colorClassName={orange ? "border-white bg-white/25" : undefined} />
-                  <div className="relative w-full h-56 overflow-hidden">
-                    <Image src={solution.image} alt={t(solution.title)} fill sizes="(max-width: 768px) 100vw, 33vw" className="card-hover-img object-cover" />
-                    {/* Blend the photo into the card color */}
-                    <div
-                      className={`absolute inset-0 bg-linear-to-t from-0% via-transparent via-30% to-transparent ${
-                        orange ? "from-brand-orange" : "from-brand-primary"
-                      }`}
-                    />
-                  </div>
-                  <div className="relative p-8 flex flex-col flex-1">
-                    {/* Background shapes */}
-                    <span
-                      aria-hidden="true"
-                      className={`pointer-events-none absolute -right-16 -bottom-16 -z-10 h-56 w-56 rounded-full border-[3px] ${
-                        orange ? "border-white/30" : "border-brand-accent/40"
-                      }`}
-                    />
-                    <span
-                      aria-hidden="true"
-                      className={`pointer-events-none absolute -left-20 bottom-0 -z-10 h-48 w-48 rounded-full ${
-                        orange ? "bg-white/10" : "bg-brand-secondary/50"
-                      }`}
-                    />
-                    <h3 className="text-xl md:text-2xl font-bold mb-3">{t(solution.title)}</h3>
-                    <p className="text-white/85 text-sm leading-relaxed mb-6 flex-1">{t(solution.description)}</p>
-                    <Link
-                      href={solution.href}
-                      className={`group/btn w-full px-4 text-center text-[13px] leading-snug ${
-                        orange ? "btn bg-white text-brand-orange hover:bg-brand-cream" : "btn-primary"
-                      }`}>
-                      {t(solution.cta)}
-                      <ArrowRightIcon className="h-4 w-4 stroke-2 transition-transform group-hover/btn:translate-x-1" />
-                    </Link>
-                  </div>
+        <section className="bg-[linear-gradient(160deg,#fff_0_58%,var(--color-cm-mint)_58%_100%)] py-16 md:py-24">
+          <div className="mx-auto grid max-w-300 grid-cols-1 gap-7 px-6 md:grid-cols-3">
+            {solutions.map((solution, i) => (
+              <div
+                key={solution.title}
+                className={`group relative isolate flex flex-col overflow-hidden rounded-4xl text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_18px_40px_rgba(25,58,39,0.25)] ${
+                  i % 2 ? "bg-cm-night" : "bg-cm-card"
+                }`}
+                data-aos="fade-up"
+                data-aos-delay={i * 100}>
+                <div className="relative h-52 w-full overflow-hidden">
+                  <Image src={solution.image} alt={t(solution.title)} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover transition-transform duration-700 group-hover:scale-105" />
                 </div>
-              );
-            })}
+                <div className="relative flex flex-1 flex-col p-8">
+                  <span
+                    aria-hidden="true"
+                    className="pointer-events-none absolute -bottom-15 -right-15 -z-10 h-55 w-55 rounded-full bg-cm-fresh/20"
+                  />
+                  <h3 className="mb-3 text-2xl font-semibold leading-tight">{t(solution.title)}</h3>
+                  <p className="mb-7 flex-1 text-base leading-relaxed">{t(solution.description)}</p>
+                  <Link href={solution.href} className="btn-fresh w-full px-5 text-base">
+                    {t(solution.cta)}
+                  </Link>
+                </div>
+              </div>
+            ))}
           </div>
         </section>
 
-        <section id="recruitment-roadmap" className="py-16 md:py-24 bg-brand-primary px-6 md:px-12 lg:px-24">
-          <div className="max-w-5xl mx-auto">
-            <div className="mb-12 text-center" data-aos="text-reveal">
-              <h2
-                className="text-3xl md:text-4xl text-white font-light"
-                style={{ fontFamily: "var(--font-playfair-display), serif" }}>
-                {t("Recruitment")} <span className="italic font-bold text-brand-accent">{t("Roadmap")}</span>
-              </h2>
-            </div>
-            <div className="flex flex-col gap-8 relative">
-              <span aria-hidden="true" className="absolute left-6 top-2 bottom-2 w-px bg-white/15" />
-              <span aria-hidden="true" data-aos="draw-line" className="absolute left-6 top-2 bottom-2 w-px bg-brand-accent shadow-[0_0_8px_var(--color-brand-accent)]" />
+        <section id="recruitment-roadmap" className="bg-cm-mint py-16 md:py-24 scroll-mt-20">
+          <div className="mx-auto max-w-300 px-6">
+            <SectionHeading>
+              {t("Recruitment")} {t("Roadmap")}
+            </SectionHeading>
+            <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {roadmap.map((step, i) => (
-                <div key={step.title} className="flex gap-6 relative" data-aos="fade-left">
-                  <div className="w-12 h-12 rounded-full bg-brand-accent text-brand-primary font-bold flex items-center justify-center shrink-0 z-10">
+                <div
+                  key={step.title}
+                  className="rounded-[28px] border-2 border-cm-hover bg-white p-8"
+                  data-aos="fade-up"
+                  data-aos-delay={i * 100}>
+                  <div className="mb-4 grid h-13 w-13 place-items-center rounded-full bg-cm-fresh font-bold text-white">
                     {i + 1}
                   </div>
-                  <div>
-                    <h3 className="text-white font-bold mb-2">{t(step.title)}</h3>
-                    <p className="text-white/85 text-sm leading-relaxed">{t(step.description)}</p>
-                  </div>
+                  <h3 className="mb-2.5 text-xl md:text-[22px] font-semibold leading-tight text-cm-deep">{t(step.title)}</h3>
+                  <p className="text-base leading-relaxed text-cm-ink">{t(step.description)}</p>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        <div data-aos="blur-in">
+        <div>
           <MobileAppSection
             headline="Discuss Your"
             headlineAccent="Workforce Requirements"

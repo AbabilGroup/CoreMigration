@@ -18,7 +18,7 @@ export default function ContactUs() {
       <main className="min-h-screen">
         <ContactHero />
 
-        <div data-aos="fade-up">
+        <div>
           <ContactFormSection />
         </div>
       </main>

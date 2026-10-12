@@ -1,6 +1,5 @@
 import React, { useRef } from 'react';
 import useHeroAnimation from '@/hooks/useHeroAnimation';
-import Image from 'next/image';
 import Link from 'next/link';
 
 interface BreadcrumbItem {
@@ -10,60 +9,47 @@ interface BreadcrumbItem {
 
 interface ServicesHeroProps {
     title: string;
-    titleAccent: string;
+    titleAccent?: string;
     subtitle: string;
-    image: string;
     breadcrumbs?: BreadcrumbItem[];
 }
 
-export default function ServicesHero({ title, titleAccent, subtitle, image, breadcrumbs }: ServicesHeroProps) {
-    const heroRef = useRef<HTMLDivElement>(null);
+/** Inner-page hero: deep green band with the same arc/line shapes as the home hero. */
+export default function ServicesHero({ title, titleAccent, subtitle, breadcrumbs }: ServicesHeroProps) {
+    const heroRef = useRef<HTMLElement>(null);
     useHeroAnimation(heroRef);
-    const defaultBreadcrumbs: BreadcrumbItem[] = [
-        { label: 'Home', href: '/' },
-        { label: 'Our Solutions', href: '/our-solutions' },
-    ];
-
-    const crumbs = breadcrumbs || defaultBreadcrumbs;
 
     return (
-        <div ref={heroRef} className="relative flex items-end w-full min-h-[55vh] md:min-h-[65vh] overflow-hidden bg-brand-primary">
-            <div data-hero-media className="absolute inset-0">
-                <Image
-                    src={image}
-                    alt={title}
-                    fill
-                    sizes="100vw"
-                    className="object-cover"
-                    priority
-                />
-                <div className="absolute inset-0 bg-linear-to-r from-brand-primary/95 via-brand-primary/65 to-brand-primary/20" />
+        <section ref={heroRef} className="relative isolate overflow-hidden bg-cm-deep text-center text-white pt-32 pb-20 md:pt-44 md:pb-28">
+            <div data-hero-media aria-hidden="true" className="pointer-events-none absolute inset-0 -z-10">
+                <span className="absolute -left-40 -top-10 h-180 w-110 -rotate-8 rounded-r-[260px] border-[3px] border-cm-fresh opacity-55" />
+                <span className="absolute -bottom-70 -right-50 h-130 w-175 -rotate-24 border-t-[3px] border-cm-fresh opacity-50" />
             </div>
-            <div data-hero-content className="relative z-20 px-6 md:px-24 pt-28 pb-16 md:pb-22 text-white max-w-3xl">
-                <nav data-hero-item className="flex items-center gap-2 mb-5 text-xs tracking-wider">
-                    {crumbs.map((crumb, i) => (
-                        <React.Fragment key={i}>
-                            {i > 0 && <span className="text-white/50">—</span>}
-                            {crumb.href ? (
-                                <Link href={crumb.href} className="text-white/70 hover:text-white transition-colors uppercase font-semibold">
-                                    {crumb.label}
-                                </Link>
-                            ) : (
-                                <span className="text-brand-accent uppercase font-semibold">{crumb.label}</span>
-                            )}
-                        </React.Fragment>
-                    ))}
-                </nav>
-                <h1 data-hero-item
-                    className="text-3xl sm:text-4xl md:text-6xl font-light mb-3 drop-shadow-lg"
-                    style={{ fontFamily: 'var(--font-playfair-display), serif' }}
-                >
-                    {title} <span className="font-bold italic">{titleAccent}</span>
+
+            <div data-hero-content className="mx-auto max-w-300 px-6">
+                {breadcrumbs && (
+                    <nav data-hero-item aria-label="Breadcrumb" className="mb-6 flex flex-wrap items-center justify-center gap-2 text-xs md:text-sm font-semibold uppercase tracking-wider">
+                        {breadcrumbs.map((crumb, i) => (
+                            <React.Fragment key={i}>
+                                {i > 0 && <span className="text-white/50">/</span>}
+                                {crumb.href ? (
+                                    <Link href={crumb.href} className="text-white/75 hover:text-white transition-colors">
+                                        {crumb.label}
+                                    </Link>
+                                ) : (
+                                    <span className="text-cm-fresh">{crumb.label}</span>
+                                )}
+                            </React.Fragment>
+                        ))}
+                    </nav>
+                )}
+                <h1 data-hero-item className="mx-auto mb-5 max-w-225 text-3xl sm:text-4xl md:text-[52px] font-bold leading-[1.2]">
+                    {title}{titleAccent ? ` ${titleAccent}` : ''}
                 </h1>
-                <p data-hero-item className="text-sm md:text-lg drop-shadow-md text-gray-200">
+                <p data-hero-item className="mx-auto max-w-205 text-base md:text-xl font-semibold leading-relaxed">
                     {subtitle}
                 </p>
             </div>
-        </div>
+        </section>
     );
 }

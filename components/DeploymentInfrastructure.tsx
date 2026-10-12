@@ -1,6 +1,5 @@
 import React from "react";
-import { ChevronDownIcon } from "@heroicons/react/24/solid";
-import CursorCircle from "./CursorCircle";
+import SectionHeading from "./SectionHeading";
 import { useLanguage } from "@/context/LanguageContext";
 
 const stages = [
@@ -30,31 +29,28 @@ export default function DeploymentInfrastructure() {
   const { t } = useLanguage();
 
   return (
-    <section className="py-20 md:py-28 bg-brand-cream/60">
-      <div className="max-w-3xl mx-auto px-6 md:px-12">
-        <div className="mb-14 text-center" data-aos="text-reveal">
-          <h2
-            className="text-3xl md:text-4xl text-brand-dark font-light"
-            style={{ fontFamily: "var(--font-playfair-display), serif" }}>
-            {t("Deployment")} <span className="italic font-bold">{t("Infrastructure")}</span>
-          </h2>
-        </div>
-
-        <div className="flex flex-col items-center">
+    <section className="relative isolate overflow-hidden bg-cm-deep py-16 md:py-24 text-white">
+      <span
+        aria-hidden="true"
+        className="pointer-events-none absolute -right-30 -top-30 -z-10 h-105 w-105 rounded-full bg-cm-glow opacity-25"
+      />
+      <div className="mx-auto max-w-300 px-6">
+        <SectionHeading light>
+          {t("Deployment")} {t("Infrastructure")}
+        </SectionHeading>
+        <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">
           {stages.map((stage, i) => (
-            <React.Fragment key={stage.title}>
-              <div
-                className="card-hover relative isolate overflow-hidden w-full bg-white border border-gray-200 px-8 py-6 text-center"
-                data-aos="zoom-in"
-                data-aos-delay={i * 100}>
-                <CursorCircle />
-                <h3 className="font-bold text-brand-dark mb-1">{t(stage.title)}</h3>
-                <p className="text-sm text-gray-500">{t(stage.detail)}</p>
+            <div
+              key={stage.title}
+              className="rounded-3xl bg-white p-6 text-cm-deep"
+              data-aos="fade-up"
+              data-aos-delay={i * 80}>
+              <div className="mb-4 grid h-11 w-11 place-items-center rounded-full bg-cm-fresh font-bold text-white">
+                {i + 1}
               </div>
-              {i < stages.length - 1 && (
-                <ChevronDownIcon className="w-6 h-6 text-brand-primary my-2 shrink-0" />
-              )}
-            </React.Fragment>
+              <h3 className="mb-2 text-lg font-bold leading-snug">{t(stage.title)}</h3>
+              <p className="text-sm leading-relaxed text-cm-ink">{t(stage.detail)}</p>
+            </div>
           ))}
         </div>
       </div>

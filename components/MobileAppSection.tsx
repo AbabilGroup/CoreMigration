@@ -1,7 +1,5 @@
 import React from "react";
 import Link from "next/link";
-import FloatingCircles from "./FloatingCircles";
-import { ArrowRightIcon } from "@heroicons/react/24/outline";
 import { useLanguage } from "@/context/LanguageContext";
 
 interface GlobalCTAProps {
@@ -12,6 +10,7 @@ interface GlobalCTAProps {
   secondaryCta?: { label: string; href: string };
 }
 
+/** Closing call-to-action: mint band, centered heading, deep + fresh buttons. */
 const GlobalCTA = ({
   headline = "Ready to Take the",
   headlineAccent = "Next Step?",
@@ -22,41 +21,23 @@ const GlobalCTA = ({
   const { t } = useLanguage();
 
   return (
-    <section className="relative isolate w-full bg-brand-primary py-16 md:py-24 overflow-hidden">
-      <FloatingCircles />
-      {/* Background accent */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-brand-accent rounded-full blur-[100px] translate-x-1/2 -translate-y-1/2" />
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-brand-light rounded-full blur-[100px] -translate-x-1/2 translate-y-1/2" />
-      </div>
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12">
-          {/* Text Content */}
-          <div className="w-full md:w-2/3 text-center md:text-left">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl text-white font-serif mb-4 md:mb-6">
-              {t(headline)}{" "}
-              <span className="italic text-brand-accent">{t(headlineAccent)}</span>
-            </h2>
-            <p className="text-white/85 text-sm md:text-base lg:text-lg max-w-2xl mx-auto md:mx-0 leading-relaxed">
-              {t(description)}
-            </p>
-          </div>
-
-          {/* Action Buttons */}
-          <div className="w-full md:w-auto flex flex-col sm:flex-row items-center gap-4 shrink-0">
-            <Link
-              href={primaryCta.href}
-              className="btn-primary w-full sm:w-auto">
-              {t(primaryCta.label)}
-              <ArrowRightIcon className="w-4 h-4 ml-2 stroke-2" />
-            </Link>
-            <Link
-              href={secondaryCta.href}
-              className="btn-outline-light w-full sm:w-auto">
-              {t(secondaryCta.label)}
-            </Link>
-          </div>
+    <section className="bg-cm-mint py-16 md:py-24 text-center">
+      <div className="mx-auto max-w-300 px-6" data-aos="blur-in">
+        <h2 className="text-3xl md:text-[44px] font-bold leading-tight text-cm-deep">
+          {t(headline)} {headlineAccent && t(headlineAccent)}
+        </h2>
+        {description && (
+          <p className="mx-auto mt-4.5 max-w-180 text-base md:text-lg leading-relaxed text-cm-ink">
+            {t(description)}
+          </p>
+        )}
+        <div className="mt-8 flex flex-col sm:flex-row flex-wrap justify-center gap-4">
+          <Link href={primaryCta.href} className="btn-deep">
+            {t(primaryCta.label)}
+          </Link>
+          <Link href={secondaryCta.href} className="btn-fresh">
+            {t(secondaryCta.label)}
+          </Link>
         </div>
       </div>
     </section>

@@ -1,12 +1,10 @@
 import Head from "next/head";
 import Hero from "@/components/Hero";
 import DualValueProposition from "@/components/DualValueProposition";
-import SourcingDeploymentModels from "@/components/SourcingDeploymentModels";
-import SourcingGeography from "@/components/SourcingGeography";
 import DeploymentProcess from "@/components/DeploymentProcess";
 import IndustryPipelines from "@/components/IndustryPipelines";
 import EthicalCommitment from "@/components/EthicalCommitment";
-import GlobalCTA from "@/components/MobileAppSection";
+import HomeCTA from "@/components/HomeCTA";
 import { useLanguage } from "@/context/LanguageContext";
 
 export default function Home() {
@@ -23,33 +21,11 @@ export default function Home() {
       </Head>
       <main className="min-h-screen overflow-hidden">
         <Hero />
-        <div data-aos="fade-up">
-          <DualValueProposition />
-        </div>
-        <div data-aos="fade-up">
-          <SourcingDeploymentModels />
-        </div>
-        <div data-aos="fade-up">
-          <SourcingGeography />
-        </div>
-        <div data-aos="fade-up">
-          <DeploymentProcess />
-        </div>
-        <div data-aos="fade-up">
-          <IndustryPipelines />
-        </div>
-        <div data-aos="fade-up">
-          <EthicalCommitment />
-        </div>
-        <div data-aos="blur-in">
-          <GlobalCTA
-            headline="Ready to Build Your"
-            headlineAccent="International Workforce?"
-            description="Whether you need individual specialist talent or a full project workforce, our team delivers with full legal compliance."
-            primaryCta={{ label: "Request a Sourcing Plan", href: "/contact-us" }}
-            secondaryCta={{ label: "Browse Open Overseas Positions", href: "/vacancies" }}
-          />
-        </div>
+        <DualValueProposition />
+        <DeploymentProcess />
+        <IndustryPipelines />
+        <EthicalCommitment />
+        <HomeCTA />
       </main>
     </>
   );

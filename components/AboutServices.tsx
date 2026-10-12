@@ -7,7 +7,7 @@ import {
   UserGroupIcon,
   ChartBarIcon,
 } from "@heroicons/react/24/outline";
-import CursorCircle from "./CursorCircle";
+import SectionHeading from "./SectionHeading";
 import { useLanguage } from "@/context/LanguageContext";
 
 const reasons = [
@@ -47,27 +47,23 @@ export default function AboutServices() {
   const { t } = useLanguage();
 
   return (
-    <section className="bg-brand-cream/60 py-20 md:py-28">
-      <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24">
-        <div className="mb-12 max-w-3xl" data-aos="text-reveal">
-          <h2
-            className="text-3xl md:text-4xl text-brand-dark font-light mb-4"
-            style={{ fontFamily: "var(--font-playfair-display), serif" }}>
-            {t("Why Employers and Candidates")}{" "}
-            <span className="italic font-bold">{t("Choose Core Migration")}</span>
-          </h2>
-        </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <section className="bg-white py-16 md:py-24">
+      <div className="mx-auto max-w-300 px-6">
+        <SectionHeading>
+          {t("Why Employers and Candidates")} {t("Choose Core Migration")}
+        </SectionHeading>
+        <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {reasons.map((reason, i) => (
             <div
               key={reason.title}
-              className="card-hover relative isolate overflow-hidden bg-white p-8 border border-gray-100"
-              data-aos="flip-up"
+              className="rounded-[28px] bg-cm-tile p-8 transition-all duration-200 hover:-translate-y-1 hover:bg-cm-hover"
+              data-aos="fade-up"
               data-aos-delay={(i % 3) * 100}>
-              <CursorCircle />
-              <reason.icon className="w-9 h-9 text-brand-primary mb-5" />
-              <h3 className="text-lg font-bold text-brand-dark mb-3">{t(reason.title)}</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">{t(reason.description)}</p>
+              <span className="mb-5 flex h-14 w-14 items-center justify-center rounded-full bg-cm-fresh text-white">
+                <reason.icon className="h-7 w-7" />
+              </span>
+              <h3 className="mb-2.5 text-xl font-bold text-cm-deep">{t(reason.title)}</h3>
+              <p className="text-base leading-relaxed text-cm-ink">{t(reason.description)}</p>
             </div>
           ))}
         </div>

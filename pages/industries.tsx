@@ -122,48 +122,53 @@ export default function Industries() {
           title={t("Dedicated Sourcing Pipelines Across Core Global")}
           titleAccent={t("Sectors")}
           subtitle={t("Core Migration maintains active candidate pools and trade-testing networks tailored to the operational demands of critical global industries.")}
-          image="https://images.pexels.com/photos/2760343/pexels-photo-2760343.jpeg"
           breadcrumbs={[
             { label: t("Home"), href: "/" },
             { label: t("Industries") },
           ]}
         />
 
-        <section
-          ref={stackRef}
-          className="py-16 md:py-24 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto space-y-24">
-          {industries.map((industry, i) => (
-            <div
-              key={industry.id}
-              id={industry.id}
-              data-stack-card
-              className="sticky overflow-hidden rounded-2xl bg-brand-primary border-t-4 border-brand-accent p-8 md:p-10 shadow-[0_-12px_40px_-20px_rgb(0_0_0/0.35)] scroll-mt-24"
-              style={{ top: STACK_TOP + i * STACK_STEP }}>
-              {/* Darkens as the next card covers this one */}
+        <section ref={stackRef} className="bg-cm-mint py-16 md:py-24">
+          <div className="mx-auto max-w-300 px-6 space-y-24">
+            {industries.map((industry, i) => (
               <div
-                data-stack-dim
-                aria-hidden="true"
-                className="pointer-events-none absolute inset-0 bg-brand-dark opacity-0"
-              />
-              <div className="flex items-center gap-4 mb-8">
-                <industry.icon className="w-10 h-10 text-brand-accent shrink-0" />
-                <h2 className="text-2xl md:text-3xl font-bold text-white">{t(industry.title)}</h2>
+                key={industry.id}
+                id={industry.id}
+                data-stack-card
+                className={`sticky isolate overflow-hidden rounded-4xl p-8 md:p-12 text-white shadow-[0_-12px_40px_-20px_rgb(0_0_0/0.35)] scroll-mt-24 ${
+                  i % 2 ? "bg-cm-night" : "bg-cm-card"
+                }`}
+                style={{ top: STACK_TOP + i * STACK_STEP }}>
+                <span
+                  aria-hidden="true"
+                  className="pointer-events-none absolute -bottom-15 -right-15 -z-10 h-55 w-55 rounded-full bg-cm-fresh/20"
+                />
+                {/* Darkens as the next card covers this one */}
+                <div
+                  data-stack-dim
+                  aria-hidden="true"
+                  className="pointer-events-none absolute inset-0 z-10 bg-cm-night opacity-0"
+                />
+                <div className="mb-8 flex items-center gap-4">
+                  <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-cm-fresh">
+                    <industry.icon className="h-7 w-7 text-white" />
+                  </span>
+                  <h2 className="text-2xl md:text-[28px] font-semibold leading-tight">{t(industry.title)}</h2>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+                  {industry.groups.map((group) => (
+                    <div key={group.label} className="rounded-3xl bg-white p-6 text-cm-ink">
+                      <h3 className="mb-2 text-lg font-bold text-cm-deep">{t(group.label)}</h3>
+                      <p className="text-base leading-relaxed">{t(group.roles)}</p>
+                    </div>
+                  ))}
+                </div>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                {industry.groups.map((group) => (
-                  <div key={group.label}>
-                    <h3 className="font-bold text-sm uppercase tracking-wider text-brand-accent mb-2">
-                      {t(group.label)}
-                    </h3>
-                    <p className="text-white/85 text-sm leading-relaxed">{t(group.roles)}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </section>
 
-        <div data-aos="blur-in">
+        <div>
           <MobileAppSection
             headline="Sourcing for Your"
             headlineAccent="Specific Industry"

@@ -1,8 +1,7 @@
 import Head from "next/head";
-import Link from "next/link";
+import SolutionDetail from "@/components/SolutionDetail";
 import ServicesHero from "@/components/ServicesHero";
 import MobileAppSection from "@/components/MobileAppSection";
-import { ArrowRightIcon } from "@heroicons/react/24/outline";
 import { useLanguage } from "@/context/LanguageContext";
 
 const keyFeatures = [
@@ -45,7 +44,6 @@ export default function BulkMobilization() {
           title={t("Bulk")}
           titleAccent={t("Mobilization")}
           subtitle={t("For large-scale infrastructure, industrial, and facility management projects where time-to-site is critical.")}
-          image="https://images.pexels.com/photos/159306/construction-site-build-construction-work-159306.jpeg"
           breadcrumbs={[
             { label: t("Home"), href: "/" },
             { label: t("Our Solutions"), href: "/our-solutions" },
@@ -53,47 +51,13 @@ export default function BulkMobilization() {
           ]}
         />
 
-        <section className="py-16 md:py-24 px-6 md:px-12 lg:px-24 max-w-5xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-bold text-brand-dark mb-8">
-            {t("Key Features")}
-          </h2>
-          <ul className="space-y-4 mb-16">
-            {keyFeatures.map((feature) => (
-              <li key={feature} className="flex items-start gap-3 text-gray-600 leading-relaxed">
-                <span className="w-1.5 h-1.5 mt-2.5 rounded-full bg-brand-primary shrink-0" />
-                {t(feature)}
-              </li>
-            ))}
-          </ul>
+        <SolutionDetail
+          keyFeatures={keyFeatures}
+          targetRoles={targetRoles}
+          primaryCta="Start a Mobilization Campaign"
+        />
 
-          <h2 className="text-2xl md:text-3xl font-bold text-brand-dark mb-8">
-            {t("Target Roles")}
-          </h2>
-          <div className="space-y-8 mb-12">
-            {targetRoles.map((group) => (
-              <div key={group.group} className="border-l-4 border-brand-primary pl-6" data-aos="fade-right">
-                <h3 className="font-bold text-brand-dark mb-2">{t(group.group)}</h3>
-                <p className="text-gray-600 leading-relaxed">{t(group.roles)}</p>
-              </div>
-            ))}
-          </div>
-
-          <div className="flex flex-wrap items-center gap-6">
-            <Link
-              href="/contact-us"
-              className="btn-primary">
-              {t("Start a Mobilization Campaign")}
-            </Link>
-            <Link
-              href="/our-solutions#recruitment-roadmap"
-              className="inline-flex items-center gap-2 text-brand-dark font-bold text-sm hover:text-brand-primary transition-colors">
-              {t("View Our Recruitment Roadmap")}
-              <ArrowRightIcon className="w-4 h-4" />
-            </Link>
-          </div>
-        </section>
-
-        <div data-aos="blur-in">
+        <div>
           <MobileAppSection
             headline="Discuss Your"
             headlineAccent="Workforce Requirements"

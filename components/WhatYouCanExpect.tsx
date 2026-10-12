@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { ChatBubbleLeftRightIcon, ClipboardDocumentCheckIcon, EyeIcon, PaperAirplaneIcon } from "@heroicons/react/24/outline";
+import SectionHeading from "./SectionHeading";
 import { useLanguage } from "@/context/LanguageContext";
 
 const blocks = [
@@ -38,15 +39,11 @@ export default function WhatYouCanExpect() {
   const { t } = useLanguage();
 
   return (
-    <section className="py-16 md:py-24">
-      <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24">
-        <div className="mb-16 text-center max-w-2xl mx-auto" data-aos="text-reveal">
-          <h2
-            className="text-3xl md:text-4xl text-brand-dark font-light"
-            style={{ fontFamily: "var(--font-playfair-display), serif" }}>
-            {t("What You Can")} <span className="italic font-bold">{t("Expect")}</span>
-          </h2>
-        </div>
+    <section className="bg-white py-16 md:py-24">
+      <div className="mx-auto max-w-300 px-6">
+        <SectionHeading center className="mb-16">
+          {t("What You Can")} {t("Expect")}
+        </SectionHeading>
 
         <div className="space-y-16 md:space-y-24">
           {blocks.map((block, i) => {
@@ -56,7 +53,7 @@ export default function WhatYouCanExpect() {
                 key={block.title}
                 className={`flex flex-col ${isReversed ? "md:flex-row-reverse" : "md:flex-row"} items-center gap-10 md:gap-16`}>
                 <div
-                  className="relative w-full md:w-1/2 h-64 md:h-80 overflow-hidden"
+                  className="relative w-full md:w-1/2 h-64 md:h-80 overflow-hidden rounded-[28px]"
                   data-aos={isReversed ? "reveal-right" : "reveal-left"}>
                   <Image src={block.image} alt={t(block.title)} fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover" />
                 </div>
@@ -64,9 +61,9 @@ export default function WhatYouCanExpect() {
                   className="w-full md:w-1/2"
                   data-aos={isReversed ? "fade-right" : "fade-left"}
                   data-aos-delay="250">
-                  <block.icon className="w-10 h-10 text-brand-primary mb-5" />
-                  <h3 className="text-2xl font-bold text-brand-dark mb-4">{t(block.title)}</h3>
-                  <p className="text-gray-600 leading-relaxed">{t(block.description)}</p>
+                  <span className="mb-5 flex h-14 w-14 items-center justify-center rounded-full bg-cm-fresh text-white"><block.icon className="h-7 w-7" /></span>
+                  <h3 className="mb-4 text-2xl md:text-[28px] font-semibold leading-tight text-cm-deep">{t(block.title)}</h3>
+                  <p className="text-base md:text-lg leading-relaxed text-cm-ink">{t(block.description)}</p>
                 </div>
               </div>
             );

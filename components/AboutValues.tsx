@@ -7,7 +7,7 @@ import {
   ClockIcon,
   HandRaisedIcon,
 } from "@heroicons/react/24/outline";
-import CursorCircle from "./CursorCircle";
+import SectionHeading from "./SectionHeading";
 import { useLanguage } from "@/context/LanguageContext";
 
 const values = [
@@ -51,37 +51,23 @@ export default function AboutValues() {
   const { t } = useLanguage();
 
   return (
-    <section className="py-20 md:py-28">
-      <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24">
-        <div className="mb-14" data-aos="fade-right">
-          <p className="text-xs font-bold tracking-[0.25em] text-brand-primary uppercase mb-4">
-            {t("OUR VALUES")}
-          </p>
-          <h2
-            className="text-4xl md:text-5xl text-brand-dark font-light mb-6"
-            style={{ fontFamily: "var(--font-playfair-display), serif" }}>
-            {t("What Drives")} <span className="italic font-bold">{t("Core Migration")}</span>
-          </h2>
-          <p className="text-gray-600 text-sm md:text-base leading-relaxed max-w-2xl">
-            {t("Our values define how we operate, how we serve, and how we grow with our global partners.")}
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {values.map((value, index) => (
+    <section className="bg-cm-mint py-16 md:py-24">
+      <div className="mx-auto max-w-300 px-6">
+        <SectionHeading intro={t("Our values define how we operate, how we serve, and how we grow with our global partners.")}>
+          {t("What Drives")} {t("Core Migration")}
+        </SectionHeading>
+        <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {values.map((value, i) => (
             <div
               key={value.title}
-              className="card-hover relative isolate overflow-hidden border border-gray-200 rounded-sm p-8 flex flex-col items-start group"
-              data-aos="blur-in"
-              data-aos-delay={index * 80}>
-              <CursorCircle />
-              <value.icon className="w-10 h-10 text-brand-primary mb-5 stroke-1 group-hover:scale-110 transition-transform duration-300" />
-              <h4 className="text-brand-dark font-bold text-lg mb-3">
-                {t(value.title)}
-              </h4>
-              <p className="text-gray-500 text-sm leading-relaxed">
-                {t(value.description)}
-              </p>
+              className="rounded-[28px] border-2 border-cm-hover bg-white p-8"
+              data-aos="fade-up"
+              data-aos-delay={(i % 3) * 100}>
+              <span className="mb-4 flex h-13 w-13 items-center justify-center rounded-full bg-cm-fresh text-white">
+                <value.icon className="h-6 w-6" />
+              </span>
+              <h3 className="mb-2.5 text-xl md:text-[22px] font-semibold text-cm-deep">{t(value.title)}</h3>
+              <p className="text-base leading-relaxed text-cm-ink">{t(value.description)}</p>
             </div>
           ))}
         </div>

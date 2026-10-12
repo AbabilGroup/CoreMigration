@@ -137,7 +137,7 @@ export default function MainHeader() {
     LANGUAGES.find((l) => l.code === locale) || LANGUAGES[0];
 
   return (
-    <header className="fixed inset-x-0 top-0 z-40 flex h-16 md:h-18 items-center justify-between px-4 md:px-10 text-white bg-brand-primary border-b-4 border-brand-accent transition-all duration-300">
+    <header className="fixed inset-x-0 top-0 z-40 flex h-16 md:h-18 items-center justify-between px-4 md:px-10 text-white bg-cm-deep border-b-2 border-white transition-all duration-300">
       {/* Logo */}
       <div className="shrink-0 pt-2 z-50">
         <Link href="/" className="flex items-center" aria-label="Lucru home">
@@ -253,6 +253,16 @@ export default function MainHeader() {
             {t("Contact Us")}
           </Link>
         </nav>
+
+        {/* Audience pill */}
+        <div className="hidden xl:flex overflow-hidden rounded-full border-2 border-cm-fresh text-sm font-bold">
+          <Link href="/our-solutions" className="bg-cm-fresh px-5 py-2 text-white">
+            {t("For Employers")}
+          </Link>
+          <Link href="/vacancies" className="px-5 py-2 text-white transition-colors hover:bg-cm-fresh/20">
+            {t("For Candidates")}
+          </Link>
+        </div>
 
         {/* Language Switcher */}
         <div className="relative group/lang flex items-center h-full cursor-pointer border-l border-white/20 pl-4 py-4">

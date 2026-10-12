@@ -9,15 +9,15 @@ export default function ContactFormSection() {
   const { t } = useLanguage();
 
   return (
-    <section className="py-20">
-      <div className="container mx-auto px-6 lg:px-12">
+    <section className="bg-[linear-gradient(160deg,#fff_0_58%,var(--color-cm-mint)_58%_100%)] py-16 md:py-24">
+      <div className="mx-auto max-w-300 px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           <div className="space-y-12" data-aos="fade-right">
             <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">
+              <h2 className="mb-6 text-3xl md:text-[44px] font-bold leading-tight text-cm-deep">
                 {t("Let's talk about things!")}
               </h2>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-base md:text-lg leading-relaxed text-cm-ink">
                 {t(
                   "Whether you're an employer seeking workforce deployment or a professional exploring international career opportunities, our team is ready to help.",
                 )}
@@ -25,47 +25,42 @@ export default function ContactFormSection() {
             </div>
 
             <div className="space-y-6">
-              <div className="flex items-start gap-4">
-                <div className="bg-brand-light p-3 rounded-full shrink-0">
-                  <MapPinIcon className="w-6 h-6 text-brand-primary" />
+              <div className="flex items-center gap-4 rounded-[20px] bg-cm-tile px-6 py-5">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-cm-fresh text-white">
+                  <MapPinIcon className="h-6 w-6" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-gray-900">
+                  <h3 className="font-bold text-cm-deep">
                     {t("Registered Office")}
                   </h3>
-                  <p className="text-gray-600 mt-1">
+                  <p className="mt-1 text-cm-ink">
                     176 Crossbank Street, Oldham, England, OL8 1HE
                   </p>
                 </div>
               </div>
 
-              <div className="flex items-start gap-4">
-                <div className="bg-brand-light p-3 rounded-full shrink-0">
-                  <EnvelopeIcon className="w-6 h-6 text-brand-primary" />
+              <div className="flex items-center gap-4 rounded-[20px] bg-cm-tile px-6 py-5">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-cm-fresh text-white">
+                  <EnvelopeIcon className="h-6 w-6" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-gray-900">
+                  <h3 className="font-bold text-cm-deep">
                     {t("Email Address")}
                   </h3>
                   <Link href="mailto:info@coremigration.eu">
-                    <p className="text-gray-600 mt-1">info@coremigration.eu</p>
+                    <p className="mt-1 text-cm-ink">info@coremigration.eu</p>
                   </Link>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="relative isolate overflow-hidden rounded-3xl bg-brand-primary p-8 md:p-10 shadow-[0_24px_60px_-24px] shadow-brand-primary/60" data-aos="fade-left" data-aos-delay="150">
-            {/* Background shapes */}
+          <div className="relative isolate overflow-hidden rounded-4xl bg-cm-card p-8 md:p-12" data-aos="fade-left" data-aos-delay="150">
             <span
               aria-hidden="true"
-              className="pointer-events-none absolute -right-20 -top-20 -z-10 h-64 w-64 rounded-full border-[3px] border-brand-accent/40"
+              className="pointer-events-none absolute -right-15 -bottom-15 -z-10 h-55 w-55 rounded-full bg-cm-fresh/20"
             />
-            <span
-              aria-hidden="true"
-              className="pointer-events-none absolute -bottom-28 -left-20 -z-10 h-80 w-80 rounded-full bg-brand-secondary/50"
-            />
-            <h3 className="text-2xl font-bold text-white mb-6">
+            <h3 className="mb-6 text-2xl md:text-[28px] font-semibold text-white">
               {t("Send Inquiry to Core Migration")}
             </h3>
             <form
@@ -95,7 +90,7 @@ export default function ContactFormSection() {
                   id="role"
                   name="role"
                   required
-                  className="w-full px-4 py-3 rounded-xl border border-white/20 bg-white text-brand-dark placeholder:text-gray-400 focus:ring-2 focus:ring-brand-accent focus:border-brand-accent outline-none transition-colors">
+                  className="w-full px-4 py-3 rounded-2xl border border-white/20 bg-white text-brand-dark placeholder:text-gray-400 focus:ring-2 focus:ring-brand-accent focus:border-brand-accent outline-none transition-colors">
                   <option value="Employer">{t("Employer")}</option>
                   <option value="Candidate">{t("Candidate")}</option>
                   <option value="Processing Partner">{t("Processing Partner")}</option>
@@ -114,7 +109,7 @@ export default function ContactFormSection() {
                     id="firstName"
                     name="firstName"
                     required
-                    className="w-full px-4 py-3 rounded-xl border border-white/20 bg-white text-brand-dark placeholder:text-gray-400 focus:ring-2 focus:ring-brand-accent focus:border-brand-accent outline-none transition-colors"
+                    className="w-full px-4 py-3 rounded-2xl border border-white/20 bg-white text-brand-dark placeholder:text-gray-400 focus:ring-2 focus:ring-brand-accent focus:border-brand-accent outline-none transition-colors"
                     placeholder={t("First Name")}
                   />
                 </div>
@@ -130,7 +125,7 @@ export default function ContactFormSection() {
                     id="lastName"
                     name="lastName"
                     required
-                    className="w-full px-4 py-3 rounded-xl border border-white/20 bg-white text-brand-dark placeholder:text-gray-400 focus:ring-2 focus:ring-brand-accent focus:border-brand-accent outline-none transition-colors"
+                    className="w-full px-4 py-3 rounded-2xl border border-white/20 bg-white text-brand-dark placeholder:text-gray-400 focus:ring-2 focus:ring-brand-accent focus:border-brand-accent outline-none transition-colors"
                     placeholder={t("Last Name")}
                   />
                 </div>
@@ -148,7 +143,7 @@ export default function ContactFormSection() {
                     id="email"
                     name="email"
                     required
-                    className="w-full px-4 py-3 rounded-xl border border-white/20 bg-white text-brand-dark placeholder:text-gray-400 focus:ring-2 focus:ring-brand-accent focus:border-brand-accent outline-none transition-colors"
+                    className="w-full px-4 py-3 rounded-2xl border border-white/20 bg-white text-brand-dark placeholder:text-gray-400 focus:ring-2 focus:ring-brand-accent focus:border-brand-accent outline-none transition-colors"
                     placeholder="john@example.com"
                   />
                 </div>
@@ -163,7 +158,7 @@ export default function ContactFormSection() {
                     type="tel"
                     id="phone"
                     name="phone"
-                    className="w-full px-4 py-3 rounded-xl border border-white/20 bg-white text-brand-dark placeholder:text-gray-400 focus:ring-2 focus:ring-brand-accent focus:border-brand-accent outline-none transition-colors"
+                    className="w-full px-4 py-3 rounded-2xl border border-white/20 bg-white text-brand-dark placeholder:text-gray-400 focus:ring-2 focus:ring-brand-accent focus:border-brand-accent outline-none transition-colors"
                   />
                 </div>
               </div>
@@ -180,7 +175,7 @@ export default function ContactFormSection() {
                     id="companyOrProfession"
                     name="companyOrProfession"
                     required
-                    className="w-full px-4 py-3 rounded-xl border border-white/20 bg-white text-brand-dark placeholder:text-gray-400 focus:ring-2 focus:ring-brand-accent focus:border-brand-accent outline-none transition-colors"
+                    className="w-full px-4 py-3 rounded-2xl border border-white/20 bg-white text-brand-dark placeholder:text-gray-400 focus:ring-2 focus:ring-brand-accent focus:border-brand-accent outline-none transition-colors"
                   />
                 </div>
 
@@ -195,7 +190,7 @@ export default function ContactFormSection() {
                     id="destinationCountry"
                     name="destinationCountry"
                     required
-                    className="w-full px-4 py-3 rounded-xl border border-white/20 bg-white text-brand-dark placeholder:text-gray-400 focus:ring-2 focus:ring-brand-accent focus:border-brand-accent outline-none transition-colors"
+                    className="w-full px-4 py-3 rounded-2xl border border-white/20 bg-white text-brand-dark placeholder:text-gray-400 focus:ring-2 focus:ring-brand-accent focus:border-brand-accent outline-none transition-colors"
                   />
                 </div>
               </div>
@@ -211,13 +206,13 @@ export default function ContactFormSection() {
                   name="message"
                   rows={5}
                   required
-                  className="w-full px-4 py-3 rounded-xl border border-white/20 bg-white text-brand-dark placeholder:text-gray-400 focus:ring-2 focus:ring-brand-accent focus:border-brand-accent outline-none transition-colors resize-none"
+                  className="w-full px-4 py-3 rounded-2xl border border-white/20 bg-white text-brand-dark placeholder:text-gray-400 focus:ring-2 focus:ring-brand-accent focus:border-brand-accent outline-none transition-colors resize-none"
                   placeholder={t("Write your msg here...")}></textarea>
               </div>
 
               <button
                 type="submit"
-                className="btn-primary w-full">
+                className="btn-fresh w-full">
                 {t("Send Inquiry to Core Migration")}
               </button>
             </form>

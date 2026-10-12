@@ -19,11 +19,11 @@ export default function HowWeDeliver() {
       <main className="min-h-screen">
         <HowWeDeliverHero />
 
-        <div data-aos="fade-up">
+        <div>
           <WhatYouCanExpect />
         </div>
 
-        <div data-aos="blur-in">
+        <div>
           <MobileAppSection
             headline="Start Building"
             headlineAccent="Your Workforce"

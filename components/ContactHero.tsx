@@ -1,40 +1,14 @@
-import React, { useRef } from 'react';
-import useHeroAnimation from '@/hooks/useHeroAnimation';
-import Image from 'next/image';
+import ServicesHero from './ServicesHero';
 import { useLanguage } from '@/context/LanguageContext';
 
 export default function ContactHero() {
-    const heroRef = useRef<HTMLDivElement>(null);
-    useHeroAnimation(heroRef);
-  const { t } = useLanguage();
-  const text = t("Let's Talk");
-  const spaceIndex = text.lastIndexOf(" ");
-  const firstPart = spaceIndex !== -1 ? text.substring(0, spaceIndex) : text;
-  const secondPart = spaceIndex !== -1 ? text.substring(spaceIndex + 1) : "";
+    const { t } = useLanguage();
 
-  return (
-    <div ref={heroRef} className="relative flex items-end w-full min-h-[50vh] md:min-h-[75vh] overflow-hidden bg-brand-primary">
-      <div data-hero-media className="absolute inset-0">
-        <Image
-          src="https://images.pexels.com/photos/7682340/pexels-photo-7682340.jpeg"
-          alt={t("Let's Talk")}
-          fill sizes="100vw"
-          className="object-cover"
-          priority
+    return (
+        <ServicesHero
+            title={t("Let's Talk")}
+            subtitle={t("Whether you're an employer seeking workforce deployment or a professional exploring international career opportunities, our team is ready to help.")}
+            breadcrumbs={[{ label: t("Home"), href: "/" }, { label: t("Contact Us") }]}
         />
-        <div className="absolute inset-0 bg-linear-to-t from-brand-primary/95 via-brand-primary/60 to-brand-primary/20" />
-      </div>
-      <div data-hero-content className="relative z-20 px-6 md:px-24 pt-28 pb-16 md:pb-22 text-white max-w-3xl">
-        <h1 data-hero-item
-          className="text-5xl md:text-7xl font-light drop-shadow-lg"
-          style={{ fontFamily: 'var(--font-playfair-display), serif' }}
-        >
-          {firstPart} {secondPart && <span className="italic">{secondPart}</span>}
-        </h1>
-        <p data-hero-item className="mt-5 text-sm md:text-lg text-gray-200 drop-shadow-md max-w-xl">
-          {t("Whether you're an employer seeking workforce deployment or a professional exploring international career opportunities, our team is ready to help.")}
-        </p>
-      </div>
-    </div>
-  );
+    );
 }

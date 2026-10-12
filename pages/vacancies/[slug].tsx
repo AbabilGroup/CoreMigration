@@ -19,9 +19,9 @@ export default function JobDetails() {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-4xl text-brand-dark font-bold mb-4">{t("Job Not Found")}</h1>
-          <p className="text-gray-500 mb-6">{t("The position you are looking for does not exist or has been filled.")}</p>
-          <Link href="/vacancies" className="btn-primary">
+          <h1 className="mb-4 text-4xl font-bold text-cm-deep">{t("Job Not Found")}</h1>
+          <p className="mb-6 text-cm-ink">{t("The position you are looking for does not exist or has been filled.")}</p>
+          <Link href="/vacancies" className="btn-fresh">
             {t("Back to Vacancies")}
           </Link>
         </div>
@@ -44,7 +44,6 @@ export default function JobDetails() {
           title={t(opportunity.title)}
           titleAccent={t(opportunity.destination)}
           subtitle={t(opportunity.industry)}
-          image="https://images.pexels.com/photos/8961030/pexels-photo-8961030.jpeg"
           breadcrumbs={[
             { label: t('Home'), href: '/' },
             { label: t('Vacancies'), href: '/vacancies' },
@@ -52,69 +51,68 @@ export default function JobDetails() {
           ]}
         />
 
-        <section className="py-20 md:py-28">
-            <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-24">
+        <section className="bg-[linear-gradient(160deg,#fff_0_58%,var(--color-cm-mint)_58%_100%)] py-16 md:py-24">
+            <div className="mx-auto max-w-300 px-6">
                 <div className="flex flex-col lg:flex-row gap-16 lg:gap-24">
                     {/* Left Column: Opportunity Description */}
                     <div className="lg:w-8/12" data-aos="fade-right">
-                        <span className="inline-block bg-brand-accent/20 text-brand-dark text-[10px] font-bold uppercase tracking-wider px-3 py-1 mb-6">
+                        <span className="mb-6 inline-block rounded-full bg-cm-fresh px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-white">
                             {t("Example Opportunity")}
                         </span>
-                        <h2 className="text-3xl md:text-4xl text-brand-dark font-light mb-6" style={{ fontFamily: 'var(--font-playfair-display), serif' }}>
-                            {t("Role")} <span className="italic font-bold">{t("Overview")}</span>
+                        <h2 className="mb-6 text-3xl md:text-[44px] font-bold leading-tight text-cm-deep">
+                            {t("Role")} {t("Overview")}
                         </h2>
-                        <div className="w-16 h-1 rounded-full bg-brand-accent mb-8" />
 
-                        <p className="text-gray-600 text-lg leading-relaxed mb-8">
+                        <p className="mb-8 text-base md:text-lg leading-relaxed text-cm-ink">
                             {t("This example opportunity illustrates a typical role, package, and structure for this position and destination — not a live, currently-open vacancy. Salary figures are based on published market-rate research for this role/country combination.")}
                         </p>
 
-                        <h3 className="text-2xl text-brand-dark font-semibold mt-12 mb-6">{t("Requirements")}</h3>
-                        <p className="text-gray-600 text-lg leading-relaxed mb-8">{t(opportunity.requirements)}</p>
+                        <h3 className="mt-12 mb-4 text-2xl md:text-[28px] font-semibold text-cm-deep">{t("Requirements")}</h3>
+                        <p className="mb-8 text-base md:text-lg leading-relaxed text-cm-ink">{t(opportunity.requirements)}</p>
 
-                        <h3 className="text-2xl text-brand-dark font-semibold mt-12 mb-6">{t("Benefits")}</h3>
-                        <p className="text-gray-600 text-lg leading-relaxed mb-8">{t(opportunity.benefits)}</p>
+                        <h3 className="mt-12 mb-4 text-2xl md:text-[28px] font-semibold text-cm-deep">{t("Benefits")}</h3>
+                        <p className="mb-8 text-base md:text-lg leading-relaxed text-cm-ink">{t(opportunity.benefits)}</p>
                     </div>
 
                     {/* Right Column: Opportunity Meta Card */}
                     <div className="lg:w-4/12" data-aos="fade-left" data-aos-delay="150">
-                        <div className="bg-zinc-50 border border-zinc-200 p-8 sticky top-32">
-                            <h3 className="text-xl font-bold text-brand-dark mb-6 border-b border-zinc-200 pb-4">{t("Position Details")}</h3>
+                        <div className="sticky top-32 rounded-4xl bg-cm-card p-8 text-white">
+                            <h3 className="mb-6 border-b border-white/20 pb-4 text-2xl font-semibold">{t("Position Details")}</h3>
 
                             <div className="space-y-6 mb-8">
                                 <div className="flex items-start gap-4">
-                                    <MapPinIcon className="w-6 h-6 text-brand-primary shrink-0" />
+                                    <MapPinIcon className="h-6 w-6 shrink-0 text-cm-fresh" />
                                     <div>
-                                        <p className="text-sm text-gray-500 font-semibold mb-1">{t("Destination")}</p>
-                                        <p className="text-brand-dark font-medium">{t(opportunity.destination)}</p>
+                                        <p className="mb-1 text-sm font-semibold text-white/75">{t("Destination")}</p>
+                                        <p className="font-semibold">{t(opportunity.destination)}</p>
                                     </div>
                                 </div>
                                 <div className="flex items-start gap-4">
-                                    <BriefcaseIcon className="w-6 h-6 text-brand-primary shrink-0" />
+                                    <BriefcaseIcon className="h-6 w-6 shrink-0 text-cm-fresh" />
                                     <div>
-                                        <p className="text-sm text-gray-500 font-semibold mb-1">{t("Industry")}</p>
-                                        <p className="text-brand-dark font-medium">{t(opportunity.industry)}</p>
+                                        <p className="mb-1 text-sm font-semibold text-white/75">{t("Industry")}</p>
+                                        <p className="font-semibold">{t(opportunity.industry)}</p>
                                     </div>
                                 </div>
                                 <div className="flex items-start gap-4">
-                                    <ClockIcon className="w-6 h-6 text-brand-primary shrink-0" />
+                                    <ClockIcon className="h-6 w-6 shrink-0 text-cm-fresh" />
                                     <div>
-                                        <p className="text-sm text-gray-500 font-semibold mb-1">{t("Contract")}</p>
-                                        <p className="text-brand-dark font-medium">{t(opportunity.contract)}</p>
+                                        <p className="mb-1 text-sm font-semibold text-white/75">{t("Contract")}</p>
+                                        <p className="font-semibold">{t(opportunity.contract)}</p>
                                     </div>
                                 </div>
                                 <div className="flex items-start gap-4">
-                                    <CurrencyDollarIcon className="w-6 h-6 text-brand-primary shrink-0" />
+                                    <CurrencyDollarIcon className="h-6 w-6 shrink-0 text-cm-fresh" />
                                     <div>
-                                        <p className="text-sm text-gray-500 font-semibold mb-1">{t("Salary")}</p>
-                                        <p className="text-brand-dark font-medium">{t(opportunity.salary)}</p>
+                                        <p className="mb-1 text-sm font-semibold text-white/75">{t("Salary")}</p>
+                                        <p className="font-semibold">{t(opportunity.salary)}</p>
                                     </div>
                                 </div>
                             </div>
 
                             <Link
                                 href="/vacancies/register"
-                                className="btn-primary w-full">
+                                className="btn-fresh w-full">
                                 {t(opportunity.ctaLabel)}
                             </Link>
                         </div>
@@ -123,7 +121,7 @@ export default function JobDetails() {
             </div>
         </section>
 
-        <div data-aos="blur-in">
+        <div>
             <MobileAppSection />
         </div>
       </main>

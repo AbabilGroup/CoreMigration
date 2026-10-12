@@ -1,6 +1,5 @@
 import React from "react";
 import Link from "next/link";
-import CursorCircle from "./CursorCircle";
 import {
   HeartIcon,
   BuildingOffice2Icon,
@@ -9,29 +8,29 @@ import {
 } from "@heroicons/react/24/outline";
 import { useLanguage } from "@/context/LanguageContext";
 
-const pipelines = [
+const industries = [
   {
     icon: HeartIcon,
-    title: "Healthcare & Life Sciences",
-    description: "Registered Nurses, General Practitioners, Lab Technicians (Prometric & Dataflow support)",
+    title: "Healthcare",
+    description: "Nurses, doctors, lab technicians",
     href: "/industries#healthcare-life-sciences",
   },
   {
     icon: BuildingOffice2Icon,
-    title: "Heavy Construction & Infrastructure",
-    description: "Civil Engineers, Masons, Steel Fixers, Carpenters, Heavy Plant Operators",
+    title: "Construction",
+    description: "Engineers, masons, plant operators",
     href: "/industries#heavy-construction-infrastructure",
   },
   {
     icon: FireIcon,
     title: "Oil, Gas & Energy",
-    description: "Certified 6G Welders, Pipe Fabricators, Riggers, Mechanical Fitters",
+    description: "6G welders, fabricators, riggers",
     href: "/industries#oil-gas-energy",
   },
   {
     icon: WrenchScrewdriverIcon,
-    title: "Hospitality & Facility Management",
-    description: "Chefs, Front-of-House, HVAC Technicians, Plumbers, Cleaners",
+    title: "Hospitality & FM",
+    description: "Chefs, front-of-house, technicians",
     href: "/industries#hospitality-catering",
   },
 ];
@@ -40,32 +39,27 @@ export default function IndustryPipelines() {
   const { t } = useLanguage();
 
   return (
-    <section className="py-16 md:py-24 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto">
-      <div className="mb-12 max-w-3xl" data-aos="fade-up">
-        <h2
-          className="text-3xl md:text-4xl text-brand-dark font-light mb-4"
-          style={{ fontFamily: "var(--font-playfair-display), serif" }}>
-          {t("Featured")} <span className="italic font-bold">{t("Industry Pipelines")}</span>
+    <section className="bg-white py-16 md:py-24">
+      <div className="mx-auto max-w-300 px-6">
+        <h2 className="text-3xl md:text-[44px] font-bold leading-tight text-cm-deep" data-aos="fade-up">
+          {t("Industries We Serve")}
         </h2>
-      </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        {pipelines.map((item, i) => (
-          <Link
-            key={item.title}
-            href={item.href}
-            className="card-hover group relative isolate overflow-hidden block bg-brand-primary border border-brand-primary p-6"
-            data-aos="fade-up"
-            data-aos-delay={i * 100}>
-            <CursorCircle />
-            <item.icon className="w-10 h-10 text-brand-accent mb-5" />
-            <h3 className="text-lg font-bold text-white mb-3">
-              {t(item.title)}
-            </h3>
-            <p className="text-white/75 text-sm leading-relaxed">
-              {t(item.description)}
-            </p>
-          </Link>
-        ))}
+        <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {industries.map((item, i) => (
+            <Link
+              key={item.title}
+              href={item.href}
+              className="block rounded-[28px] bg-cm-tile px-6 py-8 text-center transition-all duration-200 hover:-translate-y-1 hover:bg-cm-hover"
+              data-aos="fade-up"
+              data-aos-delay={i * 100}>
+              <span className="mx-auto mb-4 flex h-15 w-15 items-center justify-center rounded-full bg-cm-fresh text-white">
+                <item.icon className="h-7 w-7" />
+              </span>
+              <b className="mb-2 block text-xl text-cm-deep">{t(item.title)}</b>
+              <span className="text-base text-cm-ink">{t(item.description)}</span>
+            </Link>
+          ))}
+        </div>
       </div>
     </section>
   );
